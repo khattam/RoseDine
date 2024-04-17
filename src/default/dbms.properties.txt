@@ -1,4 +1,4 @@
 serverUsername=khattam
-serverPassword=Password123
+serverPassword=
 databaseName=S3G3-RoseDiner
 serverName=golem.csse.rose-hulman.edu
