@@ -52,6 +52,7 @@ public class DatabaseConnectionService {
     public void closeConnection() {
         if (this.connection != null) {
             try {
+                System.out.println("I am closing!!");
                 this.connection.close();
             } catch (SQLException e) {
                 e.printStackTrace();
