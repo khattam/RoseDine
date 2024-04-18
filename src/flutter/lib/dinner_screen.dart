@@ -6,7 +6,7 @@ class DinnerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Add the UI code specific to the brunch screen
+
     return Center(
       child: Text('Dinner Screen'),
     );
