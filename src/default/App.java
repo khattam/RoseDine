@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) {
         // Assuming 'dbms.properties.txt' is in the root of your project folder.
         // If it's located elsewhere, provide the correct path relative to the project root.
-        DatabaseConnectionService dbService = new DatabaseConnectionService("C:\\Users\\khattam\\IdeaProjects\\course-project-s3g3-rosediner\\src\\default\\dbms.properties.txt");
+        DatabaseConnectionService dbService = new DatabaseConnectionService("C:\\Users\\srivasa\\course-project-s3g3-rosediner\\src\\default\\dbms.properties.txt");
 
         // Attempt to connect to the database
         if (dbService.connect()) {
