@@ -43,7 +43,7 @@ public class App {
                         String[] parts = line.split(" ");
                         mealType = parts[1];
                         date = LocalDate.parse(parts[3], DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                        menuService.addMenu(date, mealType, "default timing value");
+                        menuService.addMenu(String.valueOf(date), mealType, "default timing value");
 
                     } else if (line.trim().startsWith("Item:")) {
                         // Extract item name, e.g., "Item: French Fries"
@@ -56,7 +56,7 @@ public class App {
                 e.printStackTrace();
             }
 
-            // Remember to close the connection when you're done
+
             dbService.closeConnection();
         } else {
             System.out.println("Failed to connect to the database.");
