@@ -1,63 +1,68 @@
-// App.java (Located in the 'default' package)
-
 import db.services.DatabaseConnectionService;
-import java.sql.Connection;
 import db.services.MenuService;
-import java.nio.file.Paths;
-import java.nio.file.Path;
-import java.nio.file.Files;
-import java.sql.Connection;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.FileReader;
 import java.io.IOException;
-
-
+import java.sql.Date;
+import java.util.Map;
 
 public class App {
+    private static final String JSON_FILE_PATH = "src/PyScraping/json_output.json";
+    private static final Map<String, String> mealTimings = Map.of(
+            "Breakfast", "7 to 10",
+            "Brunch", "10 to 2",
+            "Lunch", "11 to 2",
+            "Dinner", "5 to 8"
+    );
+
     public static void main(String[] args) {
+        DatabaseConnectionService dbService = new DatabaseConnectionService("src/default/dbms.properties.txt");
 
-        //Make sure you change the filepath here
-        DatabaseConnectionService dbService = new DatabaseConnectionService("C:\\Users\\khattam\\IdeaProjects\\course-project-s3g3-rosediner\\src\\default\\dbms.properties.txt");
-
-        // Attempt to connect to the database
         if (dbService.connect()) {
-            System.out.println("Connected to the database successfully.");
-
-            // Instantiate MenuService with the connection
-            MenuService menuService = new MenuService(dbService);
-
-            //Chane filepath here
-            Path pathToOutput = Paths.get("C:\\Users\\khattam\\IdeaProjects\\course-project-s3g3-rosediner\\src\\PyScraping\\output.txt");
-
             try {
-                // Read all lines from the output.txt file
-                List<String> allLines = Files.readAllLines(pathToOutput);
-                LocalDate date = null;
-                String mealType = null;
+                System.out.println("Connected to the database successfully.");
+                MenuService menuService = new MenuService(dbService);
 
-                // Iterate through the lines
-                for (String line : allLines) {
-                    if (line.startsWith("Scraping")) {
-                        // Extract date and meal type, e.g., "Scraping Breakfast for 2024-03-31"
-                        String[] parts = line.split(" ");
-                        mealType = parts[1];
-                        date = LocalDate.parse(parts[3], DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                        menuService.addMenu(String.valueOf(date), mealType, "default timing value");
+                JSONParser parser = new JSONParser();
+                JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(JSON_FILE_PATH));
 
-                    } else if (line.trim().startsWith("Item:")) {
-                        // Extract item name, e.g., "Item: French Fries"
-                        String itemName = line.trim().substring(6);
-                        menuService.addMenuItem(itemName);
-                    }
-                }
+                jsonObject.forEach((dateStr, value) -> {
+                    Date date = Date.valueOf((String) dateStr);
+                    JSONObject mealtypesObject = (JSONObject) value;
 
-            } catch (IOException e) {
+                    mealtypesObject.forEach((mealType, menuItems) -> {
+                        String timings = mealTimings.get(mealType);
+                        int restaurantId = 1;
+
+                        int menuID = menuService.addMenu(date, timings, (String) mealType, restaurantId);
+                        if (menuID != -1) {
+                            JSONArray itemsArray = (JSONArray) menuItems;
+                            for (Object itemName : itemsArray) {
+                                String name = (String) itemName;
+                                int macroId = 1;
+                                int dietaryId = 1;
+                                int overallStars = 5;
+
+                                int menuItemID = menuService.addMenuItem(name, macroId, dietaryId, overallStars);
+                                if (menuItemID != -1) {
+                                    menuService.addIncludesItem(menuID, menuItemID);
+                                }
+                            }
+                        }
+                    });
+                });
+
+                System.out.println("All menus and menu items inserted successfully.");
+
+            } catch (IOException | ParseException e) {
                 e.printStackTrace();
+            } finally {
+                dbService.closeConnection();
             }
-
-
-            dbService.closeConnection();
         } else {
             System.out.println("Failed to connect to the database.");
         }

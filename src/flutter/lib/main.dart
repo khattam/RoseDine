@@ -5,9 +5,11 @@ import 'brunch_screen.dart';
 import 'lunch_screen.dart';
 import 'dinner_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,12 +20,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey.shade200,
       ),
-      home: ScheduleScreen(),
+      home: const ScheduleScreen(),
     );
   }
 }
 
 class ScheduleScreen extends StatefulWidget {
+  const ScheduleScreen({super.key});
+
   @override
   _ScheduleScreenState createState() => _ScheduleScreenState();
 }
@@ -53,12 +57,13 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         selectedDate.weekday == DateTime.sunday;
 
     return [
-      if (isWeekend) BrunchScreen(),
-      if (!isWeekend) BreakfastScreen(),
-      if (!isWeekend) LunchScreen(),
-      DinnerScreen(),
+      if (isWeekend) BrunchScreen(selectedDate: selectedDate),
+      if (!isWeekend) BreakfastScreen(selectedDate: selectedDate),
+      if (!isWeekend) LunchScreen(selectedDate: selectedDate),
+      DinnerScreen(selectedDate: selectedDate),
     ];
   }
+
 
   String getMealTime() {
     bool isWeekend = selectedDate.weekday == DateTime.saturday ||
@@ -83,14 +88,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
 
     return [
       if (isWeekend)
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
             icon: Icon(Icons.free_breakfast), label: 'Brunch'),
       if (!isWeekend)
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
             icon: Icon(Icons.free_breakfast), label: 'Breakfast'),
       if (!isWeekend)
-        BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: 'Lunch'),
-      BottomNavigationBarItem(icon: Icon(Icons.dinner_dining), label: 'Dinner'),
+        const BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: 'Lunch'),
+      const BottomNavigationBarItem(icon: Icon(Icons.dinner_dining), label: 'Dinner'),
     ];
   }
 
@@ -136,12 +141,12 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         title: Text('$dateStr, $mealTime'),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.arrow_back_ios),
+              icon: const Icon(Icons.arrow_back_ios),
               onPressed: selectedDate.isAfter(DateTime.now())
                   ? () => changeDay(-1)
                   : null),
           IconButton(
-              icon: Icon(Icons.arrow_forward_ios),
+              icon: const Icon(Icons.arrow_forward_ios),
               onPressed: selectedDate.difference(DateTime.now()).inDays < 5
                   ? () => changeDay(1)
                   : null),
@@ -152,7 +157,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               color: getMealStatusColor(),
               shape: BoxShape.circle,
             ),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
           ),
         ],
       ),

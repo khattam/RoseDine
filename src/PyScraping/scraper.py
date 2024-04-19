@@ -25,7 +25,7 @@ def process_section(section, file):
 
 
 def get_meal(meal_name, url, file):
-    chromedriver_path = '/usr/bin/chromedriver'
+    chromedriver_path = 'chromedriver-win64\chromedriver.exe'
     service = Service(executable_path=chromedriver_path)
     driver = webdriver.Chrome(service=service)
 
@@ -51,7 +51,7 @@ def get_meal(meal_name, url, file):
             file.write(f"No {meal_name} button found on {url}\n")
         except TimeoutException:
             file.write(f"Timeout waiting for {meal_name} button on {url}\n")
-            
+
     except Exception as e:
         file.write(f"Error accessing {url}: {e}\n")
     finally:
