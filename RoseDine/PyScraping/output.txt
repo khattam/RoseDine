@@ -1,167 +1,211 @@
-Scraping Dinner for 2024-04-18
-Dinner:
-	Section: roots
-	  Item: Teriyaki Marinated Eggplant
-	  Item: Jasmine Rice
-	  Item: Steamed Snow Peas
-	Section: global
-	  Item: Nacho Bar
-	Section: sizzle
-	  Item: French Fries
-	  Item: Italian Melt
-	  Item: Steamed Peas
-	  Item: Beyond Burger
-	Section: rosies favorites
-	  Item: Penne Marinara with Andouille Sausage and Mushrooms
-	  Item: Breadworks Herb Focaccia
-	  Item: Steamed Broccoli
-	Section: pomodoro
-	  Item: Cheese Pizza
-	  Item: Pepperoni Pizza
-	  Item: Cheeseless Vegetable Pizza
-	Section: kettles
-	  Item: Beef and Pasta
-	  Item: Creamy Sage Potato
-	Section: spa waters
-	  Item: Lemon Basil
-	Section: market
-	  Item: Herb Roasted Chicken
-	  Item: Roasted Red Potatoes
-	  Item: Steamed Peas and Carrots
-Scraping Breakfast for 2024-04-19
+Scraping Breakfast for 2024-04-25
 Breakfast:
 	Section: rise
 	  Item: Scrambled Eggs
-	  Item: Egg and Cheddar Burritos
-	  Item: Tater Tots
-	  Item: Blueberry and Cream Smoothie
-	  Item: Ham and Cheddar Sliders
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: O'brien Potatoes
+	  Item: Turkey and Swiss Croissant
+	  Item: Peaches and Cream Smoothie
 	Section: roots
+	  Item: Buttermilk Pancakes
+	  Item: Chocolate Sauce
+	  Item: Morning Star Bacon
+	  Item: Mixed Berry Compote
 	  Item: Texas French Toast
-	  Item: Caramel Sauce
-	  Item: Mixed Berry
-	  Item: Morning Star Vegan Sausage
 	Section: sizzle
 	  Item: Buttermilk Biscuit
 	  Item: White Pepper Gravy
 	Section: kettles
 	  Item: Old-fashioned Oatmeal
-Scraping Lunch for 2024-04-19
+Scraping Lunch for 2024-04-25
 Lunch:
 	Section: roots
-	  Item: Black Pepper Tamari Tofu
-	  Item: Rice Noodles
-	  Item: Sesame Roasted Broccoli
+	  Item: Impossible Bolognese
+	  Item: Pasta
+	  Item: Roasted Brussel Sprouts
 	Section: global
-	  Item: Snoop Doggs Honey Blazed Ham
-	  Item: Snoop Doggs Mashed Potatoes
-	  Item: Kickin Lickin Collard Greens
+	  Item: Chicken and Shrimp Gumbo
+	  Item: Steamed Brown Rice
+	  Item: Steamed Green Beans
 	Section: sizzle
 	  Item: French Fries
-	  Item: Italian Beef
-	  Item: Cucumber Hummus Wrap
-	  Item: Steamed Corn
+	  Item: Beef Sloppy Jo
+	  Item: Three Cheese Grilled Cheese
+	  Item: Steamed Cauliflower
 	Section: rosies favorites
-	  Item: Creamy Crock Pot Chicken
-	  Item: Steamed White Rice
-	  Item: Steamed Broccoli, Cauliflower and Carrot
+	  Item: Pasta Bar
 	Section: pomodoro
-	  Item: Pepperoni Pizza
 	  Item: Cheese Pizza
-	  Item: Chicken Garlic Aioli Pizza
+	  Item: Pepperoni Pizza
+	  Item: Cheeseless Vegetable Pizza
+	Section: kettles
+	  Item: Chicken Curry
+	  Item: Three Bean and Corn Chili
 	Section: spa waters
-	  Item: Melon Strawberry
+	  Item: Mixed Berry Fresca
 	Section: market
-	  Item: Blackened Chicken with Chili Tomato Sauce
-	  Item: Poblano Brown Rice and Beans
-	  Item: Roasted Choyote Squash and Cherry Tomato
-Scraping Dinner for 2024-04-19
+	  Item: L&A Herb Roasted Chicken
+	  Item: Maple Roasted Sweet Potatoes
+	  Item: Steamed Green Beans
+Scraping Dinner for 2024-04-25
 Dinner:
 	Section: roots
-	  Item: Crispy Cajun Chickpea Cakes
-	  Item: Garlic Lemon Asparagus
-	  Item: Roasted Red Potatoes
+	  Item: Spicy Red Curry Cauliflower Wings
+	  Item: Roasted Potatoes
+	  Item: Steamed Peas and Carrots
 	Section: global
-	  Item: Sesame Chicken and Tamari Fried Rice
-	  Item: Vegetable Eggrolls
+	  Item: Taco Bowl
+	  Item: Roasted Corn and Peppers
+	Section: sizzle
+	  Item: French Fries
+	  Item: Buffalo Chicken Cheddar Flatbread
+	  Item: Roasted Vegetable Sandwich with Sun-dried Tomato Aioli
+	  Item: Steamed Cauliflower
+	Section: rosies favorites
+	  Item: Chimichurri Turkey
+	  Item: Roasted Olive Oil Garlic Smashed Potatoes
+	  Item: Steamed Carrots and Red Peppers
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Cheeseless Vegetable Pizza
+	Section: kettles
+	  Item: Chicken Curry
+	  Item: Three Bean and Corn Chili
+	Section: spa waters
+	  Item: Mixed Berry Fresca
+	Section: market
+	  Item: Sweet Thai Chili Chicken Drumstick
+	  Item: Basmati Rice with Scallions
+	  Item: Agave Glazed Carrots
+Scraping Breakfast for 2024-04-26
+Breakfast:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: Oven-roasted Potatoes
+	  Item: Egg and Cheddar Burritos
+	  Item: Blueberry Mango Tea Smoothie
+	Section: roots
+	  Item: Texas French Toast
+	  Item: Caramel Sauce
+	  Item: Morning Star Vegan Sausage
+	  Item: Peach Compote
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+	Section: kettles
+	  Item: Old-fashioned Oatmeal
+Scraping Lunch for 2024-04-26
+Lunch:
+	Section: roots
+	  Item: Sweet Corn Curry
+	  Item: Brown Rice
+	Section: global
+	  Item: Sweet and Sour Pork Stir Fry
+	  Item: Steamed Jasmine Rice
 	  Item: Steamed Snow Peas
 	Section: sizzle
 	  Item: French Fries
-	  Item: Ham Club Wrap
-	  Item: Egg Salad Slider
-	  Item: Steamed Green Beans
+	  Item: Bbq Shredded Beef
+	  Item: Portabella Mushroom Sandwich
+	  Item: Steamed Peas
 	Section: rosies favorites
-	  Item: Potato Bar
+	  Item: Chicken Coq Au Vin
+	  Item: Roasted Potaotes
+	  Item: Steamed Carrots
 	Section: pomodoro
 	  Item: Pepperoni Pizza
 	  Item: Cheese Pizza
 	  Item: Chicken Garlic Aioli Pizza
 	Section: spa waters
-	  Item: Melon Strawberry
+	  Item: Lemon Lime
 	Section: market
-	  Item: Roasted Chicken with Cilantro and Mango Puree
-	  Item: Potatoes Obrien
+	  Item: Cilantro Chili Chicken
+	  Item: Roasted Potatoes
+	  Item: Steamed Carrots
+Scraping Dinner for 2024-04-26
+Dinner:
+	Section: roots
+	  Item: Stuffed Zucchini Boats
+	  Item: Steamed Carrots
+	  Item: Roasted Fingerlngs
+	Section: global
+	  Item: Ice Cream Bar
+	Section: sizzle
+	  Item: French Fries
+	  Item: Chicken Caesar Wrap
 	  Item: Steamed Broccoli
-Scraping Brunch for 2024-04-20
+	  Item: Oven Roasted Tofu
+	Section: rosies favorites
+	  Item: Breakfast for Dinner!!!!
+	Section: pomodoro
+	  Item: Pepperoni Pizza
+	  Item: Cheese Pizza
+	  Item: Ham, Bacon, and Sweet Corn Creamy Pasta Bake
+	Section: spa waters
+	  Item: Lemon Lime
+	Section: market
+	  Item: Smoked Paprika Roasted Chicken
+	  Item: Cilantro Rice Pilaf
+	  Item: Chili Roasted Broccoli
+Scraping Brunch for 2024-04-27
 Brunch:
 	Section: rise
 	  Item: Scrambled Eggs
-	  Item: Turkey Sausage Links
+	  Item: Cameron Farms Breakfast Sausage
 	  Item: Tater Tots
 	  Item: Tofu Scramble
 	Section: roots
 	  Item: Buttermilk Pancakes
 	  Item: Chocolate Sauce
-	  Item: Spiced Apple Compte
+	  Item: Apple Compote
 	  Item: Morning Star Bacon
 	Section: sizzle
 	  Item: French Fries
-	  Item: Malibu Burger
-	  Item: Steamed Green Beans
-	  Item: Curry Pulled Pork
+	  Item: Pulled Chicken
+	  Item: Roasted Cauliflower and Tomatoes
 	Section: rosies favorites
-	  Item: Sweet Chili Chicken Vegetable Stir Fry
-	  Item: Steamed Jasmine Rice
-	  Item: Soy Garlic Marinated Tofu
-	  Item: Steamed Broccoli
+	  Item: Chorizo Hash
+	  Item: Cilantro Lime Rice
+	  Item: Chili Coriander Roasted Cauliflower
+	  Item: Southwest Roasted Tofu Steaks
 	Section: kettles
 	  Item: Old-fashioned Oatmeal
-	Section: market
-	  Item: Blackened Chicken
-Scraping Brunch for 2024-04-21
+Scraping Brunch for 2024-04-28
 Brunch:
 	Section: rise
 	  Item: Scrambled Eggs
-	  Item: Cameron Farms Breakfast Sausage
+	  Item: Turkey Sausage Links
 	  Item: Fried Potatoes
 	  Item: Biscuits and White Pepper Gravy
 	Section: roots
 	  Item: Texas French Toast
 	  Item: Caramel Sauce
-	  Item: Mixed Berry Compote
+	  Item: Mango Compote
 	  Item: Morning Star Vegan Sausage
 	Section: sizzle
 	  Item: French Fries
-	  Item: Beef Sloppy Jo
-	  Item: Curry Roasted Garbanzo Beans
-	  Item: Steamed Broccoli
+	  Item: Brats
+	  Item: Malibu Burger
+	  Item: Steamed Corn
 	Section: rosies favorites
-	  Item: Turkey Burrito Bowl
+	  Item: Herb Roasted Chicken Thighs
+	  Item: Pasta Marinara
+	  Item: Pesto Roasted Tofu
+	  Item: Steamed Broccoli
 	Section: kettles
 	  Item: Old-fashioned Oatmeal
-Scraping Dinner for 2024-04-21
+Scraping Dinner for 2024-04-28
 Dinner:
 	Section: sizzle
 	  Item: French Fries
-	  Item: Hot Dog Bar
-	  Item: Impossible Sloppy Jo Slider
-	  Item: Steamed Corn
+	  Item: Beef Sloppy Jo
+	  Item: Lentil Sloppy Jo
+	  Item: Steamed Broccoli
 	Section: rosies favorites
-	  Item: Sweet Bbq Roasted Chicken Thighs
-	  Item: Garlic Roasted Potatoes
-	  Item: Pesto Roasted Tofu Steaks
-	  Item: Steamed Broccoli, Cauliflower and Carrot
-Scraping Breakfast for 2024-04-22
+	  Item: Mashed Potato Bar
+Scraping Breakfast for 2024-04-29
 Breakfast:
 	Section: rise
 	  Item: Scrambled Eggs
@@ -170,141 +214,127 @@ Breakfast:
 	  Item: Cheesy Egg
 	  Item: Hot Chocolate
 	Section: roots
-	  Item: Texas French Toast
-	  Item: Caramel Sauce
-	  Item: Morning Star Vegan Sausage
-	  Item: Strawberry Compote
+	  Item: Buttermilk Pancakes
+	  Item: Chocolate Sauce
+	  Item: Mixed Berry Compote
+	  Item: Morning Star Breakfast Sausage Patties
 	Section: sizzle
 	  Item: Buttermilk Biscuit
 	  Item: White Pepper Gravy
 	Section: kettles
 	  Item: Old-fashioned Oatmeal
-Scraping Lunch for 2024-04-22
+Scraping Lunch for 2024-04-29
 Lunch:
-	Section: roots
-	  Item: Sweet Chili Tofu and Broccoli
-	  Item: Lemongrass Rice
+	Section: global
+	  Item: Korean-style Spicy Barbecue Chicken Drumsticks
+	  Item: Steamed Jasmine Rice
 	  Item: Steamed Snow Peas
-	Section: global
-	  Item: Ancho Pork and Hominy Stew
-	  Item: Steamed Brown Rice
-	  Item: Roasted Chayote with Tomato and Garlic
 	Section: sizzle
-	  Item: Turkey Burgers
 	  Item: French Fries
-	  Item: Italian Sub Melt
-	  Item: Veggie Burger
+	  Item: Italian Bagel Melts
 	  Item: Steamed Broccoli
-	  Item: Buffalo Chicken Wrap
 	Section: rosies favorites
-	  Item: Cameron Farms Molasses Peach Bbq Pork Chops
-	  Item: Roasted Potatoes
-	  Item: Beef Shepherd's Pie
+	  Item: Red Wine and Herb Marinated Beef Tips and Button Mushrooms
+	  Item: Parsley Buttered Red Potatoes
+	  Item: Roasted Cauliflower and Tomatoes
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
+	  Item: Meat Lovers Pizza
 	Section: spa waters
 	  Item: Cucumber Lemon
 	Section: market
-	  Item: Cajun-style Chicken Stew
-	  Item: Herb Roasted Potatoes
-	  Item: Steamed Cauliflower
-Scraping Dinner for 2024-04-22
+	  Item: Harissa Roasted Chicken
+	  Item: Steamed Rice
+	  Item: Steamed Corn
+Scraping Dinner for 2024-04-29
 Dinner:
-	Section: roots
-	  Item: Barbecue Tofu
-	  Item: Steamed Peas and Corn
-	  Item: Mac and Cheese
 	Section: global
-	  Item: Chicken and Red Pepper Pasta Alfredo
-	  Item: Garlic Butter Breadsticks
+	  Item: Ground Turkey Lettuce Cup Bar
+	  Item: Steamed Brown Rice
+	  Item: Cameron Farms Sauteed Bok Choy
 	Section: sizzle
-	  Item: Pork Burgers
-	  Item: French Fries
-	  Item: Grilled Cheese
-	  Item: Steamed Carrots
+	  Item: Poutine Bar
 	Section: rosies favorites
-	  Item: Brown Rice Pilaf
+	  Item: Cameron Farms Cajun-inspired Roasted Pork Loin
+	  Item: Creamy Cheddar Grits
+	  Item: Tomato Braised Collard Greens
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
-	  Item: Vegetable Supreme Pizza
+	  Item: Meat Lovers Pizza
 	Section: spa waters
 	  Item: Cucumber Lemon
 	Section: market
-	  Item: Bbq Roasted Chicken
-	  Item: Brown Rice
-	  Item: Garlic Roasted Broccoli
-Scraping Breakfast for 2024-04-23
+	  Item: Hunter's Chicken Stew
+	  Item: Quinoa and Rice Blend
+	  Item: Steamed Broccoli
+Scraping Breakfast for 2024-04-30
 Breakfast:
 	Section: rise
 	  Item: Scrambled Eggs
 	  Item: Cameron Farms Breakfast Sausage
 	  Item: Roasted Potatoes
-	  Item: Ham Cheese Biscuits
+	  Item: Ham Cheese Frittata
 	  Item: Tropical Smoothie
 	Section: roots
-	  Item: Buttermilk Pancakes
-	  Item: Chocolate Sauce
-	  Item: Morning Star Bacon
-	  Item: Blueberry Compote
+	  Item: Texas French Toast
+	  Item: Caramel Sauce
+	  Item: Peach Compote
 	Section: sizzle
 	  Item: Buttermilk Biscuit
 	  Item: White Pepper Gravy
 	Section: kettles
 	  Item: Old-fashioned Oatmeal
-Scraping Lunch for 2024-04-23
+Scraping Lunch for 2024-04-30
 Lunch:
 	Section: roots
-	  Item: Mushroom Stroganoff
-	  Item: Penne Pasta
-	  Item: Roasted Carrots and Cauliflower
+	  Item: Teriyaki Seitan Vegetable Stir Fry
+	  Item: Quinoa Rice Blend
+	  Item: Steamed Broccoli
 	Section: global
-	  Item: Creamy Chicken and Vegetable Masala
-	  Item: Basmati Rice
+	  Item: Moroccan Inspired Beef Daube
+	  Item: Steamed Basmati
+	  Item: Roasted Zucchini and Squash
 	Section: sizzle
 	  Item: French Fries
-	  Item: Chili Cumin Roasted Tofu
-	  Item: Steamed Snow Peas
+	  Item: Ham Cheddar Sliders
+	  Item: Buffalo Roasted Tofu
 	Section: rosies favorites
-	  Item: Beef Bourguignon
-	  Item: Creamy Chive Mashed Potatoes
-	  Item: Steamed Green Beans
+	  Item: Chicken and Sun Dried Tomato Alfredo Pasta
+	  Item: Garlic Butter Breadsticks
+	  Item: California Vegetable Medley
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
-	  Item: Vegetable Supreme Pizza
+	  Item: Chicken Bacon Ranch Pizza
 	Section: spa waters
 	  Item: Strawberry Lime
 	Section: market
-	  Item: Herb Roasted Chicken Breast
-	  Item: Rice Pilaf
-	  Item: Roasted Chayote and Tomatoes
-Scraping Dinner for 2024-04-23
+	  Item: Greek-style Chicken Stew
+	  Item: Lemon Oregano Roasted Potatoes
+	  Item: Roasted Zucchini
+Scraping Dinner for 2024-04-30
 Dinner:
-	Section: roots
-	  Item: Cajun Tempeh
-	  Item: Cilantro Rice
-	  Item: Steamed Carrots
 	Section: global
-	  Item: Sesame Teriyaki Chicken and Vegetable Stir Fry
-	  Item: Steamed Jasmine Rice
-	  Item: Steamed Snow Peas
+	  Item: Shredded Chicken Gyro Bar
+	  Item: Steamed Corn
+	  Item: Roasted Tomato Herb Couscous
 	Section: sizzle
 	  Item: French Fries
-	  Item: Bacon, Lettuce and Tomato Bagel Sandwich
-	  Item: Steamed Corn
-	  Item: Malibu Burger
+	  Item: Turkey Bacon Club Wrap
+	  Item: Dill Garlic Roasted Garbanzo Beans
 	Section: rosies favorites
-	  Item: Ham, Bacon, and Sweet Corn Creamy Pasta Bake
-	  Item: Breadworks Focaccia
+	  Item: Ground Beef and Cheese Stuffed Peppers
+	  Item: Cheesy Hashbrown Casserole
+	  Item: Steamed Green Beans and Carrot
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
-	  Item: Vegetable Supreme Pizza
+	  Item: Chicken Bacon Ranch Pizza
 	Section: spa waters
 	  Item: Strawberry Lime
 	Section: market
-	  Item: Honey-garlic Glazed Chicken Thighs
-	  Item: Smoked Paprika Smashed Potatoes
-	  Item: Tarragon Carrots
+	  Item: Smoked Paprika Chicken Drumsticks
+	  Item: Smashed Garlic Potatoes
+	  Item: Sauteed Spinach

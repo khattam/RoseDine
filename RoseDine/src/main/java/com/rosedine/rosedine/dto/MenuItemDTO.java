@@ -6,11 +6,10 @@ import lombok.Data;
 public class MenuItemDTO {
     private String name;
     private int overallStars;
-    private double fats;
-    private double protein;
-    private double netCarbs;
-    private double calories;
-    private double totalCarbs;
+    private int fats;
+    private int protein;
+    private int Carbs;
+    private int calories;
     private boolean isVegan;
     private boolean isVegetarian;
     private boolean isGlutenFree;

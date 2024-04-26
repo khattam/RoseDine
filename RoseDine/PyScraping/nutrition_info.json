@@ -1,0 +1,3407 @@
+[
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Cameron Farms Breakfast Sausage",
+        "Nutrition": {
+            "Item": "Cameron Farms Breakfast Sausage",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "2g",
+            "calories": "200",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "O'brien Potatoes",
+        "Nutrition": {
+            "Item": "O'brien Potatoes",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "35g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Turkey and Swiss Croissant",
+        "Nutrition": {
+            "Item": "Turkey and Swiss Croissant",
+            "protein": "18g",
+            "fat": "25g",
+            "carbs": "35g",
+            "calories": "420",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Peaches and Cream Smoothie",
+        "Nutrition": {
+            "Item": "Peaches and Cream Smoothie",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "50g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Pancakes",
+        "Nutrition": {
+            "Item": "Buttermilk Pancakes",
+            "protein": "10g",
+            "fat": "15g",
+            "carbs": "50g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Chocolate Sauce",
+        "Nutrition": {
+            "Item": "Chocolate Sauce",
+            "protein": "1g",
+            "fat": "5g",
+            "carbs": "20g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Morning Star Bacon",
+        "Nutrition": {
+            "Item": "Morning Star Bacon",
+            "protein": "7g",
+            "fat": "4g",
+            "carbs": "2g",
+            "calories": "70",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Mixed Berry Compote",
+        "Nutrition": {
+            "Item": "Mixed Berry Compote",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Texas French Toast",
+        "Nutrition": {
+            "Item": "Texas French Toast",
+            "protein": "8g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Biscuit",
+        "Nutrition": {
+            "Item": "Buttermilk Biscuit",
+            "protein": "3g",
+            "fat": "8g",
+            "carbs": "30g",
+            "calories": "220",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "White Pepper Gravy",
+        "Nutrition": {
+            "Item": "White Pepper Gravy",
+            "protein": "2g",
+            "fat": "8g",
+            "carbs": "10g",
+            "calories": "120",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Breakfast",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "30g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Impossible Bolognese",
+        "Nutrition": {
+            "Item": "Impossible Bolognese",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "380",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Pasta",
+        "Nutrition": {
+            "Item": "Pasta",
+            "protein": "10g",
+            "fat": "5g",
+            "carbs": "60g",
+            "calories": "350",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Brussel Sprouts",
+        "Nutrition": {
+            "Item": "Roasted Brussel Sprouts",
+            "protein": "5g",
+            "fat": "8g",
+            "carbs": "20g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Chicken and Shrimp Gumbo",
+        "Nutrition": {
+            "Item": "Chicken and Shrimp Gumbo",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Brown Rice",
+        "Nutrition": {
+            "Item": "Steamed Brown Rice",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "50g",
+            "calories": "220",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Green Beans",
+        "Nutrition": {
+            "Item": "Steamed Green Beans",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "8g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "3g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Beef Sloppy Jo",
+        "Nutrition": {
+            "Item": "Beef Sloppy Jo",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Three Cheese Grilled Cheese",
+        "Nutrition": {
+            "Item": "Three Cheese Grilled Cheese",
+            "protein": "15g",
+            "fat": "25g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Cauliflower",
+        "Nutrition": {
+            "Item": "Steamed Cauliflower",
+            "protein": "3g",
+            "fat": "0g",
+            "carbs": "5g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Pasta Bar",
+        "Nutrition": {
+            "Item": "Pasta Bar",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "50g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "35g",
+            "calories": "280",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Cheeseless Vegetable Pizza",
+        "Nutrition": {
+            "Item": "Cheeseless Vegetable Pizza",
+            "protein": "10g",
+            "fat": "5g",
+            "carbs": "40g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Chicken Curry",
+        "Nutrition": {
+            "Item": "Chicken Curry",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Three Bean and Corn Chili",
+        "Nutrition": {
+            "Item": "Three Bean and Corn Chili",
+            "protein": "10g",
+            "fat": "5g",
+            "carbs": "40g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Mixed Berry Fresca",
+        "Nutrition": {
+            "Item": "Mixed Berry Fresca",
+            "protein": "0g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "L&A Herb Roasted Chicken",
+        "Nutrition": {
+            "Item": "L&A Herb Roasted Chicken",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "0g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Maple Roasted Sweet Potatoes",
+        "Nutrition": {
+            "Item": "Maple Roasted Sweet Potatoes",
+            "protein": "2g",
+            "fat": "1g",
+            "carbs": "30g",
+            "calories": "140",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Green Beans",
+        "Nutrition": {
+            "Item": "Steamed Green Beans",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "6g",
+            "calories": "40",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Spicy Red Curry Cauliflower Wings",
+        "Nutrition": {
+            "Item": "Spicy Red Curry Cauliflower Wings",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "25g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Potatoes",
+        "Nutrition": {
+            "Item": "Roasted Potatoes",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "30g",
+            "calories": "160",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Peas and Carrots",
+        "Nutrition": {
+            "Item": "Steamed Peas and Carrots",
+            "protein": "3g",
+            "fat": "1g",
+            "carbs": "15g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Taco Bowl",
+        "Nutrition": {
+            "Item": "Taco Bowl",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Corn and Peppers",
+        "Nutrition": {
+            "Item": "Roasted Corn and Peppers",
+            "protein": "4g",
+            "fat": "2g",
+            "carbs": "20g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "3g",
+            "fat": "15g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Buffalo Chicken Cheddar Flatbread",
+        "Nutrition": {
+            "Item": "Buffalo Chicken Cheddar Flatbread",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "420",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Vegetable Sandwich with Sun-dried Tomato Aioli",
+        "Nutrition": {
+            "Item": "Roasted Vegetable Sandwich with Sun-dried Tomato Aioli",
+            "protein": "10g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "350",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Cauliflower",
+        "Nutrition": {
+            "Item": "Steamed Cauliflower",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "5g",
+            "calories": "25",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Chimichurri Turkey",
+        "Nutrition": {
+            "Item": "Chimichurri Turkey",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "20g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Olive Oil Garlic Smashed Potatoes",
+        "Nutrition": {
+            "Item": "Roasted Olive Oil Garlic Smashed Potatoes",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Carrots and Red Peppers",
+        "Nutrition": {
+            "Item": "Steamed Carrots and Red Peppers",
+            "protein": "2g",
+            "fat": "1g",
+            "carbs": "15g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "14g",
+            "carbs": "35g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Cheeseless Vegetable Pizza",
+        "Nutrition": {
+            "Item": "Cheeseless Vegetable Pizza",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "40g",
+            "calories": "300",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Chicken Curry",
+        "Nutrition": {
+            "Item": "Chicken Curry",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Three Bean and Corn Chili",
+        "Nutrition": {
+            "Item": "Three Bean and Corn Chili",
+            "protein": "12g",
+            "fat": "5g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Mixed Berry Fresca",
+        "Nutrition": {
+            "Item": "Mixed Berry Fresca",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Sweet Thai Chili Chicken Drumstick",
+        "Nutrition": {
+            "Item": "Sweet Thai Chili Chicken Drumstick",
+            "protein": "18g",
+            "fat": "10g",
+            "carbs": "15g",
+            "calories": "250",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Basmati Rice with Scallions",
+        "Nutrition": {
+            "Item": "Basmati Rice with Scallions",
+            "protein": "4g",
+            "fat": "1g",
+            "carbs": "45g",
+            "calories": "210",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-25",
+        "MealType": "Dinner",
+        "ItemName": "Agave Glazed Carrots",
+        "Nutrition": {
+            "Item": "Agave Glazed Carrots",
+            "protein": "2g",
+            "fat": "1g",
+            "carbs": "25g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Cameron Farms Breakfast Sausage",
+        "Nutrition": {
+            "Item": "Cameron Farms Breakfast Sausage",
+            "protein": "10g",
+            "fat": "15g",
+            "carbs": "5g",
+            "calories": "220",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Oven-roasted Potatoes",
+        "Nutrition": {
+            "Item": "Oven-roasted Potatoes",
+            "protein": "3g",
+            "fat": "2g",
+            "carbs": "25g",
+            "calories": "130",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Egg and Cheddar Burritos",
+        "Nutrition": {
+            "Item": "Egg and Cheddar Burritos",
+            "protein": "18g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "380",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Blueberry Mango Tea Smoothie",
+        "Nutrition": {
+            "Item": "Blueberry Mango Tea Smoothie",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "40g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Texas French Toast",
+        "Nutrition": {
+            "Item": "Texas French Toast",
+            "protein": "10g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Caramel Sauce",
+        "Nutrition": {
+            "Item": "Caramel Sauce",
+            "protein": "0g",
+            "fat": "5g",
+            "carbs": "25g",
+            "calories": "120",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Morning Star Vegan Sausage",
+        "Nutrition": {
+            "Item": "Morning Star Vegan Sausage",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "5g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Peach Compote",
+        "Nutrition": {
+            "Item": "Peach Compote",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "20g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Biscuit",
+        "Nutrition": {
+            "Item": "Buttermilk Biscuit",
+            "protein": "4g",
+            "fat": "10g",
+            "carbs": "25g",
+            "calories": "220",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "White Pepper Gravy",
+        "Nutrition": {
+            "Item": "White Pepper Gravy",
+            "protein": "1g",
+            "fat": "8g",
+            "carbs": "10g",
+            "calories": "120",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Breakfast",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "30g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Sweet Corn Curry",
+        "Nutrition": {
+            "Item": "Sweet Corn Curry",
+            "protein": "8g",
+            "fat": "5g",
+            "carbs": "35g",
+            "calories": "220",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Brown Rice",
+        "Nutrition": {
+            "Item": "Brown Rice",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "45g",
+            "calories": "215",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Sweet and Sour Pork Stir Fry",
+        "Nutrition": {
+            "Item": "Sweet and Sour Pork Stir Fry",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "420",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Jasmine Rice",
+        "Nutrition": {
+            "Item": "Steamed Jasmine Rice",
+            "protein": "4g",
+            "fat": "0g",
+            "carbs": "45g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Snow Peas",
+        "Nutrition": {
+            "Item": "Steamed Snow Peas",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "2g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Bbq Shredded Beef",
+        "Nutrition": {
+            "Item": "BBQ Shredded Beef",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Portabella Mushroom Sandwich",
+        "Nutrition": {
+            "Item": "Portabella Mushroom Sandwich",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "35g",
+            "calories": "280",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Peas",
+        "Nutrition": {
+            "Item": "Steamed Peas",
+            "protein": "5g",
+            "fat": "0.5g",
+            "carbs": "15g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Chicken Coq Au Vin",
+        "Nutrition": {
+            "Item": "Chicken Coq Au Vin",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Potaotes",
+        "Nutrition": {
+            "Item": "Roasted Potatoes",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "30g",
+            "calories": "170",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Carrots",
+        "Nutrition": {
+            "Item": "Steamed Carrots",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "18g",
+            "carbs": "30g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "14g",
+            "carbs": "35g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Chicken Garlic Aioli Pizza",
+        "Nutrition": {
+            "Item": "Chicken Garlic Aioli Pizza",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "420",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Lemon Lime",
+        "Nutrition": {
+            "Item": "Lemon Lime",
+            "protein": "0g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Cilantro Chili Chicken",
+        "Nutrition": {
+            "Item": "Cilantro Chili Chicken",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "20g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Potatoes",
+        "Nutrition": {
+            "Item": "Roasted Potatoes",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "30g",
+            "calories": "160",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Carrots",
+        "Nutrition": {
+            "Item": "Steamed Carrots",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Stuffed Zucchini Boats",
+        "Nutrition": {
+            "Item": "Stuffed Zucchini Boats",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "20g",
+            "calories": "220",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Carrots",
+        "Nutrition": {
+            "Item": "Steamed Carrots",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Fingerlngs",
+        "Nutrition": {
+            "Item": "Roasted Fingerling Potatoes",
+            "protein": "3g",
+            "fat": "2g",
+            "carbs": "25g",
+            "calories": "130",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Ice Cream Bar",
+        "Nutrition": {
+            "Item": "Ice Cream Bar",
+            "protein": "4g",
+            "fat": "10g",
+            "carbs": "30g",
+            "calories": "220",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "3g",
+            "fat": "18g",
+            "carbs": "41g",
+            "calories": "350",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Chicken Caesar Wrap",
+        "Nutrition": {
+            "Item": "Chicken Caesar Wrap",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "520",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "4g",
+            "fat": "1g",
+            "carbs": "10g",
+            "calories": "60",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Oven Roasted Tofu",
+        "Nutrition": {
+            "Item": "Oven Roasted Tofu",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "260",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Breakfast for Dinner!!!!",
+        "Nutrition": {
+            "Item": "Breakfast for Dinner",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "30g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Ham, Bacon, and Sweet Corn Creamy Pasta Bake",
+        "Nutrition": {
+            "Item": "Ham, Bacon, and Sweet Corn Creamy Pasta Bake",
+            "protein": "20g",
+            "fat": "30g",
+            "carbs": "50g",
+            "calories": "600",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Lemon Lime",
+        "Nutrition": {
+            "Item": "Lemon Lime",
+            "protein": "0g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Smoked Paprika Roasted Chicken",
+        "Nutrition": {
+            "Item": "Smoked Paprika Roasted Chicken",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "0g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Cilantro Rice Pilaf",
+        "Nutrition": {
+            "Item": "Cilantro Rice Pilaf",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "40g",
+            "calories": "210",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-26",
+        "MealType": "Dinner",
+        "ItemName": "Chili Roasted Broccoli",
+        "Nutrition": {
+            "Item": "Chili Roasted Broccoli",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "20g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Cameron Farms Breakfast Sausage",
+        "Nutrition": {
+            "Item": "Cameron Farms Breakfast Sausage",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "2g",
+            "calories": "200",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Tater Tots",
+        "Nutrition": {
+            "Item": "Tater Tots",
+            "protein": "2g",
+            "fat": "8g",
+            "carbs": "20g",
+            "calories": "160",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Tofu Scramble",
+        "Nutrition": {
+            "Item": "Tofu Scramble",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "20g",
+            "calories": "220",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Buttermilk Pancakes",
+        "Nutrition": {
+            "Item": "Buttermilk Pancakes",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "50g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Chocolate Sauce",
+        "Nutrition": {
+            "Item": "Chocolate Sauce",
+            "protein": "1g",
+            "fat": "3g",
+            "carbs": "20g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Apple Compote",
+        "Nutrition": {
+            "Item": "Apple Compote",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "20g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Morning Star Bacon",
+        "Nutrition": {
+            "Item": "Morning Star Bacon",
+            "protein": "8g",
+            "fat": "5g",
+            "carbs": "2g",
+            "calories": "80",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "2g",
+            "fat": "10g",
+            "carbs": "35g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Pulled Chicken",
+        "Nutrition": {
+            "Item": "Pulled Chicken",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Roasted Cauliflower and Tomatoes",
+        "Nutrition": {
+            "Item": "Roasted Cauliflower and Tomatoes",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "20g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Chorizo Hash",
+        "Nutrition": {
+            "Item": "Chorizo Hash",
+            "protein": "20g",
+            "fat": "25g",
+            "carbs": "35g",
+            "calories": "450",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Cilantro Lime Rice",
+        "Nutrition": {
+            "Item": "Cilantro Lime Rice",
+            "protein": "4g",
+            "fat": "2g",
+            "carbs": "50g",
+            "calories": "240",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Chili Coriander Roasted Cauliflower",
+        "Nutrition": {
+            "Item": "Chili Coriander Roasted Cauliflower",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "25g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Southwest Roasted Tofu Steaks",
+        "Nutrition": {
+            "Item": "Southwest Roasted Tofu Steaks",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "380",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-27",
+        "MealType": "Brunch",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "27g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Turkey Sausage Links",
+        "Nutrition": {
+            "Item": "Turkey Sausage Links",
+            "protein": "10g",
+            "fat": "5g",
+            "carbs": "2g",
+            "calories": "100",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Fried Potatoes",
+        "Nutrition": {
+            "Item": "Fried Potatoes",
+            "protein": "2g",
+            "fat": "10g",
+            "carbs": "30g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Biscuits and White Pepper Gravy",
+        "Nutrition": {
+            "Item": "Biscuits and White Pepper Gravy",
+            "protein": "8g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Texas French Toast",
+        "Nutrition": {
+            "Item": "Texas French Toast",
+            "protein": "8g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Caramel Sauce",
+        "Nutrition": {
+            "Item": "Caramel Sauce",
+            "protein": "0g",
+            "fat": "5g",
+            "carbs": "20g",
+            "calories": "120",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Mango Compote",
+        "Nutrition": {
+            "Item": "Mango Compote",
+            "protein": "0g",
+            "fat": "0g",
+            "carbs": "40g",
+            "calories": "160",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Morning Star Vegan Sausage",
+        "Nutrition": {
+            "Item": "Morning Star Vegan Sausage",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "5g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "3g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Brats",
+        "Nutrition": {
+            "Item": "Brats",
+            "protein": "20g",
+            "fat": "25g",
+            "carbs": "5g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Malibu Burger",
+        "Nutrition": {
+            "Item": "Malibu Burger",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "520",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Steamed Corn",
+        "Nutrition": {
+            "Item": "Steamed Corn",
+            "protein": "3g",
+            "fat": "1g",
+            "carbs": "20g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Herb Roasted Chicken Thighs",
+        "Nutrition": {
+            "Item": "Herb Roasted Chicken Thighs",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "0g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Pasta Marinara",
+        "Nutrition": {
+            "Item": "Pasta Marinara",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "60g",
+            "calories": "380",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Pesto Roasted Tofu",
+        "Nutrition": {
+            "Item": "Pesto Roasted Tofu",
+            "protein": "18g",
+            "fat": "15g",
+            "carbs": "25g",
+            "calories": "350",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "4g",
+            "fat": "0g",
+            "carbs": "6g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Brunch",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "30g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Dinner",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "2g",
+            "fat": "10g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Dinner",
+        "ItemName": "Beef Sloppy Jo",
+        "Nutrition": {
+            "Item": "Beef Sloppy Jo",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "420",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Dinner",
+        "ItemName": "Lentil Sloppy Jo",
+        "Nutrition": {
+            "Item": "Lentil Sloppy Jo",
+            "protein": "12g",
+            "fat": "8g",
+            "carbs": "35g",
+            "calories": "280",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "3g",
+            "fat": "0g",
+            "carbs": "6g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-28",
+        "MealType": "Dinner",
+        "ItemName": "Mashed Potato Bar",
+        "Nutrition": {
+            "Item": "Mashed Potato Bar",
+            "protein": "5g",
+            "fat": "10g",
+            "carbs": "40g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Bacon",
+        "Nutrition": {
+            "Item": "Bacon",
+            "protein": "6g",
+            "fat": "12g",
+            "carbs": "0g",
+            "calories": "120",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Fried Wedges",
+        "Nutrition": {
+            "Item": "Fried Wedges",
+            "protein": "3g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "280",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Cheesy Egg",
+        "Nutrition": {
+            "Item": "Cheesy Egg",
+            "protein": "15g",
+            "fat": "10g",
+            "carbs": "5g",
+            "calories": "200",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Hot Chocolate",
+        "Nutrition": {
+            "Item": "Hot Chocolate",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "30g",
+            "calories": "200",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Pancakes",
+        "Nutrition": {
+            "Item": "Buttermilk Pancakes",
+            "protein": "8g",
+            "fat": "12g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Chocolate Sauce",
+        "Nutrition": {
+            "Item": "Chocolate Sauce",
+            "protein": "1g",
+            "fat": "3g",
+            "carbs": "20g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Mixed Berry Compote",
+        "Nutrition": {
+            "Item": "Mixed Berry Compote",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Morning Star Breakfast Sausage Patties",
+        "Nutrition": {
+            "Item": "Morning Star Breakfast Sausage Patties",
+            "protein": "8g",
+            "fat": "5g",
+            "carbs": "10g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Biscuit",
+        "Nutrition": {
+            "Item": "Buttermilk Biscuit",
+            "protein": "4g",
+            "fat": "12g",
+            "carbs": "25g",
+            "calories": "230",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "White Pepper Gravy",
+        "Nutrition": {
+            "Item": "White Pepper Gravy",
+            "protein": "2g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "170",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Breakfast",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "30g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Korean-style Spicy Barbecue Chicken Drumsticks",
+        "Nutrition": {
+            "Item": "Korean-style Spicy Barbecue Chicken Drumsticks",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "20g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Jasmine Rice",
+        "Nutrition": {
+            "Item": "Steamed Jasmine Rice",
+            "protein": "3g",
+            "fat": "0g",
+            "carbs": "45g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Snow Peas",
+        "Nutrition": {
+            "Item": "Steamed Snow Peas",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "6g",
+            "calories": "40",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "2g",
+            "fat": "10g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Italian Bagel Melts",
+        "Nutrition": {
+            "Item": "Italian Bagel Melts",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "4g",
+            "fat": "1g",
+            "carbs": "10g",
+            "calories": "60",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Red Wine and Herb Marinated Beef Tips and Button Mushrooms",
+        "Nutrition": {
+            "Item": "Red Wine and Herb Marinated Beef Tips and Button Mushrooms",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Parsley Buttered Red Potatoes",
+        "Nutrition": {
+            "Item": "Parsley Buttered Red Potatoes",
+            "protein": "3g",
+            "fat": "7g",
+            "carbs": "25g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Cauliflower and Tomatoes",
+        "Nutrition": {
+            "Item": "Roasted Cauliflower and Tomatoes",
+            "protein": "5g",
+            "fat": "7g",
+            "carbs": "20g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "30g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Meat Lovers Pizza",
+        "Nutrition": {
+            "Item": "Meat Lovers Pizza",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "550",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Cucumber Lemon",
+        "Nutrition": {
+            "Item": "Cucumber Lemon",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Harissa Roasted Chicken",
+        "Nutrition": {
+            "Item": "Harissa Roasted Chicken",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "0g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Rice",
+        "Nutrition": {
+            "Item": "Steamed Rice",
+            "protein": "4g",
+            "fat": "0g",
+            "carbs": "45g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Corn",
+        "Nutrition": {
+            "Item": "Steamed Corn",
+            "protein": "3g",
+            "fat": "1g",
+            "carbs": "20g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Ground Turkey Lettuce Cup Bar",
+        "Nutrition": {
+            "Item": "Ground Turkey Lettuce Cup Bar",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "280",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Brown Rice",
+        "Nutrition": {
+            "Item": "Steamed Brown Rice",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "40g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Cameron Farms Sauteed Bok Choy",
+        "Nutrition": {
+            "Item": "Cameron Farms Sauteed Bok Choy",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "10g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Poutine Bar",
+        "Nutrition": {
+            "Item": "Poutine Bar",
+            "protein": "12g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "450",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Cameron Farms Cajun-inspired Roasted Pork Loin",
+        "Nutrition": {
+            "Item": "Cameron Farms Cajun-inspired Roasted Pork Loin",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "5g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Creamy Cheddar Grits",
+        "Nutrition": {
+            "Item": "Creamy Cheddar Grits",
+            "protein": "8g",
+            "fat": "12g",
+            "carbs": "40g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Tomato Braised Collard Greens",
+        "Nutrition": {
+            "Item": "Tomato Braised Collard Greens",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "15g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Meat Lovers Pizza",
+        "Nutrition": {
+            "Item": "Meat Lovers Pizza",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "550",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Cucumber Lemon",
+        "Nutrition": {
+            "Item": "Cucumber Lemon",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "15g",
+            "calories": "60",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Hunter's Chicken Stew",
+        "Nutrition": {
+            "Item": "Hunter's Chicken Stew",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Quinoa and Rice Blend",
+        "Nutrition": {
+            "Item": "Quinoa and Rice Blend",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "30g",
+            "calories": "160",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-29",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "4g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Scrambled Eggs",
+        "Nutrition": {
+            "Item": "Scrambled Eggs",
+            "protein": "12g",
+            "fat": "10g",
+            "carbs": "2g",
+            "calories": "160",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Cameron Farms Breakfast Sausage",
+        "Nutrition": {
+            "Item": "Cameron Farms Breakfast Sausage",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "5g",
+            "calories": "230",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Roasted Potatoes",
+        "Nutrition": {
+            "Item": "Roasted Potatoes",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "30g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Ham Cheese Frittata",
+        "Nutrition": {
+            "Item": "Ham Cheese Frittata",
+            "protein": "20g",
+            "fat": "15g",
+            "carbs": "10g",
+            "calories": "280",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Tropical Smoothie",
+        "Nutrition": {
+            "Item": "Tropical Smoothie",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "50g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Texas French Toast",
+        "Nutrition": {
+            "Item": "Texas French Toast",
+            "protein": "10g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Caramel Sauce",
+        "Nutrition": {
+            "Item": "Caramel Sauce",
+            "protein": "0g",
+            "fat": "6g",
+            "carbs": "25g",
+            "calories": "150",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Peach Compote",
+        "Nutrition": {
+            "Item": "Peach Compote",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "25g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Buttermilk Biscuit",
+        "Nutrition": {
+            "Item": "Buttermilk Biscuit",
+            "protein": "5g",
+            "fat": "12g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "White Pepper Gravy",
+        "Nutrition": {
+            "Item": "White Pepper Gravy",
+            "protein": "2g",
+            "fat": "5g",
+            "carbs": "10g",
+            "calories": "90",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Breakfast",
+        "ItemName": "Old-fashioned Oatmeal",
+        "Nutrition": {
+            "Item": "Old-fashioned Oatmeal",
+            "protein": "5g",
+            "fat": "2g",
+            "carbs": "30g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Teriyaki Seitan Vegetable Stir Fry",
+        "Nutrition": {
+            "Item": "Teriyaki Seitan Vegetable Stir Fry",
+            "protein": "18g",
+            "fat": "8g",
+            "carbs": "35g",
+            "calories": "320",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Quinoa Rice Blend",
+        "Nutrition": {
+            "Item": "Quinoa Rice Blend",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "40g",
+            "calories": "210",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Broccoli",
+        "Nutrition": {
+            "Item": "Steamed Broccoli",
+            "protein": "4g",
+            "fat": "0.5g",
+            "carbs": "8g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Moroccan Inspired Beef Daube",
+        "Nutrition": {
+            "Item": "Moroccan Inspired Beef Daube",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Steamed Basmati",
+        "Nutrition": {
+            "Item": "Steamed Basmati",
+            "protein": "5g",
+            "fat": "0g",
+            "carbs": "40g",
+            "calories": "200",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Zucchini and Squash",
+        "Nutrition": {
+            "Item": "Roasted Zucchini and Squash",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "20g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "2g",
+            "fat": "15g",
+            "carbs": "40g",
+            "calories": "300",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Ham Cheddar Sliders",
+        "Nutrition": {
+            "Item": "Ham Cheddar Sliders",
+            "protein": "18g",
+            "fat": "15g",
+            "carbs": "30g",
+            "calories": "360",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Buffalo Roasted Tofu",
+        "Nutrition": {
+            "Item": "Buffalo Roasted Tofu",
+            "protein": "18g",
+            "fat": "15g",
+            "carbs": "20g",
+            "calories": "320",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Chicken and Sun Dried Tomato Alfredo Pasta",
+        "Nutrition": {
+            "Item": "Chicken and Sun Dried Tomato Alfredo Pasta",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "50g",
+            "calories": "550",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Garlic Butter Breadsticks",
+        "Nutrition": {
+            "Item": "Garlic Butter Breadsticks",
+            "protein": "5g",
+            "fat": "12g",
+            "carbs": "35g",
+            "calories": "250",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "California Vegetable Medley",
+        "Nutrition": {
+            "Item": "California Vegetable Medley",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "15g",
+            "calories": "120",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "320",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "18g",
+            "carbs": "35g",
+            "calories": "380",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Chicken Bacon Ranch Pizza",
+        "Nutrition": {
+            "Item": "Chicken Bacon Ranch Pizza",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "40g",
+            "calories": "550",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Strawberry Lime",
+        "Nutrition": {
+            "Item": "Strawberry Lime",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "20g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Greek-style Chicken Stew",
+        "Nutrition": {
+            "Item": "Greek-style Chicken Stew",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "25g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Lemon Oregano Roasted Potatoes",
+        "Nutrition": {
+            "Item": "Lemon Oregano Roasted Potatoes",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "25g",
+            "calories": "150",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Lunch",
+        "ItemName": "Roasted Zucchini",
+        "Nutrition": {
+            "Item": "Roasted Zucchini",
+            "protein": "2g",
+            "fat": "5g",
+            "carbs": "10g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Shredded Chicken Gyro Bar",
+        "Nutrition": {
+            "Item": "Shredded Chicken Gyro Bar",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Corn",
+        "Nutrition": {
+            "Item": "Steamed Corn",
+            "protein": "3g",
+            "fat": "1g",
+            "carbs": "20g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Roasted Tomato Herb Couscous",
+        "Nutrition": {
+            "Item": "Roasted Tomato Herb Couscous",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "35g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "French Fries",
+        "Nutrition": {
+            "Item": "French Fries",
+            "protein": "3g",
+            "fat": "15g",
+            "carbs": "30g",
+            "calories": "250",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Turkey Bacon Club Wrap",
+        "Nutrition": {
+            "Item": "Turkey Bacon Club Wrap",
+            "protein": "30g",
+            "fat": "25g",
+            "carbs": "35g",
+            "calories": "520",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Dill Garlic Roasted Garbanzo Beans",
+        "Nutrition": {
+            "Item": "Dill Garlic Roasted Garbanzo Beans",
+            "protein": "10g",
+            "fat": "5g",
+            "carbs": "20g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Ground Beef and Cheese Stuffed Peppers",
+        "Nutrition": {
+            "Item": "Ground Beef and Cheese Stuffed Peppers",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "25g",
+            "calories": "380",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Cheesy Hashbrown Casserole",
+        "Nutrition": {
+            "Item": "Cheesy Hashbrown Casserole",
+            "protein": "10g",
+            "fat": "25g",
+            "carbs": "35g",
+            "calories": "400",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Steamed Green Beans and Carrot",
+        "Nutrition": {
+            "Item": "Steamed Green Beans and Carrot",
+            "protein": "2g",
+            "fat": "0g",
+            "carbs": "10g",
+            "calories": "50",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Cheese Pizza",
+        "Nutrition": {
+            "Item": "Cheese Pizza",
+            "protein": "12g",
+            "fat": "15g",
+            "carbs": "35g",
+            "calories": "350",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Pepperoni Pizza",
+        "Nutrition": {
+            "Item": "Pepperoni Pizza",
+            "protein": "12g",
+            "fat": "18g",
+            "carbs": "35g",
+            "calories": "380",
+            "isVegan": false,
+            "isVegetarian": true,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Chicken Bacon Ranch Pizza",
+        "Nutrition": {
+            "Item": "Chicken Bacon Ranch Pizza",
+            "protein": "18g",
+            "fat": "22g",
+            "carbs": "40g",
+            "calories": "450",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": false
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Strawberry Lime",
+        "Nutrition": {
+            "Item": "Strawberry Lime",
+            "protein": "1g",
+            "fat": "0g",
+            "carbs": "20g",
+            "calories": "80",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Smoked Paprika Chicken Drumsticks",
+        "Nutrition": {
+            "Item": "Smoked Paprika Chicken Drumsticks",
+            "protein": "30g",
+            "fat": "15g",
+            "carbs": "0g",
+            "calories": "300",
+            "isVegan": false,
+            "isVegetarian": false,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Smashed Garlic Potatoes",
+        "Nutrition": {
+            "Item": "Smashed Garlic Potatoes",
+            "protein": "5g",
+            "fat": "3g",
+            "carbs": "35g",
+            "calories": "180",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    },
+    {
+        "Date": "2024-04-30",
+        "MealType": "Dinner",
+        "ItemName": "Sauteed Spinach",
+        "Nutrition": {
+            "Item": "Sauteed Spinach",
+            "protein": "3g",
+            "fat": "5g",
+            "carbs": "10g",
+            "calories": "100",
+            "isVegan": true,
+            "isVegetarian": true,
+            "isGlutenFree": true
+        }
+    }
+]

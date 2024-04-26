@@ -29,11 +29,10 @@ public class MenuItemRepository {
             MenuItemDTO menuItem = new MenuItemDTO();
             menuItem.setName(rs.getString("Name"));
             menuItem.setOverallStars(rs.getInt("OverallStars"));
-            menuItem.setFats(rs.getDouble("Fats"));
-            menuItem.setProtein(rs.getDouble("Protein"));
-            menuItem.setNetCarbs(rs.getDouble("Net_Carbs"));
-            menuItem.setCalories(rs.getDouble("Calories"));
-            menuItem.setTotalCarbs(rs.getDouble("Total_Carbs"));
+            menuItem.setFats(rs.getInt("Fats"));
+            menuItem.setProtein(rs.getInt("Protein"));
+            menuItem.setCarbs(rs.getInt("Carbs"));
+            menuItem.setCalories(rs.getInt("Calories"));
             menuItem.setVegan(rs.getBoolean("Is_Vegan"));
             menuItem.setVegetarian(rs.getBoolean("Is_Vegetarian"));
             menuItem.setGlutenFree(rs.getBoolean("Is_Gluten_Free"));
