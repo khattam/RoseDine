@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17a77fd5-ab0a-4d3e-9a82-14dc85cbce3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RoseDine/flutter/lib/Auth.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RoseDine/flutter/lib/ScheduleScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/RoseDine/flutter/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +37,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/srivasa/IdeaProjects/course-project-s3g3-rosediner",
+    "last_opened_file_path": "C:/Users/khattam/Agnay/course-project-s3g3-rosediner/RoseDine",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +87,7 @@
       <workItem from="1714098053107" duration="711000" />
       <workItem from="1714098778747" duration="1510000" />
       <workItem from="1714100305432" duration="5450000" />
+      <workItem from="1714114527759" duration="53000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'ScheduleScreen.dart';  // Next screen after authentication
+import 'ScheduleScreen.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -13,41 +13,47 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
-  // Backend URL
+  bool _isLogin = true;
+
   final String backendUrl = 'http://localhost:8081/api/users';
 
-  // Function to register a user
-  Future<void> registerUser(String email, String password) async {
+  Future<void> _submitForm() async {
+    final email = _emailController.text;
+    final password = _passwordController.text;
+
+    final url = Uri.parse(
+        'http://localhost:8081/api/users/${_isLogin ? 'login' : 'register'}');
+
     final response = await http.post(
-      Uri.parse('http://localhost:8081/api/users/register'),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: json.encode({
-        'email': email,
-        'password': password,
-      }),
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'email': email, 'password': password}),
     );
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Registration successful')),
+        SnackBar(
+          content: Text(
+              _isLogin ? 'Login successful' : 'Registration successful'),
+        ),
       );
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => ScheduleScreen()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to register: ${response.body}')),
+        SnackBar(
+          content: Text(
+              'Failed to ${_isLogin ? 'log in' : 'register'}: ${response.body}'),
+        ),
       );
     }
   }
 
-  // Function to validate email and password
   String? _emailValidator(String? email) {
     if (email == null || !EmailValidator.validate(email)) {
       return 'Please enter a valid email address';
@@ -76,7 +82,7 @@ class _AuthScreenState extends State<AuthScreen> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Welcome to RoseDine',
@@ -104,17 +110,35 @@ class _AuthScreenState extends State<AuthScreen> {
                 obscureText: true,
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    final email = _emailController.text;
-                    final password = _passwordController.text;
-                    registerUser(email, password);
-                  }
-                },
-                child: const Text('Register'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        _isLogin = true;
+                      });
+                      if (_formKey.currentState!.validate()) {
+                        _submitForm();
+                      }
+                    },
+                    child: const Text('Login'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        _isLogin = false;
+                      });
+                      if (_formKey.currentState!.validate()) {
+                        _submitForm();
+                      }
+                    },
+                    child: const Text('Register'),
+                  ),
+                ],
               ),
-              ElevatedButton(
+              const SizedBox(height: 20),
+              TextButton(
                 onPressed: _bypass,
                 child: const Text('Bypass'),
               ),
@@ -125,9 +149,8 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
 
-  // Function to bypass authentication
   void _bypass() {
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => ScheduleScreen()),
     );

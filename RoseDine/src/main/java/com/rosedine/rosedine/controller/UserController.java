@@ -60,7 +60,6 @@ public class UserController {
                 return ResponseEntity.status(401).body("Invalid email or password");
             }
         } catch (Exception e) {
-            // Handle unexpected errors
             return ResponseEntity.status(500).body("Internal server error: " + e.getMessage());
         }
     }
