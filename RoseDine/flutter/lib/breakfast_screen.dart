@@ -1,9 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-
-import 'MenuForDate.dart';
-import 'menu_repository.dart';
+import 'menu_item_screen.dart';
 
 class BreakfastScreen extends StatelessWidget {
   final DateTime selectedDate;
@@ -12,27 +8,6 @@ class BreakfastScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateString = DateFormat('yyyy-MM-dd').format(selectedDate);
-
-    return FutureBuilder<Map<String, dynamic>>(
-      future: MenuRepository().loadMenuData(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        } else if (snapshot.hasError) {
-          return Center(child: Text('Error: ${snapshot.error}'));
-        } else if (snapshot.hasData) {
-          final menuForDate = MenuForDate.fromJson(snapshot.data![dateString] ?? {});
-          final breakfastItems = menuForDate.getMealsForType('Breakfast');
-
-          return ListView.builder(
-            itemCount: breakfastItems.length,
-            itemBuilder: (context, index) => ListTile(title: Text(breakfastItems[index])),
-          );
-        } else {
-          return const Center(child: Text('No data available for this date.'));
-        }
-      },
-    );
+    return MenuItemScreen(selectedDate: selectedDate, mealType: 'Breakfast');
   }
 }
