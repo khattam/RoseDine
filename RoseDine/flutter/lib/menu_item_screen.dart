@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
+import 'package:rosedine/widgets/menu_item_widget.dart';
 import 'dart:convert';
 import 'meal_provider.dart';
 
@@ -27,9 +28,6 @@ class MenuItemScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(mealType),
-      ),
       body: FutureBuilder<List<dynamic>>(
         future: fetchMenuItems(selectedDate, mealType),
         builder: (context, snapshot) {
@@ -40,25 +38,24 @@ class MenuItemScreen extends ConsumerWidget {
           } else if (snapshot.hasData) {
             final menuItems = snapshot.data!;
 
-            return ListView.builder(
-              itemCount: menuItems.length,
+            return ListView.separated(
+              itemCount: (menuItems.length / 2).ceil(),
+              separatorBuilder: (context, index) => const SizedBox(height: 16),
               itemBuilder: (context, index) {
-                final item = menuItems[index];
-                return ListTile(
-                  title: Text(item['name']),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Stars: ${item['overallStars']}'),
-                      Text('Fats: ${item['fats']}g'),
-                      Text('Protein: ${item['protein']}g'),
-                      Text('Calories: ${item['calories']}'),
-                      Text('Gluten-Free: ${item['glutenFree']}'),
-                      Text('Vegetarian: ${item['vegetarian']}'),
-                      Text('Vegan: ${item['vegan']}'),
-                      Text('Carbs: ${item['carbs']}g'),
-                    ],
-                  ),
+                final startIndex = index * 2;
+                final endIndex = startIndex + 2 < menuItems.length ? startIndex + 2 : menuItems.length;
+                final rowItems = menuItems.sublist(startIndex, endIndex);
+
+                return Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: rowItems.map((item) {
+                    return Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: MenuItemWidget(menuItem: item),
+                      ),
+                    );
+                  }).toList(),
                 );
               },
             );
@@ -69,4 +66,5 @@ class MenuItemScreen extends ConsumerWidget {
       ),
     );
   }
+
 }
