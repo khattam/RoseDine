@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+
+class CirclesWidget extends StatelessWidget {
+  final Map<String, dynamic> menuItem;
+
+  const CirclesWidget({Key? key, required this.menuItem}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final isGlutenFree = menuItem['glutenFree'];
+    final isVegan = menuItem['vegan'];
+    final isVegetarian = menuItem['vegetarian'];
+
+    if (!isGlutenFree && !isVegan && !isVegetarian) {
+      return Container(
+        margin: EdgeInsets.only(left: 8),
+        width: 40,
+        height: 40,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.red[900],
+        ),
+        child: Center(
+          child: Text(
+            'NVG',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+            ),
+          ),
+        ),
+      );
+    }
+
+    return Row(
+      children: [
+        if (isGlutenFree)
+          Container(
+            margin: EdgeInsets.only(left: 8),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.brown,
+            ),
+            child: Center(
+              child: Text(
+                'GF',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        if (isVegan)
+          Container(
+            margin: EdgeInsets.only(left: 8),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.lightGreen,
+            ),
+            child: Center(
+              child: Text(
+                'V',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        if (isVegetarian)
+          Container(
+            margin: EdgeInsets.only(left: 8),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.green,
+            ),
+            child: Center(
+              child: Text(
+                'VG',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}

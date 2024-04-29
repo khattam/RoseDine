@@ -12,6 +12,14 @@ class ScheduleScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
     final selectedMealType = ref.watch(selectedMealTypeProvider);
 
+    // Set the initial meal type based on the selected date and time
+    final initialMealType = _getInitialMealType(selectedDate);
+    if (selectedMealType.isEmpty) {
+      Future(() {
+        ref.read(selectedMealTypeProvider.notifier).state = initialMealType;
+      });
+    }
+
     String dateStr = DateFormat('EEE, dd MMM').format(selectedDate);
     String mealTime = getMealTime(selectedDate, selectedMealType);
 
@@ -20,7 +28,20 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('$dateStr, $mealTime'),
+        title: Text(
+          '$dateStr, $mealTime',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.arrow_back_ios),
@@ -59,6 +80,24 @@ class ScheduleScreen extends ConsumerWidget {
         type: BottomNavigationBarType.fixed,
       ),
     );
+  }
+
+  String _getInitialMealType(DateTime selectedDate) {
+    final isWeekend = selectedDate.weekday == DateTime.saturday ||
+        selectedDate.weekday == DateTime.sunday;
+
+    if (isWeekend) {
+      return 'Brunch';
+    } else {
+      final currentTime = TimeOfDay.now();
+      if (currentTime.hour < 11) {
+        return 'Breakfast';
+      } else if (currentTime.hour < 17) {
+        return 'Lunch';
+      } else {
+        return 'Dinner';
+      }
+    }
   }
 
   String getMealTime(DateTime selectedDate, String mealType) {
@@ -117,13 +156,23 @@ class ScheduleScreen extends ConsumerWidget {
     return [
       if (isWeekend)
         const BottomNavigationBarItem(
-            icon: Icon(Icons.free_breakfast), label: 'Brunch'),
+          icon: Icon(Icons.free_breakfast),
+          label: 'Brunch',
+        ),
       if (!isWeekend)
         const BottomNavigationBarItem(
-            icon: Icon(Icons.free_breakfast), label: 'Breakfast'),
+          icon: Icon(Icons.free_breakfast),
+          label: 'Breakfast',
+        ),
       if (!isWeekend)
-        const BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: 'Lunch'),
-      const BottomNavigationBarItem(icon: Icon(Icons.dinner_dining), label: 'Dinner'),
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.lunch_dining),
+          label: 'Lunch',
+        ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.dinner_dining),
+        label: 'Dinner',
+      ),
     ];
   }
 }

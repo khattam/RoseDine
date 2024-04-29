@@ -5,14 +5,12 @@ import 'Auth.dart';
 void main() {
   runApp(
     ProviderScope(
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,10 +18,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.grey.shade200,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          background: Color(0xFFF0F0F0), // Light steel grey color
+        ),
       ),
-      home: const AuthScreen(),
+      home: AuthScreen(),
     );
   }
 }
