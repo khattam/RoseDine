@@ -1,53 +1,109 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'breakfast_screen.dart';
-import 'brunch_screen.dart';
-import 'lunch_screen.dart';
-import 'dinner_screen.dart';
+import 'meal_provider.dart';
+import 'menu_item_screen.dart';
 
-class ScheduleScreen extends StatefulWidget {
+class ScheduleScreen extends ConsumerWidget {
   const ScheduleScreen({super.key});
 
   @override
-  _ScheduleScreenState createState() => _ScheduleScreenState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedDate = ref.watch(selectedDateProvider);
+    final selectedMealType = ref.watch(selectedMealTypeProvider);
 
-class _ScheduleScreenState extends State<ScheduleScreen> {
-  int _selectedIndex = 0;
-  DateTime selectedDate = DateTime.now();
+    // Set the initial meal type based on the selected date and time
+    final initialMealType = _getInitialMealType(selectedDate);
+    if (selectedMealType.isEmpty) {
+      Future(() {
+        ref.read(selectedMealTypeProvider.notifier).state = initialMealType;
+      });
+    }
 
-  List<Widget> get _widgetOptions => _getMealScreens();
-  List<BottomNavigationBarItem> get _navBarItems => _getNavBarItems();
+    String dateStr = DateFormat('EEE, dd MMM').format(selectedDate);
+    String mealTime = getMealTime(selectedDate, selectedMealType);
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    final navBarItems = _getNavBarItems(selectedDate);
+    final currentIndex = navBarItems.indexWhere((item) => item.label == selectedMealType);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          '$dateStr, $mealTime',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: selectedDate.isAfter(DateTime.now())
+                ? () => ref.read(selectedDateProvider.notifier).state =
+                selectedDate.subtract(const Duration(days: 1))
+                : null,
+          ),
+          IconButton(
+            icon: const Icon(Icons.arrow_forward_ios),
+            onPressed: selectedDate.difference(DateTime.now()).inDays < 5
+                ? () => ref.read(selectedDateProvider.notifier).state =
+                selectedDate.add(const Duration(days: 1))
+                : null,
+          ),
+          Container(
+            width: 20,
+            height: 20,
+            decoration: BoxDecoration(
+              color: getMealStatusColor(selectedDate, selectedMealType),
+              shape: BoxShape.circle,
+            ),
+            margin: const EdgeInsets.all(10),
+          ),
+        ],
+      ),
+      body: Center(child: MenuItemScreen(mealType: selectedMealType)),
+      bottomNavigationBar: BottomNavigationBar(
+        items: navBarItems,
+        currentIndex: currentIndex >= 0 ? currentIndex : 0,
+        selectedItemColor: Theme.of(context).primaryColor,
+        onTap: (index) {
+          ref.read(selectedMealTypeProvider.notifier).state =
+          navBarItems[index].label!;
+        },
+        type: BottomNavigationBarType.fixed,
+      ),
+    );
   }
 
-  void changeDay(int days) {
-    setState(() {
-      selectedDate = selectedDate.add(Duration(days: days));
-      _selectedIndex = 0;
-    });
-  }
-
-  List<Widget> _getMealScreens() {
-    bool isWeekend = selectedDate.weekday == DateTime.saturday ||
+  String _getInitialMealType(DateTime selectedDate) {
+    final isWeekend = selectedDate.weekday == DateTime.saturday ||
         selectedDate.weekday == DateTime.sunday;
 
-    return [
-      if (isWeekend) BrunchScreen(selectedDate: selectedDate),
-      if (!isWeekend) BreakfastScreen(selectedDate: selectedDate),
-      if (!isWeekend) LunchScreen(selectedDate: selectedDate),
-      DinnerScreen(selectedDate: selectedDate),
-    ];
+    if (isWeekend) {
+      return 'Brunch';
+    } else {
+      final currentTime = TimeOfDay.now();
+      if (currentTime.hour < 11) {
+        return 'Breakfast';
+      } else if (currentTime.hour < 17) {
+        return 'Lunch';
+      } else {
+        return 'Dinner';
+      }
+    }
   }
 
-  String getMealTime() {
+  String getMealTime(DateTime selectedDate, String mealType) {
     bool isWeekend = selectedDate.weekday == DateTime.saturday ||
         selectedDate.weekday == DateTime.sunday;
-    switch (_navBarItems[_selectedIndex].label) {
+    switch (mealType) {
       case 'Breakfast':
         return '7:00 AM - 10:00 AM';
       case 'Brunch':
@@ -61,38 +117,21 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     }
   }
 
-  List<BottomNavigationBarItem> _getNavBarItems() {
-    bool isWeekend = selectedDate.weekday == DateTime.saturday ||
-        selectedDate.weekday == DateTime.sunday;
-
-    return [
-      if (isWeekend)
-        const BottomNavigationBarItem(
-            icon: Icon(Icons.free_breakfast), label: 'Brunch'),
-      if (!isWeekend)
-        const BottomNavigationBarItem(
-            icon: Icon(Icons.free_breakfast), label: 'Breakfast'),
-      if (!isWeekend)
-        const BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: 'Lunch'),
-      const BottomNavigationBarItem(icon: Icon(Icons.dinner_dining), label: 'Dinner'),
-    ];
-  }
-
-  Color getMealStatusColor() {
+  Color getMealStatusColor(DateTime selectedDate, String mealType) {
     final now = DateTime.now();
     final currentHour = now.hour + now.minute / 60.0;
     bool isWeekend = selectedDate.weekday == DateTime.saturday ||
         selectedDate.weekday == DateTime.sunday;
     bool isSelectedDateToday = selectedDate.year == now.year &&
         selectedDate.month == now.month &&
-        selectedDate.day == now.day;  // Check if the selected date is today
+        selectedDate.day == now.day;
     bool isOpen = false;
 
     if (!isSelectedDateToday) {
-      return Colors.red;  // If it's not today, always return red
+      return Colors.red;
     }
 
-    switch (_navBarItems[_selectedIndex].label) {
+    switch (mealType) {
       case 'Breakfast':
         isOpen = !isWeekend && currentHour >= 7 && currentHour < 10;
         break;
@@ -110,44 +149,30 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     return isOpen ? Colors.green : Colors.red;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    String dateStr = DateFormat('EEE, dd MMM').format(selectedDate);
-    String mealTime = getMealTime();
+  List<BottomNavigationBarItem> _getNavBarItems(DateTime selectedDate) {
+    bool isWeekend = selectedDate.weekday == DateTime.saturday ||
+        selectedDate.weekday == DateTime.sunday;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('$dateStr, $mealTime'),
-        actions: <Widget>[
-          IconButton(
-              icon: const Icon(Icons.arrow_back_ios),
-              onPressed: selectedDate.isAfter(DateTime.now())
-                  ? () => changeDay(-1)
-                  : null),
-          IconButton(
-              icon: const Icon(Icons.arrow_forward_ios),
-              onPressed: selectedDate.difference(DateTime.now()).inDays < 5
-                  ? () => changeDay(1)
-                  : null),
-          Container(
-            width: 20,
-            height: 20,
-            decoration: BoxDecoration(
-              color: getMealStatusColor(),
-              shape: BoxShape.circle,
-            ),
-            margin: const EdgeInsets.all(10),
-          ),
-        ],
+    return [
+      if (isWeekend)
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.free_breakfast),
+          label: 'Brunch',
+        ),
+      if (!isWeekend)
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.free_breakfast),
+          label: 'Breakfast',
+        ),
+      if (!isWeekend)
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.lunch_dining),
+          label: 'Lunch',
+        ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.dinner_dining),
+        label: 'Dinner',
       ),
-      body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
-      bottomNavigationBar: BottomNavigationBar(
-        items: _navBarItems,
-        currentIndex: _selectedIndex,
-        selectedItemColor: Theme.of(context).primaryColor,
-        onTap: _onItemTapped,
-        type: BottomNavigationBarType.fixed,
-      ),
-    );
+    ];
   }
 }

@@ -1,14 +1,9 @@
-# scraper.py
-
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from bs4 import BeautifulSoup
 import time
-import requests
 
 def process_section(section, file):
     elements = section.find_all(['div', 'h3'], class_=['station-title-inline-block', 'site-panel__daypart-item'])
@@ -23,12 +18,7 @@ def process_section(section, file):
                 item_name = element.find('button', class_='site-panel__daypart-item-title').text.strip()
                 file.write(f"\t  Item: {item_name}\n")
 
-
-def get_meal(meal_name, url, file):
-    chromedriver_path = 'chromedriver-win64\chromedriver.exe'
-    service = Service(executable_path=chromedriver_path)
-    driver = webdriver.Chrome(service=service)
-
+def get_meal(meal_name, url, driver, file):
     try:
         driver.get(url)
         wait = WebDriverWait(driver, 10)
@@ -54,11 +44,3 @@ def get_meal(meal_name, url, file):
 
     except Exception as e:
         file.write(f"Error accessing {url}: {e}\n")
-    finally:
-        driver.quit()
-
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1:
-        with open('output.txt', 'a') as file:
-            get_meal(sys.argv[1], "https://rose-hulman.cafebonappetit.com/cafe/cafe/", file)
