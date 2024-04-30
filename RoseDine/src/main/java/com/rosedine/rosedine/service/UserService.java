@@ -17,7 +17,7 @@ public class UserService {
             Integer count = jdbcTemplate.queryForObject(query, new Object[]{email}, Integer.class);
             return count != null && count > 0;
         } catch (Exception e) {
-            // Handle database errors
+
             return false; // Return false if query fails
         }
     }
