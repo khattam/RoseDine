@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:rosedine/user_profile_screen.dart';
 import 'meal_provider.dart';
 import 'menu_item_screen.dart';
 
@@ -28,12 +29,40 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          '$dateStr, $mealTime',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
+        leading: IconButton(
+          icon: Icon(Icons.person),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => UserProfileScreen()),
+            );
+          },
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back_ios),
+              onPressed: selectedDate.isAfter(DateTime.now())
+                  ? () => ref.read(selectedDateProvider.notifier).state =
+                  selectedDate.subtract(const Duration(days: 1))
+                  : null,
+            ),
+            Text(
+              '$dateStr, $mealTime',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IconButton(
+              icon: const Icon(Icons.arrow_forward_ios),
+              onPressed: selectedDate.difference(DateTime.now()).inDays < 5
+                  ? () => ref.read(selectedDateProvider.notifier).state =
+                  selectedDate.add(const Duration(days: 1))
+                  : null,
+            ),
+          ],
         ),
         centerTitle: true,
         elevation: 4,
@@ -43,20 +72,6 @@ class ScheduleScreen extends ConsumerWidget {
           ),
         ),
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.arrow_back_ios),
-            onPressed: selectedDate.isAfter(DateTime.now())
-                ? () => ref.read(selectedDateProvider.notifier).state =
-                selectedDate.subtract(const Duration(days: 1))
-                : null,
-          ),
-          IconButton(
-            icon: const Icon(Icons.arrow_forward_ios),
-            onPressed: selectedDate.difference(DateTime.now()).inDays < 5
-                ? () => ref.read(selectedDateProvider.notifier).state =
-                selectedDate.add(const Duration(days: 1))
-                : null,
-          ),
           Container(
             width: 20,
             height: 20,

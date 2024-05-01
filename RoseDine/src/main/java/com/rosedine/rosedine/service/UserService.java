@@ -5,6 +5,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public class UserService {
 
@@ -18,7 +20,7 @@ public class UserService {
             return count != null && count > 0;
         } catch (Exception e) {
 
-            return false; // Return false if query fails
+            return false;
         }
     }
 
@@ -26,30 +28,38 @@ public class UserService {
         try {
             String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
-            // Insert into DietaryRestrictions
+
             String insertDietaryRestriction = "INSERT INTO dbo.DietaryRestrictions (Is_Vegan, Is_Vegetarian, Is_Gluten_Free) VALUES (0, 0, 0)";
             jdbcTemplate.update(insertDietaryRestriction);
 
             Long dietaryRestrictionId = jdbcTemplate.queryForObject("SELECT SCOPE_IDENTITY()", Long.class);
 
-            // Insert into User
+
             String insertUser = "INSERT INTO [User] ([Email ID], Password, DietaryRestrictions_ID) VALUES (?, ?, ?)";
             jdbcTemplate.update(insertUser, email, hashedPassword, dietaryRestrictionId);
         } catch (Exception e) {
-            // Handle database and SQL errors
+
             System.err.println("Error creating user: " + e.getMessage());
         }
     }
 
-    public boolean validateUser(String email, String password) {
+    public int validateUser(String email, String password) {
         try {
-            String query = "SELECT Password FROM [User]  WHERE [Email ID] = ?";
-            String storedHashedPassword = jdbcTemplate.queryForObject(query, new Object[]{email}, String.class);
+            String query = "SELECT UserID, Password FROM [User]  WHERE [Email ID] = ?";
+            Map<String, Object> result = jdbcTemplate.queryForMap(query, email);
 
-            return storedHashedPassword != null && BCrypt.checkpw(password, storedHashedPassword);
+            int userId = (int) result.get("UserID");
+            String storedHashedPassword = (String) result.get("Password");
+
+            if (storedHashedPassword != null && BCrypt.checkpw(password, storedHashedPassword)) {
+                return userId;
+            } else {
+                return -1;
+            }
         } catch (Exception e) {
-            // Handle database and query errors
-            return false; // Return false if query fails or validation fails
+            return -1;
         }
     }
+
+
 }
