@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -52,15 +53,15 @@ public class UserController {
             String email = user.get("email");
             String password = user.get("password");
 
-            boolean valid = userService.validateUser(email, password);
+            int userId = userService.validateUser(email, password);
 
-            if (valid) {
-                return ResponseEntity.ok("Login successful");
+            if (userId != -1) {
+                return ResponseEntity.ok(String.valueOf(userId));
             } else {
                 return ResponseEntity.status(401).body("Invalid email or password");
             }
         } catch (Exception e) {
-            return ResponseEntity.status(500).body("Internal server error: " + e.getMessage());
+            return ResponseEntity.status(500).body(STR."Internal server error: \{e.getMessage()}");
         }
     }
 }

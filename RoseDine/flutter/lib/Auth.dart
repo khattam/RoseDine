@@ -2,6 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'ScheduleScreen.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _AuthScreenState extends State<AuthScreen> {
     final password = _passwordController.text;
 
     final url = Uri.parse(
-        'http://localhost:8081/api/users/${_isLogin ? 'login' : 'register'}');
+        '$backendUrl/${_isLogin ? 'login' : 'register'}');
 
     final response = await http.post(
       url,
@@ -34,6 +35,10 @@ class _AuthScreenState extends State<AuthScreen> {
     );
 
     if (response.statusCode == 200) {
+      if (_isLogin) {
+        final userId = response.body;
+        await _saveUserId(userId);
+      }
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
@@ -54,6 +59,11 @@ class _AuthScreenState extends State<AuthScreen> {
     }
   }
 
+  Future<void> _saveUserId(String userId) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userId', userId);
+  }
+
   String? _emailValidator(String? email) {
     if (email == null || !EmailValidator.validate(email)) {
       return 'Please enter a valid email address';
@@ -72,6 +82,7 @@ class _AuthScreenState extends State<AuthScreen> {
     }
     return null;
   }
+
 
   @override
   Widget build(BuildContext context) {
