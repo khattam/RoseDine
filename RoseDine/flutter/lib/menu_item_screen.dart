@@ -23,13 +23,33 @@ class MenuItemScreen extends ConsumerWidget {
     }
   }
 
+  Future<List<dynamic>> fetchMenuHard() async {
+    final url = 'http://localhost:8081/api/menu-items/hardcoded';
+
+    final response = await http.get(Uri.parse(url));
+
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception('Failed to load hardcoded menu items');
+    }
+  }
+
+  Future<List<dynamic>> fetchCombinedMenu(DateTime selectedDate, String mealType) async {
+    // Fetch both regular and hardcoded menu items
+    final regularItems = await fetchMenuItems(selectedDate, mealType);
+    final hardcodedItems = await fetchMenuHard();
+    // Combine the two lists
+    return [...regularItems, ...hardcodedItems];
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDate = ref.watch(selectedDateProvider);
 
     return Scaffold(
       body: FutureBuilder<List<dynamic>>(
-        future: fetchMenuItems(selectedDate, mealType),
+        future: fetchCombinedMenu(selectedDate, mealType),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -66,5 +86,4 @@ class MenuItemScreen extends ConsumerWidget {
       ),
     );
   }
-
 }

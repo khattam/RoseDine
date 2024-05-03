@@ -23,20 +23,23 @@ public class MenuItemRepository {
         return jdbcTemplate.query(sql, new Object[]{date, type}, new MenuItemRowMapper());
     }
 
+
     private static class MenuItemRowMapper implements RowMapper<MenuItemDTO> {
         @Override
         public MenuItemDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
-            MenuItemDTO menuItem = new MenuItemDTO();
-            menuItem.setName(rs.getString("Name"));
-            menuItem.setOverallStars(rs.getInt("OverallStars"));
-            menuItem.setFats(rs.getInt("Fats"));
-            menuItem.setProtein(rs.getInt("Protein"));
-            menuItem.setCarbs(rs.getInt("Carbs"));
-            menuItem.setCalories(rs.getInt("Calories"));
-            menuItem.setVegan(rs.getBoolean("Is_Vegan"));
-            menuItem.setVegetarian(rs.getBoolean("Is_Vegetarian"));
-            menuItem.setGlutenFree(rs.getBoolean("Is_Gluten_Free"));
-            return menuItem;
+            String name = rs.getString("Name");
+            int overallStars = rs.getInt("OverallStars");
+            int fats = rs.getInt("Fats");
+            int protein = rs.getInt("Protein");
+            int carbs = rs.getInt("Carbs");
+            int calories = rs.getInt("Calories");
+            boolean isVegan = rs.getBoolean("Is_Vegan");
+            boolean isVegetarian = rs.getBoolean("Is_Vegetarian");
+            boolean isGlutenFree = rs.getBoolean("Is_Gluten_Free");
+
+            return new MenuItemDTO(name, overallStars, fats, protein, carbs, calories, isVegan, isVegetarian, isGlutenFree);
         }
     }
+
+
 }

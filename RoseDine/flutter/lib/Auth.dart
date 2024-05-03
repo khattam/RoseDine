@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'ScheduleScreen.dart';
-import 'OnboardingScreen.dart';  // Import the onboarding screen
+import 'OnboardingScreen.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
