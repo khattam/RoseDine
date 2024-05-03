@@ -1,45 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:rosedine/Auth.dart';
 import 'dart:convert';
 import 'ScheduleScreen.dart';
-import 'OnboardingScreen.dart';  // Import the onboarding screen
 
-class AuthScreen extends StatefulWidget {
-  const AuthScreen({super.key});
-
+class OnboardingScreen extends StatefulWidget {
   @override
-  _AuthScreenState createState() => _AuthScreenState();
+  _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
-class _AuthScreenState extends State<AuthScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   final _formKey = GlobalKey<FormState>();
+  final _fnameController = TextEditingController();
+  final _lnameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
   final String backendUrl = 'http://localhost:8081/api/users';
 
-  Future<void> _login() async {
+  Future<void> _register() async {
+    final fname = _fnameController.text;
+    final lname = _lnameController.text;
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    final url = Uri.parse('$backendUrl/login');
+    final url = Uri.parse('$backendUrl/register');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
-      body: json.encode({'email': email, 'password': password}),
+      body: json.encode({'fname': fname, 'lname': lname, 'email': email, 'password': password}),
     );
 
     if (response.statusCode == 200) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login successful')));
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ScheduleScreen()));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Registration successful')));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AuthScreen()));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login failed: ${response.body}')));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Registration failed: ${response.body}')));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: const Text('Register')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -47,6 +50,16 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              TextFormField(
+                controller: _fnameController,
+                decoration: const InputDecoration(labelText: 'First Name', border: OutlineInputBorder()),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: _lnameController,
+                decoration: const InputDecoration(labelText: 'Last Name', border: OutlineInputBorder()),
+              ),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder()),
@@ -62,16 +75,10 @@ class _AuthScreenState extends State<AuthScreen> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    _login();
+                    _register();
                   }
                 },
-                child: const Text('Login'),
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));  // Navigate to onboarding
-                },
-                child: const Text('First time? Create an account'),
+                child: const Text('Register'),
               ),
             ],
           ),

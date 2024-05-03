@@ -24,24 +24,41 @@ public class UserService {
         }
     }
 
-    public void createUser(String email, String password) {
+//    public void createUser(String email, String password) {
+//        try {
+//            String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+//
+//
+//            String insertDietaryRestriction = "INSERT INTO dbo.DietaryRestrictions (Is_Vegan, Is_Vegetarian, Is_Gluten_Free) VALUES (0, 0, 0)";
+//            jdbcTemplate.update(insertDietaryRestriction);
+//
+//            Long dietaryRestrictionId = jdbcTemplate.queryForObject("SELECT SCOPE_IDENTITY()", Long.class);
+//
+//
+//            String insertUser = "INSERT INTO [User] ([Email ID], Password, DietaryRestrictions_ID) VALUES (?, ?, ?)";
+//            jdbcTemplate.update(insertUser, email, hashedPassword, dietaryRestrictionId);
+//        } catch (Exception e) {
+//
+//            System.err.println("Error creating user: " + e.getMessage());
+//        }
+//    }
+
+    public void createUser(String fname, String lname, String email, String password) {
         try {
             String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-
 
             String insertDietaryRestriction = "INSERT INTO dbo.DietaryRestrictions (Is_Vegan, Is_Vegetarian, Is_Gluten_Free) VALUES (0, 0, 0)";
             jdbcTemplate.update(insertDietaryRestriction);
 
             Long dietaryRestrictionId = jdbcTemplate.queryForObject("SELECT SCOPE_IDENTITY()", Long.class);
 
-
-            String insertUser = "INSERT INTO [User] ([Email ID], Password, DietaryRestrictions_ID) VALUES (?, ?, ?)";
-            jdbcTemplate.update(insertUser, email, hashedPassword, dietaryRestrictionId);
+            String insertUser = "INSERT INTO [User] ([Fname], [Lname], [Email ID], Password, DietaryRestrictions_ID) VALUES (?, ?, ?, ?, ?)";
+            jdbcTemplate.update(insertUser, fname, lname, email, hashedPassword, dietaryRestrictionId);
         } catch (Exception e) {
-
             System.err.println("Error creating user: " + e.getMessage());
         }
     }
+
 
     public int validateUser(String email, String password) {
         try {
