@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:rosedine/widgets/menu_item_widget.dart';
 import 'dart:convert';
 import 'meal_provider.dart';
+import 'recommendation_screen.dart';
+import 'widgets/menu_item_widget.dart';
 
 class MenuItemScreen extends ConsumerWidget {
   final String mealType;
@@ -48,6 +50,20 @@ class MenuItemScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Menu Items'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.recommend),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RecommendationScreen(mealType: mealType)),
+              );
+            },
+          ),
+        ],
+      ),
       body: FutureBuilder<List<dynamic>>(
         future: fetchCombinedMenu(selectedDate, mealType),
         builder: (context, snapshot) {

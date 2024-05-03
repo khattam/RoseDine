@@ -41,5 +41,11 @@ public class MenuItemRepository {
         }
     }
 
+    public List<MenuItemDTO> getAllMenuItems() {
+        String sql = "SELECT * FROM MenuItem";
+        return jdbcTemplate.query(sql, new MenuItemRowMapper());
+    }
+
+
 
 }

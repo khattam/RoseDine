@@ -14,7 +14,7 @@ public class MenuItemDTO {
     private boolean isVegetarian;
     private boolean isGlutenFree;
 
-    // Constructor with all arguments
+    // Constructor with all arguments include dieatry as well
     public MenuItemDTO(String name, int overallStars, int fats, int protein, int carbs, int calories, boolean isVegan, boolean isVegetarian, boolean isGlutenFree) {
         this.name = name;
         this.overallStars = overallStars;
