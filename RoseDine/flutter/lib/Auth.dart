@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:email_validator/email_validator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'ScheduleScreen.dart';
 import 'OnboardingScreen.dart';
 
@@ -17,7 +19,9 @@ class _AuthScreenState extends State<AuthScreen> {
   final _passwordController = TextEditingController();
   final String backendUrl = 'http://localhost:8081/api/users';
 
-  Future<void> _login() async {
+  bool _isLogin = true;
+
+  Future<void> _submitForm() async {
     final email = _emailController.text;
     final password = _passwordController.text;
 
@@ -29,17 +33,41 @@ class _AuthScreenState extends State<AuthScreen> {
     );
 
     if (response.statusCode == 200) {
+      final userId = response.body;
+      await _saveUserId(userId);
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login successful')));
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ScheduleScreen()));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login failed: ${response.body}')));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to log in: ${response.body}')));
     }
+  }
+
+  Future<void> _saveUserId(String userId) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userId', userId);
+  }
+
+  String? _emailValidator(String? email) {
+    if (email == null || !EmailValidator.validate(email)) {
+      return 'Please enter a valid email address';
+    }
+    if (!email.endsWith('@rose-hulman.edu')) {
+      return 'Invalid domain, use a @rose-hulman.edu email';
+    }
+    return null;
+  }
+
+  String? _passwordValidator(String? password) {
+    if (password == null || password.length < 6) {
+      return 'Password must be at least 6 characters long';
+    }
+    return null;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: const Text('Authentication')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -50,26 +78,28 @@ class _AuthScreenState extends State<AuthScreen> {
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder()),
+                validator: _emailValidator,
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 20),
               TextFormField(
                 controller: _passwordController,
                 decoration: const InputDecoration(labelText: 'Password', border: OutlineInputBorder()),
+                validator: _passwordValidator,
                 obscureText: true,
               ),
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    _login();
+                    _submitForm();
                   }
                 },
                 child: const Text('Login'),
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));  // Navigate to onboarding
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
                 },
                 child: const Text('First time? Create an account'),
               ),
