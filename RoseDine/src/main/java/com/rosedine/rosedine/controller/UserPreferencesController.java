@@ -1,10 +1,13 @@
 package com.rosedine.rosedine.controller;
 
+import com.rosedine.rosedine.dto.UserPreferences;
+import com.rosedine.rosedine.repository.UserRepository;
 import com.rosedine.rosedine.service.UserPreferencesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -48,9 +51,19 @@ public class UserPreferencesController {
             return ResponseEntity.status(500).body(null);
         }
     }
+    @GetMapping("/get-all-preferences")
+    public ResponseEntity<Map<String, Object>> getAllPreferences(@RequestParam("userId") int userId, @RequestParam String mealType) {
+        try {
+            // Call the new method from the service
+            Map<String, Object> preferences = userPreferencesService.getAllUserPreferences(userId, mealType);
 
-
-
-
-
+            // Respond with the result
+            return ResponseEntity.ok(preferences);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(null);
+        }
+    }
 }
+
+
+

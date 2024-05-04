@@ -4,10 +4,10 @@ public class UserPreferences {
     private boolean isVegan;
     private boolean isVegetarian;
     private boolean isGlutenFree;
-    private int targetProtein;
-    private int targetCarbs;
-    private int targetFats;
-    private int targetCalories;
+    private int Protein;
+    private int Carbohydrates;
+    private int Fats;
+    private int Calories;
 
     // Constructors
     public UserPreferences() {}
@@ -16,15 +16,12 @@ public class UserPreferences {
         this.isVegan = isVegan;
         this.isVegetarian = isVegetarian;
         this.isGlutenFree = isGlutenFree;
-        this.targetProtein = targetProtein;
-        this.targetCarbs = targetCarbs;
-        this.targetFats = targetFats;
-        this.targetCalories = targetCalories;
+        this.Protein = targetProtein;
+        this.Carbohydrates = targetCarbs;
+        this.Fats = targetFats;
+        this.Calories = targetCalories;
     }
 
-
-
-    // Getters and setters
     public boolean isVegan() {
         return isVegan;
     }
@@ -45,9 +42,39 @@ public class UserPreferences {
         return isGlutenFree;
     }
 
-    public void setGlutenFree(boolean glutenFree) {
-        isGlutenFree = glutenFree;
+    public void setGlutenFree(boolean isGlutenFree) {
+        this.isGlutenFree = isGlutenFree;
     }
 
+    public void setProtein(int protein) {
+        this.Protein = protein;
+    }
 
+    public void setCarbohydrates(int carbohydrates) {
+        this.Carbohydrates = carbohydrates;
+    }
+
+    public void setFats(int fats) {
+        this.Fats = fats;
+    }
+
+    public void setCalories(int calories) {
+        this.Calories = calories;
+    }
+
+    public int getProtein() {
+        return Protein;
+    }
+
+    public int getCarbohydrates() {
+        return Carbohydrates;
+    }
+
+    public int getFats() {
+        return Fats;
+    }
+
+    public int getCalories() {
+        return Calories;
+    }
 }

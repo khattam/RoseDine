@@ -26,7 +26,7 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
     final userId = prefs.getString('userId');
 
     if (userId != null) {
-      final url = 'http://localhost:8081/api/user-preferences/get-preferences?userId=$userId&mealType=${widget.mealType}';
+      final url = 'http://localhost:8081/api/user-preferences/get-all-preferences?userId=$userId&mealType=${widget.mealType}';
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode == 200) {
@@ -39,6 +39,7 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
       }
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,15 +55,15 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Dietary Restrictions:'),
-            Text('Vegan: ${_preferences['IsVegan']}'),
-            Text('Vegetarian: ${_preferences['IsVegetarian']}'),
-            Text('Gluten-Free: ${_preferences['IsGlutenFree']}'),
+            Text('Vegan: ${_preferences['Is_Vegan']}'),
+            Text('Vegetarian: ${_preferences['Is_Vegetarian']}'),
+            Text('Gluten-Free: ${_preferences['Is_Gluten_Free']}'),
             SizedBox(height: 16),
             Text('Macros (${widget.mealType}):'),
-            Text('Protein: ${_preferences['Protein']}'),
-            Text('Carbohydrates: ${_preferences['Carbohydrates']}'),
-            Text('Fat: ${_preferences['Fat']}'),
-            Text('Calories: ${_preferences['Calories']}'),
+            Text('Protein: ${_preferences['Protein'] ?? 'N/A'}'),
+            Text('Carbohydrates: ${_preferences['Carbs'] ?? 'N/A'}'),
+            Text('Fat: ${_preferences['Fats'] ?? 'N/A'}'),
+            Text('Calories: ${_preferences['Calories'] ?? 'N/A'}'),
           ],
         ),
       ),

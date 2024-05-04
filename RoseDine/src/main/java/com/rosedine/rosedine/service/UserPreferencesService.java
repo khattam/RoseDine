@@ -27,4 +27,9 @@ public class UserPreferencesService {
         return jdbcTemplate.queryForMap(sql, userId);
     }
 
+    public Map<String, Object> getAllUserPreferences(int userId, String mealType) {
+        String sql = "EXEC GetAllUserPreferences @UserId = ?, @MealType = ?";
+        return jdbcTemplate.queryForMap(sql, userId, mealType);
+    }
+
 }
