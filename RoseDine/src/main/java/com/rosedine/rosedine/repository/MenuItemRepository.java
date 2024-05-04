@@ -19,7 +19,7 @@ public class MenuItemRepository {
     }
 
     public List<MenuItemDTO> getMenuItemsByDateAndType(LocalDate date, String type) {
-        String sql = "EXEC GetMenuItemsByDateAndType ?, ?";
+        String sql = "EXEC GetMenuItemsByDateAndTypeWithId ?, ?";
         return jdbcTemplate.query(sql, new Object[]{date, type}, new MenuItemRowMapper());
     }
 
@@ -27,6 +27,7 @@ public class MenuItemRepository {
     private static class MenuItemRowMapper implements RowMapper<MenuItemDTO> {
         @Override
         public MenuItemDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+            int id = rs.getInt("ID");
             String name = rs.getString("Name");
             int overallStars = rs.getInt("OverallStars");
             int fats = rs.getInt("Fats");
@@ -37,7 +38,7 @@ public class MenuItemRepository {
             boolean isVegetarian = rs.getBoolean("Is_Vegetarian");
             boolean isGlutenFree = rs.getBoolean("Is_Gluten_Free");
 
-            return new MenuItemDTO(name, overallStars, fats, protein, carbs, calories, isVegan, isVegetarian, isGlutenFree);
+            return new MenuItemDTO(id, name, overallStars, fats, protein, carbs, calories, isVegan, isVegetarian, isGlutenFree);
         }
     }
 

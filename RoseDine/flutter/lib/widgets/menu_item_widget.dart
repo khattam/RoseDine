@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'expanded_content.dart';
 import 'circles_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MenuItemWidget extends StatefulWidget {
-  final dynamic menuItem;
+  final Map<String, dynamic> menuItem;
+  final Function(int, int) onRatingUpdate;
+  final Function(int, int) getUserRating;
 
-  const MenuItemWidget({Key? key, required this.menuItem}) : super(key: key);
+  const MenuItemWidget({
+    Key? key,
+    required this.menuItem,
+    required this.onRatingUpdate,
+    required this.getUserRating,
+  }) : super(key: key);
 
   @override
   _MenuItemWidgetState createState() => _MenuItemWidgetState();
@@ -16,6 +24,7 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
   late AnimationController _animationController;
   late Animation<double> _expandAnimation;
   bool _isExpanded = false;
+  int _userRating = 0;
 
   @override
   void initState() {
@@ -28,6 +37,7 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
       parent: _animationController,
       curve: Curves.easeInOut,
     );
+    _fetchUserRating();
   }
 
   @override
@@ -45,6 +55,31 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
         _animationController.reverse();
       }
     });
+  }
+
+  void _updateRating(int rating) async {
+    final userId = await getUserId();
+    setState(() {
+      _userRating = rating;
+    });
+    widget.onRatingUpdate(userId, rating);
+  }
+
+  Future<void> _fetchUserRating() async {
+    try {
+      final userId = await getUserId();
+      final userRating = await widget.getUserRating(userId, widget.menuItem['id']);
+      setState(() {
+        _userRating = userRating;
+      });
+    } catch (e) {
+      print('Error fetching user rating: $e');
+    }
+  }
+
+  Future<int> getUserId() async {
+    final prefs = await SharedPreferences.getInstance();
+    return int.tryParse(prefs.getString('userId') ?? '') ?? 0;
   }
 
   @override
@@ -102,10 +137,35 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
                 ),
               ],
             ),
-            child: ExpandedContent(menuItem: widget.menuItem),
+            child: Column(
+              children: [
+                ExpandedContent(
+                  menuItem: widget.menuItem,
+                  userRating: _userRating,
+                ),
+                SizedBox(height: 16),
+                _buildStarRating(),
+              ],
+            ),
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildStarRating() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(5, (index) {
+        return GestureDetector(
+          onTap: () => _updateRating(index + 1),
+          child: Icon(
+            index < _userRating ? Icons.star : Icons.star_border,
+            color: Colors.yellow,
+            size: 32,
+          ),
+        );
+      }),
     );
   }
 }

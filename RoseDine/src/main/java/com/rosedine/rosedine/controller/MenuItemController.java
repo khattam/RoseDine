@@ -30,9 +30,9 @@ public class MenuItemController {
     @GetMapping("/hardcoded")
     public List<MenuItemDTO> getHardcodedItems() {
         List<MenuItemDTO> hardcodedItems = List.of(
-                new MenuItemDTO("Sandwich Veg", 5, 10, 7, 35, 250, false, true, false),
-                new MenuItemDTO("Sandwich Non-Veg", 5, 20, 10, 30, 350, false, false, false),
-                new MenuItemDTO("Salad", 5, 5, 5, 10, 150, true, true, true)
+                new MenuItemDTO(0, "Sandwich Veg", 5, 10, 7, 35, 250, false, true, false),
+                new MenuItemDTO(0, "Sandwich Non-Veg", 5, 20, 10, 30, 350, false, false, false),
+                new MenuItemDTO(0, "Salad", 5, 5, 5, 10, 150, true, true, true)
         );
         return hardcodedItems;
     }

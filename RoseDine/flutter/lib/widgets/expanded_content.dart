@@ -4,8 +4,13 @@ import 'nutrient_bar_style.dart';
 
 class ExpandedContent extends StatelessWidget {
   final Map<String, dynamic> menuItem;
+  final int userRating;
 
-  const ExpandedContent({Key? key, required this.menuItem}) : super(key: key);
+  const ExpandedContent({
+    Key? key,
+    required this.menuItem,
+    required this.userRating,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +60,14 @@ class ExpandedContent extends StatelessWidget {
           value: menuItem['overallStars'],
           maxValue: 5,
           barColor: Colors.yellow.shade700,
+          style: customStyle,
+        ),
+        SizedBox(height: 16),
+        NutrientBar(
+          label: 'Your Rating',
+          value: userRating,
+          maxValue: 5,
+          barColor: Colors.blue.shade700,
           style: customStyle,
         ),
       ],

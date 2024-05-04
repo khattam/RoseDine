@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class MenuItemDTO {
+    private int id;
     private String name;
     private int overallStars;
     private int fats;
@@ -15,7 +16,8 @@ public class MenuItemDTO {
     private boolean isGlutenFree;
 
     // Constructor with all arguments include dieatry as well
-    public MenuItemDTO(String name, int overallStars, int fats, int protein, int carbs, int calories, boolean isVegan, boolean isVegetarian, boolean isGlutenFree) {
+    public MenuItemDTO(int id, String name, int overallStars, int fats, int protein, int carbs, int calories, boolean isVegan, boolean isVegetarian, boolean isGlutenFree) {
+        this.id = id;
         this.name = name;
         this.overallStars = overallStars;
         this.fats = fats;

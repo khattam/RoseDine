@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:rosedine/widgets/menu_item_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'meal_provider.dart';
 import 'recommendation_screen.dart';
-import 'widgets/menu_item_widget.dart';
 
 class MenuItemScreen extends ConsumerWidget {
   final String mealType;
@@ -45,6 +45,32 @@ class MenuItemScreen extends ConsumerWidget {
     return [...regularItems, ...hardcodedItems];
   }
 
+  Future<void> sendReview(int userId, int menuItemId, int rating) async {
+    final url = 'http://localhost:8081/api/reviews/$menuItemId?userId=$userId&stars=$rating';
+    print('Sending review: userId=$userId, menuItemId=$menuItemId, rating=$rating');
+
+    final response = await http.post(Uri.parse(url));
+
+    if (response.statusCode != 200) {
+      print('Failed to send review. Status code: ${response.statusCode}');
+      throw Exception('Failed to send review');
+    } else {
+      print('Review sent successfully');
+    }
+  }
+
+  Future<int> getUserRating(int userId, int menuItemId) async {
+    final url = 'http://localhost:8081/api/reviews/$menuItemId/user-rating?userId=$userId';
+
+    final response = await http.get(Uri.parse(url));
+
+    if (response.statusCode == 200) {
+      final rating = json.decode(response.body);
+      return rating != null ? rating as int : 0;
+    } else {
+      throw Exception('Failed to get user rating');
+    }
+  }
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDate = ref.watch(selectedDateProvider);
@@ -74,24 +100,43 @@ class MenuItemScreen extends ConsumerWidget {
           } else if (snapshot.hasData) {
             final menuItems = snapshot.data!;
 
-            return ListView.separated(
-              itemCount: (menuItems.length / 2).ceil(),
-              separatorBuilder: (context, index) => const SizedBox(height: 16),
-              itemBuilder: (context, index) {
-                final startIndex = index * 2;
-                final endIndex = startIndex + 2 < menuItems.length ? startIndex + 2 : menuItems.length;
-                final rowItems = menuItems.sublist(startIndex, endIndex);
+            return FutureBuilder<int>(
+              future: SharedPreferences.getInstance().then((prefs) => int.tryParse(prefs.getString('userId') ?? '') ?? 0),
+              builder: (context, userIdSnapshot) {
+                final userId = userIdSnapshot.data ?? 0;
 
-                return Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: rowItems.map((item) {
-                    return Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: MenuItemWidget(menuItem: item),
-                      ),
+                return ListView.separated(
+                  itemCount: (menuItems.length / 2).ceil(),
+                  separatorBuilder: (context, index) => const SizedBox(height: 16),
+                  itemBuilder: (context, index) {
+                    final startIndex = index * 2;
+                    final endIndex = startIndex + 2 < menuItems.length ? startIndex + 2 : menuItems.length;
+                    final rowItems = menuItems.sublist(startIndex, endIndex);
+
+                    return Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: rowItems.map((item) {
+                        final menuItemId = item['id'];
+
+                        return Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: MenuItemWidget(
+                              menuItem: item,
+                              onRatingUpdate: (userId, rating) {
+                                if (menuItemId != null) {
+                                  sendReview(userId, menuItemId, rating);
+                                } else {
+                                  print('Menu item ID is null');
+                                }
+                              },
+                              getUserRating: (userId, menuItemId) => getUserRating(userId, menuItemId),
+                            ),
+                          ),
+                        );
+                      }).toList(),
                     );
-                  }).toList(),
+                  },
                 );
               },
             );

@@ -19,6 +19,7 @@ public class MenuItemService {
         return menuItemRepository.getMenuItemsByDateAndType(date, type);
     }
 
+
     public List<MenuItemDTO> getAllMenuItems() {
 
         return menuItemRepository.getAllMenuItems();
