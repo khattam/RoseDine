@@ -62,6 +62,7 @@ public class RecommendationService {
         List<MenuItemDTO> result = new ArrayList<>();
         int remainingCalories = userPreferences.getCalories();
 
+
         for (MenuItemDTO item : items) {
             if (item.getCalories() <= remainingCalories) {
                 result.add(item);
