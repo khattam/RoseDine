@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:intl/intl.dart';
 
 class RecommendationScreen extends StatefulWidget {
   final String mealType;
-  const RecommendationScreen({required this.mealType});
+  final DateTime selectedDate;
+
+  const RecommendationScreen({required this.mealType, required this.selectedDate});
 
   @override
   _RecommendationScreenState createState() => _RecommendationScreenState();
@@ -28,18 +30,28 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
   Future<void> _fetchRecommendations() async {
     final prefs = await SharedPreferences.getInstance();
     final userId = prefs.getString('userId');
+    final formattedDate = DateFormat('yyyy-MM-dd').format(widget.selectedDate); // Use this
+
     if (userId != null) {
-      final url = 'http://localhost:8081/api/recommendations?userId=$userId&mealType=${widget.mealType}';
+      final url = 'http://localhost:8081/api/recommendations?userId=$userId&mealType=${widget.mealType}&date=$formattedDate';
       final response = await http.get(Uri.parse(url));
+
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
-        setState(() {
-          _recommendations = data;
-          _totalProtein = data[0]['totalProtein'];
-          _totalCarbs = data[0]['totalCarbs'];
-          _totalFats = data[0]['totalFats'];
-          _totalCalories = data[0]['totalCalories'];
-        });
+        if (data.isEmpty) {
+          print('No recommendations found for mealType: ${widget.mealType}');
+          setState(() {
+            _recommendations = [];
+          });
+        } else {
+          setState(() {
+            _recommendations = data;
+            _totalProtein = data[0]['totalProtein'] ?? 0;
+            _totalCarbs = data[0]['totalCarbs'] ?? 0;
+            _totalFats = data[0]['totalFats'] ?? 0;
+            _totalCalories = data[0]['totalCalories'] ?? 0;
+          });
+        }
       } else {
         print('Failed to fetch recommendations');
       }
@@ -72,7 +84,7 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Recommendations')),
+      appBar: AppBar(title: const Text('Recommendations')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -82,10 +94,10 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
             Text('Total Carbs: $_totalCarbs g'),
             Text('Total Fats: $_totalFats g'),
             Text('Total Calories: $_totalCalories kcal'),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Expanded(
               child: _recommendations.isEmpty
-                  ? Center(child: CircularProgressIndicator())
+                  ? const Center(child: CircularProgressIndicator())
                   : ListView(
                 children: _recommendations
                     .map((item) => _buildRecommendationCard(item))

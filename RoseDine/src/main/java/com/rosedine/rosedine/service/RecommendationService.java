@@ -1,23 +1,22 @@
 package com.rosedine.rosedine.service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.rosedine.rosedine.dto.MenuItemDTO;
 import com.rosedine.rosedine.dto.UserPreferences;
-import com.rosedine.rosedine.service.MenuItemService;
-import com.rosedine.rosedine.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 @Service
 public class RecommendationService {
     private final MenuItemService menuItemService;
     private final UserService userService;
+
+    private static final Logger logger = LoggerFactory.getLogger(RecommendationService.class);
 
     @Autowired
     public RecommendationService(MenuItemService menuItemService, UserService userService) {
@@ -25,9 +24,15 @@ public class RecommendationService {
         this.userService = userService;
     }
 
-    public List<Map<String, Object>> getRecommendations(int userId, String mealType) {
+    public List<Map<String, Object>> getRecommendations(int userId, String mealType, String date) {
+        logger.info("Fetching user preferences for userId: {}, mealType: {}", userId, mealType);
         UserPreferences userPreferences = userService.getUserPreferences(userId, mealType);
-        List<MenuItemDTO> menuItems = menuItemService.getMenuItemsByDateAndType(LocalDate.now(), mealType);
+        LocalDate selectedDate = LocalDate.parse(date);
+
+        logger.info("Fetching menu items for date: {} and mealType: {}", selectedDate, mealType);
+        List<MenuItemDTO> menuItems = menuItemService.getMenuItemsByDateAndType(selectedDate, mealType);
+
+        logger.info("Menu items fetched: {}", menuItems);
 
         List<MenuItemDTO> filteredItems = menuItems.stream()
                 .filter(item -> matchesPreferences(item, userPreferences))
@@ -62,13 +67,12 @@ public class RecommendationService {
         List<MenuItemDTO> result = new ArrayList<>();
         int remainingCalories = userPreferences.getCalories();
 
-
         for (MenuItemDTO item : items) {
             if (item.getCalories() <= remainingCalories) {
                 result.add(item);
                 remainingCalories -= item.getCalories();
             }
-            if (remainingCalories <= 0) break; // Stop adding if calorie limit is reached
+            if (remainingCalories <= 0) break;
         }
 
         return result;

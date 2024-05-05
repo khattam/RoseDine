@@ -84,7 +84,8 @@ class MenuItemScreen extends ConsumerWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => RecommendationScreen(mealType: mealType)),
+                  MaterialPageRoute(builder: (context) => RecommendationScreen(mealType: mealType, selectedDate: selectedDate))
+
               );
             },
           ),
