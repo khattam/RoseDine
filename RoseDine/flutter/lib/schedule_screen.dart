@@ -16,7 +16,7 @@ class ScheduleScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
     final selectedMealType = ref.watch(selectedMealTypeProvider);
 
-    // Set the initial meal type based on the selected date and time
+
     final initialMealType = _getInitialMealType(selectedDate);
     if (selectedMealType.isEmpty) {
       Future(() {
@@ -32,64 +32,58 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Container(
-          width: 150,
-          child: Row(
-            children: [
-              const SizedBox(width: 10),
-              Expanded(
-                child: IconButton(
-                  icon: const Icon(Icons.person),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => UserProfileScreen()),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(width: 30),
-              Expanded(
-                child: IconButton(
-                  icon: const Icon(Icons.logout),
-                  onPressed: () => _logout(context),
-                  tooltip: 'Logout',
-                ),
-              ),
-            ],
-          ),
+        leading: IconButton(
+          icon: const Icon(Icons.person),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => UserProfileScreen()),
+            );
+          },
+          tooltip: 'User Profile',
         ),
-        title: Column(
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              DateFormat('EEEE dd MMM').format(selectedDate),
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            GestureDetector(
-              onHorizontalDragEnd: (DragEndDetails details) {
-                if (details.primaryVelocity! < 0) {
-                  // Swipe left - Next day
-                  if (selectedDate.difference(DateTime.now()).inDays < 5) {
-                    ref.read(selectedDateProvider.notifier).state =
-                        selectedDate.add(const Duration(days: 1));
-                  }
-                } else if (details.primaryVelocity! > 0) {
-                  // Swipe right - Previous day
-                  if (selectedDate.isAfter(DateTime.now())) {
-                    ref.read(selectedDateProvider.notifier).state =
-                        selectedDate.subtract(const Duration(days: 1));
-                  }
+            const SizedBox(width: 5),
+            IconButton(
+              iconSize: 24,
+              padding: EdgeInsets.zero,
+              icon: const Icon(Icons.arrow_left),
+              onPressed: () {
+                if (selectedDate.isAfter(DateTime.now())) {
+                  ref.read(selectedDateProvider.notifier).state =
+                      selectedDate.subtract(const Duration(days: 1));
                 }
               },
-              child: Text(
-                mealTime,
-                style: const TextStyle(
-                  fontSize: 16,
+              tooltip: 'Previous Day',
+            ),
+            Column(
+              children: [
+                Text(
+                  DateFormat('EE, dd MMM').format(selectedDate), // Shorter format
+                  style: const TextStyle(
+                    fontSize: 16, // Smaller font size
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
+                Text(
+                  mealTime,
+                  style: const TextStyle(fontSize: 14), // Smaller font size
+                ),
+              ],
+            ),
+            IconButton(
+              iconSize: 24,
+              padding: EdgeInsets.zero,
+              icon: const Icon(Icons.arrow_right),
+              onPressed: () {
+                if (selectedDate.difference(DateTime.now()).inDays < 5) {
+                  ref.read(selectedDateProvider.notifier).state =
+                      selectedDate.add(const Duration(days: 1));
+                }
+              },
+              tooltip: 'Next Day',
             ),
           ],
         ),
@@ -106,7 +100,7 @@ class ScheduleScreen extends ConsumerWidget {
             onPressed: () => _sendEmail(),
             tooltip: 'Send feedback',
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 5),
           Container(
             width: 15,
             height: 15,
@@ -119,7 +113,6 @@ class ScheduleScreen extends ConsumerWidget {
           const SizedBox(width: 5),
         ],
       ),
-
       body: MenuItemScreen(mealType: selectedMealType),
       bottomNavigationBar: BottomNavigationBar(
         items: navBarItems,
@@ -131,16 +124,8 @@ class ScheduleScreen extends ConsumerWidget {
         },
       ),
     );
-  }
 
 
-  Future<void> _logout(BuildContext context) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('userId');
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => AuthScreen()),
-    );
   }
 
   Future<void> _sendEmail() async {
