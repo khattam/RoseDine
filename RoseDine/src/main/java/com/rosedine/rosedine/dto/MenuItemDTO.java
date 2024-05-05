@@ -28,4 +28,9 @@ public class MenuItemDTO {
         this.isVegetarian = isVegetarian;
         this.isGlutenFree = isGlutenFree;
     }
+
+
+    public int getFat() {
+        return fats;
+    }
 }

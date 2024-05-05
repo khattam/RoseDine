@@ -77,4 +77,8 @@ public class UserPreferences {
     public int getCalories() {
         return Calories;
     }
+
+    public int getCarbs() {
+        return Carbohydrates;
+    }
 }
