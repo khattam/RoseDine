@@ -14,7 +14,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
   bool _isVegan = false;
   bool _isVegetarian = false;
   bool _isGlutenFree = false;
-  bool _isDairyFree = false;
 
   Map<String, Map<String, int>> _macros = {
     'Breakfast': {'Protein': 0, 'Carbohydrates': 0, 'Fat': 0, 'Calories': 0},
@@ -205,31 +204,31 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             _macros[mealType]!['Protein'] = value.round();
           });
           _updateMacro(mealType, 'Protein', value.round());
-        }),
+        }, 120),
         _buildMacroSlider(mealType, 'Carbohydrates', _macros[mealType]!['Carbohydrates']!, (value) {
           setState(() {
             _macros[mealType]!['Carbohydrates'] = value.round();
           });
           _updateMacro(mealType, 'Carbohydrates', value.round());
-        }),
+        }, 240),
         _buildMacroSlider(mealType, 'Fat', _macros[mealType]!['Fat']!, (value) {
           setState(() {
             _macros[mealType]!['Fat'] = value.round();
           });
           _updateMacro(mealType, 'Fat', value.round());
-        }),
+        }, 120),
         _buildMacroSlider(mealType, 'Calories', _macros[mealType]!['Calories']!, (value) {
           setState(() {
             _macros[mealType]!['Calories'] = value.round();
           });
           _updateMacro(mealType, 'Calories', value.round());
-        }),
+        }, 1200),
         SizedBox(height: 16),
       ],
     );
   }
 
-  Widget _buildMacroSlider(String mealType, String macroName, int value, ValueChanged<double> onChanged) {
+  Widget _buildMacroSlider(String mealType, String macroName, int value, ValueChanged<double> onChanged, double max) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -240,7 +239,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
         Slider(
           value: value.toDouble(),
           min: 0,
-          max: 500,
+          max: max,
           onChanged: onChanged,
         ),
       ],
