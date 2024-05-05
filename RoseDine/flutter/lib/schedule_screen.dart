@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:rosedine/user_profile_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'auth.dart';
 import 'meal_provider.dart';
 import 'menu_item_screen.dart';
 
@@ -30,65 +32,95 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.person),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => UserProfileScreen()),
-            );
-          },
+        leading: Container(
+          width: 150,
+          child: Row(
+            children: [
+              const SizedBox(width: 10),
+              Expanded(
+                child: IconButton(
+                  icon: const Icon(Icons.person),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserProfileScreen()),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(width: 30),
+              Expanded(
+                child: IconButton(
+                  icon: const Icon(Icons.logout),
+                  onPressed: () => _logout(context),
+                  tooltip: 'Logout',
+                ),
+              ),
+            ],
+          ),
         ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        title: Column(
           children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back_ios),
-              onPressed: selectedDate.isAfter(DateTime.now())
-                  ? () => ref.read(selectedDateProvider.notifier).state =
-                  selectedDate.subtract(const Duration(days: 1))
-                  : null,
-            ),
             Text(
-              '$dateStr, $mealTime',
-              style: TextStyle(
-                fontSize: 20,
+              DateFormat('EEEE dd MMM').format(selectedDate),
+              style: const TextStyle(
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            IconButton(
-              icon: const Icon(Icons.arrow_forward_ios),
-              onPressed: selectedDate.difference(DateTime.now()).inDays < 5
-                  ? () => ref.read(selectedDateProvider.notifier).state =
-                  selectedDate.add(const Duration(days: 1))
-                  : null,
+            GestureDetector(
+              onHorizontalDragEnd: (DragEndDetails details) {
+                if (details.primaryVelocity! < 0) {
+                  // Swipe left - Next day
+                  if (selectedDate.difference(DateTime.now()).inDays < 5) {
+                    ref.read(selectedDateProvider.notifier).state =
+                        selectedDate.add(const Duration(days: 1));
+                  }
+                } else if (details.primaryVelocity! > 0) {
+                  // Swipe right - Previous day
+                  if (selectedDate.isAfter(DateTime.now())) {
+                    ref.read(selectedDateProvider.notifier).state =
+                        selectedDate.subtract(const Duration(days: 1));
+                  }
+                }
+              },
+              child: Text(
+                mealTime,
+                style: const TextStyle(
+                  fontSize: 16,
+                ),
+              ),
             ),
           ],
         ),
         centerTitle: true,
         elevation: 4,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(20),
           ),
         ),
-        actions: <Widget>[
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.mail),
+            onPressed: () => _sendEmail(),
+            tooltip: 'Send feedback',
+          ),
+          const SizedBox(width: 10),
           Container(
-            width: 20,
-            height: 20,
+            width: 15,
+            height: 15,
             decoration: BoxDecoration(
               color: getMealStatusColor(selectedDate, selectedMealType),
               shape: BoxShape.circle,
             ),
-            margin: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(right: 16),
           ),
-          IconButton(
-            icon: Icon(Icons.mail),
-            onPressed: _sendEmail,
-          ),
+          const SizedBox(width: 5),
         ],
       ),
-      body: Center(child: MenuItemScreen(mealType: selectedMealType)),
+
+      body: MenuItemScreen(mealType: selectedMealType),
       bottomNavigationBar: BottomNavigationBar(
         items: navBarItems,
         currentIndex: currentIndex >= 0 ? currentIndex : 0,
@@ -97,8 +129,17 @@ class ScheduleScreen extends ConsumerWidget {
           ref.read(selectedMealTypeProvider.notifier).state =
           navBarItems[index].label!;
         },
-        type: BottomNavigationBarType.fixed,
       ),
+    );
+  }
+
+
+  Future<void> _logout(BuildContext context) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('userId');
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => AuthScreen()),
     );
   }
 

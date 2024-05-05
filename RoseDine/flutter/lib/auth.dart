@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:email_validator/email_validator.dart';
+import 'package:rosedine/widgets/custom_text_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'schedule_screen.dart';
 import 'onboarding_screen.dart';
@@ -167,46 +168,17 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                     ),
                   ),
                   const SizedBox(height: 60),
-                  TextFormField(
+                  CustomTextField(
                     controller: _emailController,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      labelStyle: TextStyle(color: Colors.white70),
-                      filled: true,
-                      fillColor: Colors.blueGrey[700],
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: BorderSide(color: Color(0xFFAB8532)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: BorderSide(color: Color(0xFFAB8532)),
-                      ),
-                    ),
-                    style: TextStyle(color: Colors.white),
-                    validator: _emailValidator,
+                    labelText: 'Email',
                     keyboardType: TextInputType.emailAddress,
+                    obscureText: false,
                   ),
                   const SizedBox(height: 30),
-                  TextFormField(
+                  CustomTextField(
                     controller: _passwordController,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      labelStyle: TextStyle(color: Colors.white70),
-                      filled: true,
-                      fillColor: Colors.blueGrey[700],
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: BorderSide(color: Color(0xFFAB8532)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: BorderSide(color: Color(0xFFAB8532)),
-                      ),
-                    ),
-                    style: TextStyle(color: Colors.white),
-                    validator: _passwordValidator,
-                    obscureText: true,
+                    labelText: 'Password',
+                    obscureText: true, // Ensures the text is obscured for password input
                   ),
                   const SizedBox(height: 50),
                   OutlinedButton(

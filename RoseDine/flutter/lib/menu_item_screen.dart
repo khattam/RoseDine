@@ -91,7 +91,11 @@ class MenuItemScreen extends ConsumerWidget {
         ],
       ),
       body: FutureBuilder<List<dynamic>>(
-        future: fetchCombinedMenu(selectedDate, mealType),
+        future: fetchCombinedMenu(selectedDate, mealType).then((items) {
+          // Sort items alphabetically by name
+          items.sort((a, b) => a['name'].compareTo(b['name']));
+          return items;
+        }),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -100,43 +104,26 @@ class MenuItemScreen extends ConsumerWidget {
           } else if (snapshot.hasData) {
             final menuItems = snapshot.data!;
 
-            return FutureBuilder<int>(
-              future: SharedPreferences.getInstance().then((prefs) => int.tryParse(prefs.getString('userId') ?? '') ?? 0),
-              builder: (context, userIdSnapshot) {
-                final userId = userIdSnapshot.data ?? 0;
+            return ListView.separated(
+              itemCount: menuItems.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 16),
+              itemBuilder: (context, index) {
+                final item = menuItems[index];
+                final menuItemId = item['id'];
 
-                return ListView.separated(
-                  itemCount: (menuItems.length / 2).ceil(),
-                  separatorBuilder: (context, index) => const SizedBox(height: 16),
-                  itemBuilder: (context, index) {
-                    final startIndex = index * 2;
-                    final endIndex = startIndex + 2 < menuItems.length ? startIndex + 2 : menuItems.length;
-                    final rowItems = menuItems.sublist(startIndex, endIndex);
-
-                    return Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: rowItems.map((item) {
-                        final menuItemId = item['id'];
-
-                        return Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: MenuItemWidget(
-                              menuItem: item,
-                              onRatingUpdate: (userId, rating) {
-                                if (menuItemId != null) {
-                                  sendReview(userId, menuItemId, rating);
-                                } else {
-                                  print('Menu item ID is null');
-                                }
-                              },
-                              getUserRating: (userId, menuItemId) => getUserRating(userId, menuItemId),
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    );
-                  },
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: MenuItemWidget(
+                    menuItem: item,
+                    onRatingUpdate: (userId, rating) {
+                      if (menuItemId != null) {
+                        sendReview(userId, menuItemId, rating);
+                      } else {
+                        print('Menu item ID is null');
+                      }
+                    },
+                    getUserRating: (userId, menuItemId) => getUserRating(userId, menuItemId),
+                  ),
                 );
               },
             );
@@ -146,5 +133,6 @@ class MenuItemScreen extends ConsumerWidget {
         },
       ),
     );
+
   }
 }
