@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:rosedine/user_profile_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'meal_provider.dart';
 import 'menu_item_screen.dart';
 
@@ -81,6 +82,10 @@ class ScheduleScreen extends ConsumerWidget {
             ),
             margin: const EdgeInsets.all(10),
           ),
+          IconButton(
+            icon: Icon(Icons.mail),
+            onPressed: _sendEmail,
+          ),
         ],
       ),
       body: Center(child: MenuItemScreen(mealType: selectedMealType)),
@@ -95,6 +100,22 @@ class ScheduleScreen extends ConsumerWidget {
         type: BottomNavigationBarType.fixed,
       ),
     );
+  }
+
+  Future<void> _sendEmail() async {
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: 'support@bonappetit.com',
+      queryParameters: {
+        'subject': 'Feedback',
+      },
+    );
+
+    if (await canLaunchUrl(emailLaunchUri)) {
+      await launchUrl(emailLaunchUri);
+    } else {
+      throw 'Could not launch email';
+    }
   }
 
   String _getInitialMealType(DateTime selectedDate) {
