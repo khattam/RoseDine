@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:rosedine/Auth.dart';
+import 'package:rosedine/auth.dart';
 import 'dart:convert';
-import 'ScheduleScreen.dart';
+import 'schedule_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   @override

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'nutrient_bar.dart';
-import 'nutrient_bar_style.dart';
 
 class ExpandedContent extends StatelessWidget {
   final Map<String, dynamic> menuItem;
@@ -14,63 +12,123 @@ class ExpandedContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const customStyle = NutrientBarStyle(
-      labelStyle: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
-      valueStyle: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
+    const labelStyle = TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+    );
+
+    const valueStyle = TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
     );
 
     return Column(
       children: [
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Calories',
           value: menuItem['calories'],
           maxValue: 1000,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
         SizedBox(height: 8),
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Protein',
           value: menuItem['protein'],
           maxValue: 150,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
         SizedBox(height: 8),
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Fats',
           value: menuItem['fats'],
           maxValue: 150,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
         SizedBox(height: 8),
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Carbs',
           value: menuItem['carbs'],
           maxValue: 150,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
         SizedBox(height: 16),
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Overall Rating',
           value: menuItem['overallStars'],
           maxValue: 5,
           barColor: Colors.yellow.shade700,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
         SizedBox(height: 16),
-        NutrientBar(
+        _buildNutrientBar(
           label: 'Your Rating',
           value: userRating,
           maxValue: 5,
           barColor: Colors.blue.shade700,
-          style: customStyle,
+          labelStyle: labelStyle,
+          valueStyle: valueStyle,
         ),
       ],
+    );
+  }
+
+  Widget _buildNutrientBar({
+    required String label,
+    required int value,
+    required int maxValue,
+    Color barColor = Colors.blue,
+    TextStyle labelStyle = const TextStyle(),
+    TextStyle valueStyle = const TextStyle(),
+  }) {
+    final percentage = value / maxValue;
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Text('$label: ', style: labelStyle),
+          ),
+          Expanded(
+            flex: 7,
+            child: Container(
+              height: 20,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  Flexible(
+                    child: FractionallySizedBox(
+                      widthFactor: percentage,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: barColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Text(
+              '$value',
+              textAlign: TextAlign.right,
+              style: valueStyle,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
