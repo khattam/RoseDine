@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:rosedine/auth.dart';
+import 'package:rosedine/widgets/custom_button_widget.dart';
 import 'package:rosedine/widgets/custom_text_widget.dart';
 import 'dart:convert';
 
@@ -90,7 +91,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> with SingleTickerPr
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
-      appBar: AppBar(title: const Text('Register'), backgroundColor: Colors.blueGrey[900]),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -105,8 +105,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> with SingleTickerPr
                     child: ScaleTransition(
                       scale: _scaleAnimation,
                       child: Container(
-                        width: 330,
-                        height: 330,
+                        width: 280,
+                        height: 280,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
@@ -158,23 +158,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> with SingleTickerPr
                     validator: _passwordValidator,
                   ),
                   const SizedBox(height: 30),
-                  OutlinedButton(
-                    onPressed: () {
+                  MyButton(
+                    onTap: () {
                       if (_formKey.currentState!.validate()) {
                         _register();
                       }
                     },
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                    ),
-                    child: const Text(
-                      'Register',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
+                    text: 'Register',
+                  ),
+              const SizedBox(height: 20),
+                  MyButton(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => AuthScreen()),
+                      );
+                    },
+                    text: 'Login',
                   ),
                 ],
               ),

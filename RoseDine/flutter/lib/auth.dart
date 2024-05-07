@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:email_validator/email_validator.dart';
+import 'package:rosedine/widgets/custom_button_widget.dart';
 import 'package:rosedine/widgets/custom_text_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'schedule_screen.dart';
@@ -23,8 +26,6 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
-
-  bool _isLogin = true;
 
   @override
   void initState() {
@@ -86,25 +87,28 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     await prefs.setString('userId', userId);
   }
 
-  String? _emailValidator(String? email) {
-    if (email == null || !EmailValidator.validate(email)) {
-      return 'Please enter a valid email address';
-    }
-    if (!email.endsWith('@rose-hulman.edu')) {
-      return 'Invalid domain, use a @rose-hulman.edu email';
-    }
-    return null;
-  }
 
-  String? _passwordValidator(String? password) {
-    if (password == null || password.length < 6) {
-      return 'Password must be at least 6 characters long';
-    }
-    return null;
-  }
+  final List<String> welcomeMessages = [
+    'Welcome to RoseDine!',
+    'A better bon appétit experience',
+    'Drinking in the eyecandy :)',
+    'Feeding your foodie soul, one scroll at a time!',
+    'Inspired By Minecraft !',
+    'To eat away the pain of exams...',
+    'Food so good, you\'ll forget about your student loans!',
+    'Procrastination never tasted so delicious!',
+    'Is it just us, or does food taste better when you\'re not paying?',
+    'Putting the "pro" in procrastination...',
+    'Food, glorious food!',
+    'by Agnay and Medhansh',
+    'We\'re not saying we\'re the best, but we\'re not not saying it either',
+  ];
 
   @override
   Widget build(BuildContext context) {
+    final random = Random();
+    final selectedMessage = welcomeMessages[random.nextInt(welcomeMessages.length)];
+
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
       body: SafeArea(
@@ -116,7 +120,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 30),
                   FadeTransition(
                     opacity: _fadeAnimation,
                     child: ScaleTransition(
@@ -159,15 +163,18 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                     ),
                   ),
                   const SizedBox(height: 40),
-                  const Text(
-                    'Welcome to RoseDine',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  Center(
+                    child: Text(
+                      selectedMessage,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 30),
                   CustomTextField(
                     controller: _emailController,
                     labelText: 'Email',
@@ -180,41 +187,21 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                     labelText: 'Password',
                     obscureText: true, // Ensures the text is obscured for password input
                   ),
-                  const SizedBox(height: 50),
-                  OutlinedButton(
-                    onPressed: () {
+                  const SizedBox(height: 30),
+                  MyButton(
+                    onTap: () {
                       if (_formKey.currentState!.validate()) {
                         _submitForm();
                       }
                     },
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                    ),
-                    child: const Text(
-                      'Login',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
+                    text: 'Login',
                   ),
                   const SizedBox(height: 20),
-                  OutlinedButton(
-                    onPressed: () {
+                  MyButton(
+                    onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
                     },
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                    ),
-                    child: const Text(
-                      'Create an Account',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
+                    text: 'Create an Account',
                   ),
                 ],
               ),
