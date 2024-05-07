@@ -25,27 +25,7 @@ class MenuItemScreen extends ConsumerWidget {
     }
   }
 
-  Future<List<dynamic>> fetchMenuHard() async {
-    final url = 'http://localhost:8081/api/menu-items/hardcoded';
-
-    final response = await http.get(Uri.parse(url));
-
-    if (response.statusCode == 200) {
-      return json.decode(response.body);
-    } else {
-      throw Exception('Failed to load hardcoded menu items');
-    }
-  }
-
-  Future<List<dynamic>> fetchCombinedMenu(DateTime selectedDate, String mealType) async {
-    // Fetch both regular and hardcoded menu items
-    final regularItems = await fetchMenuItems(selectedDate, mealType);
-    final hardcodedItems = await fetchMenuHard();
-    // Combine the two lists
-    return [...regularItems, ...hardcodedItems];
-  }
-
-  Future<void> sendReview(int userId, int menuItemId, int rating) async {
+   Future<void> sendReview(int userId, int menuItemId, int rating) async {
     final url = 'http://localhost:8081/api/reviews/$menuItemId?userId=$userId&stars=$rating';
     print('Sending review: userId=$userId, menuItemId=$menuItemId, rating=$rating');
 
@@ -92,7 +72,7 @@ class MenuItemScreen extends ConsumerWidget {
         ],
       ),
       body: FutureBuilder<List<dynamic>>(
-        future: fetchCombinedMenu(selectedDate, mealType).then((items) {
+        future: fetchMenuItems(selectedDate, mealType).then((items) {
           // Sort items alphabetically by name
           items.sort((a, b) => a['name'].compareTo(b['name']));
           return items;
