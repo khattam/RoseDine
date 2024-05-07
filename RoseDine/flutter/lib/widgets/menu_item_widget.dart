@@ -91,16 +91,12 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
           child: Container(
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Color(0x739FB7FF),
+              color: Colors.blueGrey[900],
               borderRadius: BorderRadius.circular(16),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: Offset(0, 3),
-                ),
-              ],
+              border: Border.all(
+                color: Color(0xFFAB8532),
+                width: 1.5,
+              ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,6 +125,10 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
             decoration: BoxDecoration(
               color: Colors.blueGrey[800],
               borderRadius: BorderRadius.circular(16),
+              border: Border.all(
+                color: Color(0xFFAB8532),
+                width: 1.5,
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.3),

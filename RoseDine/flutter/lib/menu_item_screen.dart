@@ -55,37 +55,23 @@ class MenuItemScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDate = ref.watch(selectedDateProvider);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Menu Items'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.recommend),
-            onPressed: () {
-              Navigator.push(
-                context,
-                  MaterialPageRoute(builder: (context) => RecommendationScreen(mealType: mealType, selectedDate: selectedDate))
+    return FutureBuilder<List<dynamic>>(
+      future: fetchMenuItems(selectedDate, mealType).then((items) {
+        // Sort items alphabetically by name
+        items.sort((a, b) => a['name'].compareTo(b['name']));
+        return items;
+      }),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        } else if (snapshot.hasData) {
+          final menuItems = snapshot.data!;
 
-              );
-            },
-          ),
-        ],
-      ),
-      body: FutureBuilder<List<dynamic>>(
-        future: fetchMenuItems(selectedDate, mealType).then((items) {
-          // Sort items alphabetically by name
-          items.sort((a, b) => a['name'].compareTo(b['name']));
-          return items;
-        }),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (snapshot.hasData) {
-            final menuItems = snapshot.data!;
-
-            return ListView.separated(
+          return Padding(
+            padding: const EdgeInsets.only(top: 16.0),
+            child: ListView.separated(
               itemCount: menuItems.length,
               separatorBuilder: (context, index) => const SizedBox(height: 16),
               itemBuilder: (context, index) {
@@ -107,13 +93,12 @@ class MenuItemScreen extends ConsumerWidget {
                   ),
                 );
               },
-            );
-          } else {
-            return const Center(child: Text('No menu items available.'));
-          }
-        },
-      ),
+            ),
+          );
+        } else {
+          return const Center(child: Text('No menu items available.'));
+        }
+      },
     );
-
   }
 }

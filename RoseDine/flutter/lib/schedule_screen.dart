@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:rosedine/recommendation_screen.dart';
 import 'package:rosedine/user_profile_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,10 +32,9 @@ class ScheduleScreen extends ConsumerWidget {
     navBarItems.indexWhere((item) => item.label == selectedMealType);
 
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.person, color: Colors.white),
+          icon: Icon(Icons.person, color: Colors.grey.shade300),
           onPressed: () {
             Navigator.push(
               context,
@@ -50,7 +50,7 @@ class ScheduleScreen extends ConsumerWidget {
             IconButton(
               iconSize: 24,
               padding: EdgeInsets.zero,
-              icon: const Icon(Icons.arrow_left, color: Colors.white),
+              icon: Icon(Icons.arrow_left, color: Colors.grey.shade300),
               onPressed: () {
                 if (selectedDate.isAfter(DateTime.now())) {
                   ref.read(selectedDateProvider.notifier).state =
@@ -94,7 +94,23 @@ class ScheduleScreen extends ConsumerWidget {
         elevation: 0,
         actions: [
           IconButton(
-            icon: const Icon(Icons.mail, color: Colors.white),
+            icon: Icon(Icons.play_arrow, color: Colors.grey.shade300),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => RecommendationScreen(
+                    mealType: selectedMealType,
+                    selectedDate: selectedDate,
+                  ),
+                ),
+              );
+            },
+            tooltip: 'Recommendations',
+          ),
+          const SizedBox(width: 5),
+          IconButton(
+            icon: Icon(Icons.mail, color: Colors.grey.shade300),
             onPressed: () => _sendEmail(),
             tooltip: 'Send feedback',
           ),
