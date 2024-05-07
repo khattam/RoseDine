@@ -15,11 +15,13 @@ class ExpandedContent extends StatelessWidget {
     const labelStyle = TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
+      color: Colors.white,
     );
 
     const valueStyle = TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
+      color: Colors.white,
     );
 
     return Column(
@@ -60,7 +62,7 @@ class ExpandedContent extends StatelessWidget {
           label: 'Overall Rating',
           value: menuItem['overallStars'],
           maxValue: 5,
-          barColor: Colors.yellow.shade700,
+          barColor: Color(0xFFAB8532),
           labelStyle: labelStyle,
           valueStyle: valueStyle,
         ),
@@ -69,7 +71,7 @@ class ExpandedContent extends StatelessWidget {
           label: 'Your Rating',
           value: userRating,
           maxValue: 5,
-          barColor: Colors.blue.shade700,
+          barColor: Color(0xFFAB8532),
           labelStyle: labelStyle,
           valueStyle: valueStyle,
         ),

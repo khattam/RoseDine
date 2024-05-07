@@ -42,7 +42,7 @@ class CirclesWidget extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.brown,
+              color: Color(0xFFAB8532),
             ),
             child: Center(
               child: Text(
@@ -61,7 +61,7 @@ class CirclesWidget extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.lightGreen,
+              color: Colors.green[700],
             ),
             child: Center(
               child: Text(
@@ -80,7 +80,7 @@ class CirclesWidget extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.green,
+              color: Colors.green[900],
             ),
             child: Center(
               child: Text(

@@ -91,11 +91,11 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
           child: Container(
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0x739FB7FF),
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: Colors.black.withOpacity(0.3),
                   spreadRadius: 2,
                   blurRadius: 5,
                   offset: Offset(0, 3),
@@ -111,6 +111,7 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -126,11 +127,11 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
             margin: EdgeInsets.only(top: 8),
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.blueGrey[800],
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: Colors.black.withOpacity(0.3),
                   spreadRadius: 2,
                   blurRadius: 5,
                   offset: Offset(0, 3),

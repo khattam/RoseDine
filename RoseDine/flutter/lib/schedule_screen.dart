@@ -16,7 +16,6 @@ class ScheduleScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
     final selectedMealType = ref.watch(selectedMealTypeProvider);
 
-
     final initialMealType = _getInitialMealType(selectedDate);
     if (selectedMealType.isEmpty) {
       Future(() {
@@ -28,12 +27,14 @@ class ScheduleScreen extends ConsumerWidget {
     String mealTime = getMealTime(selectedDate, selectedMealType);
 
     final navBarItems = _getNavBarItems(selectedDate);
-    final currentIndex = navBarItems.indexWhere((item) => item.label == selectedMealType);
+    final currentIndex =
+    navBarItems.indexWhere((item) => item.label == selectedMealType);
 
     return Scaffold(
+      backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.person),
+          icon: const Icon(Icons.person, color: Colors.white),
           onPressed: () {
             Navigator.push(
               context,
@@ -49,7 +50,7 @@ class ScheduleScreen extends ConsumerWidget {
             IconButton(
               iconSize: 24,
               padding: EdgeInsets.zero,
-              icon: const Icon(Icons.arrow_left),
+              icon: const Icon(Icons.arrow_left, color: Colors.white),
               onPressed: () {
                 if (selectedDate.isAfter(DateTime.now())) {
                   ref.read(selectedDateProvider.notifier).state =
@@ -61,22 +62,23 @@ class ScheduleScreen extends ConsumerWidget {
             Column(
               children: [
                 Text(
-                  DateFormat('EE, dd MMM').format(selectedDate), // Shorter format
+                  DateFormat('EE, dd MMM').format(selectedDate),
                   style: const TextStyle(
-                    fontSize: 16, // Smaller font size
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
                 Text(
                   mealTime,
-                  style: const TextStyle(fontSize: 14), // Smaller font size
+                  style: const TextStyle(fontSize: 14, color: Colors.white),
                 ),
               ],
             ),
             IconButton(
               iconSize: 24,
               padding: EdgeInsets.zero,
-              icon: const Icon(Icons.arrow_right),
+              icon: const Icon(Icons.arrow_right, color: Colors.white),
               onPressed: () {
                 if (selectedDate.difference(DateTime.now()).inDays < 5) {
                   ref.read(selectedDateProvider.notifier).state =
@@ -88,15 +90,11 @@ class ScheduleScreen extends ConsumerWidget {
           ],
         ),
         centerTitle: true,
-        elevation: 4,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(20),
-          ),
-        ),
+        backgroundColor: Colors.blueGrey[900],
+        elevation: 0,
         actions: [
           IconButton(
-            icon: const Icon(Icons.mail),
+            icon: const Icon(Icons.mail, color: Colors.white),
             onPressed: () => _sendEmail(),
             tooltip: 'Send feedback',
           ),
@@ -115,17 +113,22 @@ class ScheduleScreen extends ConsumerWidget {
       ),
       body: MenuItemScreen(mealType: selectedMealType),
       bottomNavigationBar: BottomNavigationBar(
-        items: navBarItems,
+        items: navBarItems.map((item) {
+          return BottomNavigationBarItem(
+            icon: item.icon,
+            label: item.label,
+          );
+        }).toList(),
         currentIndex: currentIndex >= 0 ? currentIndex : 0,
-        selectedItemColor: Theme.of(context).primaryColor,
+        selectedItemColor: const Color(0xFFAB8532),
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.blueGrey[900],
         onTap: (index) {
           ref.read(selectedMealTypeProvider.notifier).state =
           navBarItems[index].label!;
         },
       ),
     );
-
-
   }
 
   Future<void> _sendEmail() async {
