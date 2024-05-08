@@ -7,12 +7,14 @@ class MenuItemWidget extends StatefulWidget {
   final Map<String, dynamic> menuItem;
   final Function(int, int) onRatingUpdate;
   final Function(int, int) getUserRating;
+  final bool isRecommended;
 
   const MenuItemWidget({
     Key? key,
     required this.menuItem,
     required this.onRatingUpdate,
     required this.getUserRating,
+    this.isRecommended = false
   }) : super(key: key);
 
   @override
@@ -84,6 +86,9 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
 
   @override
   Widget build(BuildContext context) {
+    final borderWidth = widget.isRecommended ? 3.0 : 1.5;
+
+
     return Column(
       children: [
         InkWell(
@@ -95,7 +100,7 @@ class _MenuItemWidgetState extends State<MenuItemWidget>
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: Color(0xFFAB8532),
-                width: 1.5,
+                width: borderWidth,
               ),
             ),
             child: Row(

@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:email_validator/email_validator.dart';
 import 'package:rosedine/widgets/custom_button_widget.dart';
 import 'package:rosedine/widgets/custom_text_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';

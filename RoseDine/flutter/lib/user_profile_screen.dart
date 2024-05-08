@@ -111,7 +111,31 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Theme(
+        data: ThemeData(
+          primaryColor:  Color(0xFFAB8532),
+          scaffoldBackgroundColor: Colors.blueGrey[900],
+          appBarTheme:  AppBarTheme(
+            backgroundColor: Colors.blueGrey[900],
+            elevation: 0,
+            iconTheme: IconThemeData(color: Colors.white),
+            titleTextStyle: TextStyle(color: Colors.white),
+          ),
+          textTheme: const TextTheme(
+            bodyText1: TextStyle(color: Colors.white),
+            bodyText2: TextStyle(color: Colors.white),
+          ),
+          sliderTheme: const SliderThemeData(
+            activeTrackColor: const Color(0xFFAB8532),
+            inactiveTrackColor: Colors.grey,
+            thumbColor: const Color(0xFFAB8532),
+            overlayColor: const Color(0x29AB8532),
+            valueIndicatorColor: const Color(0xFFAB8532),
+          ),
+
+        ),
+
+    child: Scaffold(
       appBar: AppBar(
         title: Text('User Profile'),
         actions: [
@@ -176,14 +200,21 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
           ],
         ),
       ),
+    ),
     );
   }
 
   Widget _buildPreferenceToggle(String label, bool value, ValueChanged<bool> onChanged) {
     return SwitchListTile(
-      title: Text(label),
+         title: Text(
+        label,
+        style: const TextStyle(color: Colors.white),
+      ),
       value: value,
       onChanged: onChanged,
+      activeColor: Color(0xFFAB8532),
+      inactiveThumbColor: Color(0xFFAB8532),
+      inactiveTrackColor: Colors.white,
     );
   }
 

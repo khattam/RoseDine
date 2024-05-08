@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:rosedine/recommendation_screen.dart';
+import 'package:rosedine/providers/meal_provider.dart';
 import 'package:rosedine/user_profile_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'auth.dart';
-import 'meal_provider.dart';
 import 'menu_item_screen.dart';
 
 class ScheduleScreen extends ConsumerWidget {
@@ -33,99 +30,95 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.person, color: Colors.grey.shade300),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => UserProfileScreen()),
-            );
-          },
-          tooltip: 'User Profile',
-        ),
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const SizedBox(width: 5),
-            IconButton(
-              iconSize: 24,
-              padding: EdgeInsets.zero,
-              icon: Icon(Icons.arrow_left, color: Colors.grey.shade300),
-              onPressed: () {
-                if (selectedDate.isAfter(DateTime.now())) {
-                  ref.read(selectedDateProvider.notifier).state =
-                      selectedDate.subtract(const Duration(days: 1));
-                }
-              },
-              tooltip: 'Previous Day',
-            ),
-            Column(
-              children: [
-                Text(
-                  DateFormat('EE, dd MMM').format(selectedDate),
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+        title: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                icon: Icon(Icons.person, color: Colors.grey.shade300),
+                padding: EdgeInsets.zero,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserProfileScreen()),
+                  );
+                },
+                tooltip: 'User Profile',
+              ),
+              IconButton(
+                icon: Icon(Icons.play_arrow, color: Colors.grey.shade300),
+                onPressed: () {
+
+                  ref.read(recommendationsNotifierProvider.notifier).fetchRecommendations(selectedDate, selectedMealType);
+                },
+                tooltip: 'Recommendations',
+              ),
+              const SizedBox(width: 5),
+              IconButton(
+                iconSize: 24,
+                padding: EdgeInsets.zero,
+                icon: Icon(Icons.arrow_left, color: Colors.grey.shade300),
+                onPressed: () {
+                  if (selectedDate.isAfter(DateTime.now())) {
+                    ref.read(selectedDateProvider.notifier).state =
+                        selectedDate.subtract(const Duration(days: 1));
+                  }
+                },
+                tooltip: 'Previous Day',
+              ),
+              Column(
+                children: [
+                  Text(
+                    DateFormat('EE, dd MMM').format(selectedDate),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
+                  Text(
+                    mealTime,
+                    style: const TextStyle(fontSize: 14, color: Colors.white),
+                  ),
+                ],
+              ),
+              const SizedBox(width: 5),
+              IconButton(
+                iconSize: 24,
+                padding: EdgeInsets.zero,
+                icon: const Icon(Icons.arrow_right, color: Colors.white),
+                onPressed: () {
+                  if (selectedDate.difference(DateTime.now()).inDays < 5) {
+                    ref.read(selectedDateProvider.notifier).state =
+                        selectedDate.add(const Duration(days: 1));
+                  }
+                },
+                tooltip: 'Next Day',
+              ),
+              const SizedBox(width: 5),
+              IconButton(
+                icon: Icon(Icons.mail, color: Colors.grey.shade300),
+                padding: EdgeInsets.zero,
+                onPressed: () => _sendEmail(),
+                tooltip: 'Send feedback',
+              ),
+              const SizedBox(width: 5),
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  color: getMealStatusColor(selectedDate, selectedMealType),
+                  shape: BoxShape.circle,
                 ),
-                Text(
-                  mealTime,
-                  style: const TextStyle(fontSize: 14, color: Colors.white),
-                ),
-              ],
-            ),
-            IconButton(
-              iconSize: 24,
-              padding: EdgeInsets.zero,
-              icon: const Icon(Icons.arrow_right, color: Colors.white),
-              onPressed: () {
-                if (selectedDate.difference(DateTime.now()).inDays < 5) {
-                  ref.read(selectedDateProvider.notifier).state =
-                      selectedDate.add(const Duration(days: 1));
-                }
-              },
-              tooltip: 'Next Day',
-            ),
-          ],
+                margin: const EdgeInsets.only(right: 8),
+              ),
+            ],
+          ),
         ),
         centerTitle: true,
         backgroundColor: Colors.blueGrey[900],
         elevation: 0,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.play_arrow, color: Colors.grey.shade300),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => RecommendationScreen(
-                    mealType: selectedMealType,
-                    selectedDate: selectedDate,
-                  ),
-                ),
-              );
-            },
-            tooltip: 'Recommendations',
-          ),
-          const SizedBox(width: 5),
-          IconButton(
-            icon: Icon(Icons.mail, color: Colors.grey.shade300),
-            onPressed: () => _sendEmail(),
-            tooltip: 'Send feedback',
-          ),
-          const SizedBox(width: 5),
-          Container(
-            width: 15,
-            height: 15,
-            decoration: BoxDecoration(
-              color: getMealStatusColor(selectedDate, selectedMealType),
-              shape: BoxShape.circle,
-            ),
-            margin: const EdgeInsets.only(right: 16),
-          ),
-          const SizedBox(width: 5),
-        ],
       ),
       body: MenuItemScreen(mealType: selectedMealType),
       bottomNavigationBar: BottomNavigationBar(
@@ -256,4 +249,5 @@ class ScheduleScreen extends ConsumerWidget {
       ),
     ];
   }
+
 }
