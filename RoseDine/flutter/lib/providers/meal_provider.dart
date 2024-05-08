@@ -25,7 +25,6 @@ class RecommendationsNotifier extends StateNotifier<Map<String, dynamic>> {
 
   Future<void> fetchRecommendations(DateTime selectedDate, String mealType) async {
     final recommendations = await mealRepository.fetchRecommendations(selectedDate, mealType);
-    print('Fetched Recommendations: $recommendations');
     state = recommendations;
   }
   void clearRecommendations() {
