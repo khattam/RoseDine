@@ -30,6 +30,7 @@ class ScheduleScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
