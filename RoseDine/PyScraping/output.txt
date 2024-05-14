@@ -1,0 +1,385 @@
+Scraping Brunch for 2024-05-11
+Brunch:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Turkey Sausage Links
+	  Item: Tater Tots
+	  Item: Tofu Scramble
+	Section: roots
+	  Item: Buttermilk Pancakes
+	  Item: Caramel Sauce
+	  Item: Blueberry Compote
+	Section: sizzle
+	  Item: French Fries
+	  Item: Honey Mustard Shredded Chicken Slider
+	  Item: Grilled Cheese
+	  Item: Steamed Broccoli
+	Section: rosies favorites
+	  Item: Beef and Black Bean Tamale Pie
+	  Item: Cilantro Lime Rice
+	  Item: Braised Black Beans
+	  Item: Steamed Cauliflower
+	Section: kettles
+	  Item: Old-fashioned Oatmeal
+Scraping Brunch for 2024-05-12
+Brunch:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: Fried Potatoes
+	  Item: Biscuits and White Pepper Gravy
+	Section: roots
+	  Item: Texas French Toast
+	  Item: Chocolate Sauce
+	  Item: Blueberry Compote
+	Section: sizzle
+	  Item: French Fries
+	  Item: Mini Corn Dogs
+	  Item: Beyond Burger
+	  Item: Steamed Green Beans
+	Section: rosies favorites
+	  Item: Chicken Parmesan Pasta Bake
+	  Item: Pasta with Roasted Vegetables
+	  Item: Pesto Roasted Tofu
+	  Item: Steamed Carrots
+	Section: kettles
+	  Item: Old-fashioned Oatmeal
+Scraping Dinner for 2024-05-12
+Dinner:
+	Section: sizzle
+	  Item: French Fries
+	  Item: Bbq Shredded Beef
+	  Item: Cheese Quesadilla
+	  Item: Steamed Cauliflower Broccoli and Carrots
+	Section: rosies favorites
+	  Item: Teriyaki Chicken Potstickers
+	  Item: Steamed Jasmine Rice
+	  Item: Sweet Chili Roasted Tofu
+	  Item: Vegetable Stir Fry
+Scraping Breakfast for 2024-05-13
+Breakfast:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Bacon
+	  Item: Fried Wedges
+	  Item: Cheesy Egg
+	  Item: Hot Chocolate
+	Section: roots
+	  Item: Buttermilk Pancakes
+	  Item: Chocolate Sauce
+	  Item: Strawberry Compote
+	  Item: Morning Star Sausage
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+Scraping Lunch for 2024-05-13
+Lunch:
+	Section: roots
+	  Item: Black Pepper Tamari Tofu
+	  Item: Steamed Jasmine Rice
+	  Item: Steamed Broccoli
+	Section: global
+	  Item: Sesame Beef N Broccoli
+	  Item: Steamed Jasmine Rice
+	  Item: Steamed Snow Peas and Peppers
+	Section: sizzle
+	  Item: French Fries
+	  Item: Cameron Farms Barbecue Pulled Pork
+	  Item: Three Cheese Grilled Cheese
+	  Item: Steamed Broccoli
+	Section: rosies favorites
+	  Item: Creamed Farfalle Pasta with Blackened Chicken
+	  Item: Roasted Zucchini and Squash
+	  Item: Garlic Buttered Breadsticks
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Sausage Pizza
+	Section: spa waters
+	  Item: Cucumber Melon
+	Section: market
+	  Item: L&A Bbq Roasted Chicken
+	  Item: Garlic Roasted Potatoes
+	  Item: Steamed Corn
+Scraping Dinner for 2024-05-13
+Dinner:
+	Section: roots
+	  Item: Jamaican Escovitch Inspired Tofu
+	  Item: Black Beans and Rice
+	  Item: Steamed Peas
+	Section: global
+	  Item: Ancho Pork and Hominy Stew
+	  Item: Black Beans and Brown Rice
+	  Item: Roasted Zucchini and Squash
+	Section: sizzle
+	  Item: French Fries
+	  Item: Turkey and Cheddar Hoagie
+	  Item: Lentil Sloppy Jo
+	Section: rosies favorites
+	  Item: Sweet Molasses Bbq Chicken Drumsticks
+	  Item: Buttery Mashed Sweet Potatoes
+	  Item: Steamed Broccoli
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Sausage Pizza
+	Section: spa waters
+	  Item: Cucumber Melon
+	Section: market
+	  Item: Buffalo Roasted Chicken Thighs
+	  Item: Rice with Sauteed Peppers
+	  Item: Dill Roasted Zucchini and Squash
+Scraping Breakfast for 2024-05-14
+Breakfast:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: Fried Potatoes
+	  Item: Broccoli Cheddar Frittata
+	  Item: Chocolate Cold Brew
+	Section: roots
+	  Item: Texas French Toast
+	  Item: Caramel Sauce
+	  Item: Pineapple Compote
+	  Item: Morning Star Bacon
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+Scraping Lunch for 2024-05-14
+Lunch:
+	Section: roots
+	  Item: Barbecue "chicken" Bites
+	  Item: Roasted Potatoes
+	  Item: Corn and Red Pepper
+	Section: global
+	  Item: Cameron Farms Lemongrass Coconut Pork Curry
+	  Item: Steamed Basmati
+	  Item: Steamed Green Beans
+	Section: sizzle
+	  Item: French Fries
+	  Item: Italian Sub
+	Section: rosies favorites
+	  Item: Memphis Mop Sauce Glazed Bone in Chicken Thighs
+	  Item: Garlic Smashed Potatoes
+	  Item: Steamed Peas
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Lamb Gyro Pizza
+	Section: spa waters
+	  Item: Pineapple Lemon
+	Section: market
+	  Item: Greek Inspired Chicken Thighs
+	  Item: Lemon Mint Rice
+	  Item: Roasted Broccoli
+Scraping Dinner for 2024-05-14
+Dinner:
+	Section: roots
+	  Item: Indian-inspired Chickpea and Summer Corn Curry
+	  Item: Cilantro Rice
+	  Item: Green Peas
+	Section: global
+	  Item: Chipotle Mango Chicken Thighs
+	  Item: Cilantro Lime Rice
+	  Item: Steamed Corn
+	Section: sizzle
+	  Item: French Fries
+	  Item: Turkey Sloppy Jo Slider
+	Section: rosies favorites
+	  Item: Pasta Bar
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Lamb Gyro Pizza
+	Section: spa waters
+	  Item: Pineapple Lemon
+	Section: market
+	  Item: Chicken Chili Rojo
+	  Item: Cumin Quinoa and Brown Rice
+	  Item: Steamed Cauliflower
+Scraping Breakfast for 2024-05-15
+Breakfast:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Bacon
+	  Item: Tater Tots
+	  Item: Southwest Egg Burritos
+	  Item: Power Smoothie
+	Section: roots
+	  Item: Buttermilk Pancakes
+	  Item: Chocolate Sauce
+	  Item: Peach Compote
+	  Item: Morning Star Sausage
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+Scraping Lunch for 2024-05-15
+Lunch:
+	Section: roots
+	  Item: Sticky Miso Cauliflower
+	  Item: Rice Noodles
+	  Item: Steamed Carrots
+	Section: global
+	  Item: Beef Bolognese
+	  Item: Spaghetti
+	  Item: Steamed Corn and Peas
+	Section: sizzle
+	  Item: French Fries
+	  Item: Chicken Tenders
+	  Item: Black Bean Burger
+	  Item: Steamed Green Beans
+	Section: rosies favorites
+	  Item: Chicken Tenders
+	  Item: Roasted Potato Wedges
+	  Item: Steamed Broccoli
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Bqq Chicken Pizza
+	Section: spa waters
+	  Item: Mango Blackberry
+	Section: market
+	  Item: Cajun Roasted Chicken
+	  Item: Smashed Potatoes
+	  Item: Stewed Okra and Tomatoes
+Scraping Dinner for 2024-05-15
+Dinner:
+	Section: roots
+	  Item: Seitan "roast Beef"
+	  Item: Mac and Cheese
+	  Item: Roasted Vegetable Medley
+	Section: global
+	  Item: Shrimp Fried Rice
+	  Item: Vegetable Eggrolls
+	  Item: Steamed Snow Peas
+	Section: sizzle
+	  Item: French Fries
+	  Item: Ham and Swiss Melt
+	Section: rosies favorites
+	  Item: Creamy Chicken Pot Pie
+	  Item: Creamy Mashed Potatoes
+	  Item: Roasted Brussels and Carrots
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Bqq Chicken Pizza
+	Section: spa waters
+	  Item: Mango Blackberry
+	Section: market
+	  Item: Lemon Oregano Roasted Bone in Chicken
+	  Item: Steamed Basmati Rice
+	  Item: Roasted Yellow Squash and Tomatoes
+Scraping Breakfast for 2024-05-16
+Breakfast:
+	Section: rise
+	  Item: Scrambled Eggs
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: O'brien Potatoes
+	  Item: Ham and Cheddar Croissant
+	  Item: Peaches and Cream Smoothie
+	Section: roots
+	  Item: Texas French Toast
+	  Item: Caramel Sauce
+	  Item: Spiced Apple Compote
+	  Item: Morning Star Bacon
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+Scraping Lunch for 2024-05-16
+Lunch:
+	Section: roots
+	  Item: Fried Buffalo Tofu
+	  Item: Roasted Potatoes
+	  Item: Steamed Broccoli
+	Section: global
+	  Item: Chimichurri Chicken Brown Rice Quinoa Bowl
+	Section: sizzle
+	  Item: French Fries
+	  Item: Turkey Cheddar Pretzel Melt
+	Section: rosies favorites
+	  Item: Cameron Farms Habanero Maple Roasted Pork Loin
+	  Item: Chili Roasted Sweet Potatoes
+	  Item: Steamed Green Beans and Tomatoes
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Chicken Bacon Ranch Pizza
+	Section: spa waters
+	  Item: Blueberry Orange Fresca
+	Section: market
+	  Item: Orange Oregano Roasted Chicken Thighs
+	  Item: Roasted Vegetables
+	  Item: Steamed Quinoa and Brown Rice
+Scraping Dinner for 2024-05-16
+Dinner:
+	Section: roots
+	  Item: Carrot Hotdogs
+	  Item: Idaho Potato Wedges
+	  Item: Roasted Corn
+	Section: global
+	  Item: Chicken with Mushroom Marsala
+	  Item: Bowtie Pasta
+	  Item: Sauteed Spinach and Peppers
+	Section: sizzle
+	  Item: French Fries
+	  Item: Beef and Pepperjack Hoagie
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Chicken Bacon Ranch Pizza
+	Section: spa waters
+	  Item: Blueberry Orange Fresca
+	Section: market
+	  Item: Blackened Bone-in Chicken
+	  Item: Sauteed Spinach
+	  Item: Black Beans and Rice
+Scraping Breakfast for 2024-05-17
+Breakfast:
+	Section: rise
+	  Item: Cameron Farms Breakfast Sausage
+	  Item: Scrambled Eggs
+	  Item: Oven-roasted Potatoes
+	  Item: Beyond Sausage Scaramble
+	  Item: Raspberry Mango Tea Smoothie
+	Section: roots
+	  Item: Buttermilk Pancakes
+	  Item: Chocolate Sauce
+	  Item: Mango Compote
+	  Item: Morning Star Sausage
+	Section: sizzle
+	  Item: Buttermilk Biscuit
+	  Item: White Pepper Gravy
+Scraping Lunch for 2024-05-17
+Lunch:
+	Section: roots
+	  Item: Spinach Mushroom Rolls
+	  Item: Herb Orzo
+	  Item: Steamed Carrots
+	Section: global
+	  Item: Jerk Chicken Thighs
+	  Item: Mango Coconut Rice
+	  Item: Steamed Carrots
+	Section: sizzle
+	  Item: French Fries
+	  Item: Crispy French Fry Bar
+	Section: rosies favorites
+	  Item: Red Wine and Herb Marinated Beef Tips and Button Mushrooms
+	  Item: Sour Cream and Chive Mashed Potatoes
+	  Item: Steamed Broccoli and Cauliflower
+	Section: pomodoro
+	  Item: Cheese Pizza
+	  Item: Pepperoni Pizza
+	  Item: Caprese Pizza
+	Section: spa waters
+	  Item: Raspberry Mandarin Orange
+	Section: market
+	  Item: Southwest Chicken
+	  Item: Cumin Rice
+	  Item: Steamed Broccoli
+Scraping Dinner for 2024-05-17
+Dinner:
+	Section: pomodoro
+	  Item: Pepperoni Pizza
+	  Item: Caprese Pizza
+	Section: spa waters
+	  Item: Raspberry Mandarin Orange
