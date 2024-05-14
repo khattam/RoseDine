@@ -8,9 +8,23 @@ class MealRepository {
 
   MealRepository({required this.httpClient});
 
+  final int ipSwitcher = 0;
+
+  String get baseUrl {
+    switch (ipSwitcher) {
+      case 0:
+        return 'http://localhost:8081';
+      case 1:
+        return 'http://137.112.227.135:8081'; //replace with laptop ipv4 address
+                                              //Also change auth.dart
+      default:
+        return 'http://localhost:8081';
+    }
+  }
+
   Future<List<dynamic>> fetchMenuItems(DateTime selectedDate, String mealType) async {
     final dateString = selectedDate.toIso8601String().split('T')[0];
-    final url = 'http://localhost:8081/api/menu-items?date=$dateString&type=$mealType';
+    final url = '$baseUrl/api/menu-items?date=$dateString&type=$mealType';
     final response = await httpClient.get(Uri.parse(url));
     if (response.statusCode == 200) {
       return json.decode(response.body);
@@ -20,7 +34,7 @@ class MealRepository {
   }
 
   Future<int> getUserRating(int userId, int menuItemId) async {
-    final url = 'http://localhost:8081/api/reviews/$menuItemId/user-rating?userId=$userId';
+    final url = '$baseUrl/api/reviews/$menuItemId/user-rating?userId=$userId';
     final response = await httpClient.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final rating = json.decode(response.body);
@@ -31,7 +45,7 @@ class MealRepository {
   }
 
   Future<void> sendReview(int userId, int menuItemId, int rating) async {
-    final url = 'http://localhost:8081/api/reviews/$menuItemId?userId=$userId&stars=$rating';
+    final url = '$baseUrl/api/reviews/$menuItemId?userId=$userId&stars=$rating';
     final response = await httpClient.post(Uri.parse(url));
     if (response.statusCode != 200) {
       throw Exception('Failed to send review');
@@ -44,7 +58,7 @@ class MealRepository {
     final formattedDate = DateFormat('yyyy-MM-dd').format(selectedDate);
 
     if (userId != null) {
-      final url = 'http://localhost:8081/api/recommendations?userId=$userId&mealType=$mealType&date=$formattedDate';
+      final url = '$baseUrl/api/recommendations?userId=$userId&mealType=$mealType&date=$formattedDate';
       final response = await httpClient.get(Uri.parse(url));
       if (response.statusCode == 200) {
         List<dynamic> rawData = json.decode(response.body);
@@ -52,7 +66,6 @@ class MealRepository {
           List<Map<String, dynamic>> cleanedData = rawData.map<Map<String, dynamic>>((item) {
             return {
               "item": item['item'],
-
             };
           }).toList();
 
@@ -74,9 +87,13 @@ class MealRepository {
     return {};
   }
 
-
-
-
-
-
+  Future<List<dynamic>> getNotificationFoods(int userId) async {
+    final url = '$baseUrl/api/get-notifications?userId=$userId';
+    final response = await httpClient.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception('Failed to load notification foods');
+    }
+  }
 }

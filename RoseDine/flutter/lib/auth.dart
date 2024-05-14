@@ -20,7 +20,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final String backendUrl = 'http://localhost:8081/api/users';
+  final int ipSwitcher = 0;
+
+  late String backendUrl;
 
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
@@ -41,6 +43,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
       CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
     );
     _animationController.forward();
+
+    // Set the backendUrl based on the ipSwitcher value
+    backendUrl = ipSwitcher == 0 ? 'http://localhost:8081' : 'http://137.112.227.135:8081';
   }
 
   Future<void> _checkLoginStatus() async {
@@ -64,7 +69,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    final url = Uri.parse('$backendUrl/login');
+    final url = Uri.parse('$backendUrl/api/users/login');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -85,7 +90,6 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('userId', userId);
   }
-
 
   final List<String> welcomeMessages = [
     'Welcome to RoseDine!',
@@ -210,5 +214,4 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
       ),
     );
   }
-
 }
