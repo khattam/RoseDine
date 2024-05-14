@@ -72,4 +72,6 @@ public class UserService {
     public UserPreferences getUserPreferences(int userId, String mealType) {
         return userRepository.getUserPreferences(userId, mealType);
     }
+
+
 }
