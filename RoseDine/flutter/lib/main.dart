@@ -1,4 +1,5 @@
 import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -9,10 +10,12 @@ final container = ProviderContainer();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  print('Requesting SCHEDULE_EXACT_ALARM permission...');
-  await Permission.scheduleExactAlarm.request();
-  print('Initializing AndroidAlarmManager...');
-  await AndroidAlarmManager.initialize();
+  if (!kIsWeb) {
+    print('Requesting SCHEDULE_EXACT_ALARM permission...');
+    await Permission.scheduleExactAlarm.request();
+    print('Initializing AndroidAlarmManager...');
+    await AndroidAlarmManager.initialize();
+  }
   runApp(UncontrolledProviderScope(container: container, child: MyApp()));
 }
 

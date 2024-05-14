@@ -1,4 +1,5 @@
 import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -18,47 +19,50 @@ void notificationCallback(int id) async {
 class NotificationService {
   static Future<void> scheduleNotificationService(WidgetRef ref) async {
     print('Scheduling notification service...');
-    final bool isPermissionGranted = await Permission.scheduleExactAlarm.isGranted;
+    if (!kIsWeb) {
+      final bool isPermissionGranted = await Permission.scheduleExactAlarm.isGranted;
 
-    if (isPermissionGranted) {
-      print('SCHEDULE_EXACT_ALARM permission granted');
-      final now = DateTime.now();
-      final notificationTime = DateTime(now.year, now.month, now.day, 7, 30);
-      print('Current time: $now');
-      print('Notification time: $notificationTime');
+      if (isPermissionGranted) {
+        print('SCHEDULE_EXACT_ALARM permission granted');
+        final now = DateTime.now();
+        final notificationTime = DateTime(now.year, now.month, now.day, 7, 30);
+        print('Current time: $now');
+        print('Notification time: $notificationTime');
 
-
-      if (notificationTime.isBefore(now)) {
-        final tomorrowNotificationTime = notificationTime.add(Duration(days: 1));
-        print('Scheduling notification for tomorrow at ${tomorrowNotificationTime.toString()}');
-        await AndroidAlarmManager.oneShotAt(
-          tomorrowNotificationTime,
-          0,
-          notificationCallback,
-          exact: true,
-          wakeup: true,
-        );
+        if (notificationTime.isBefore(now)) {
+          final tomorrowNotificationTime = notificationTime.add(Duration(days: 1));
+          print('Scheduling notification for tomorrow at ${tomorrowNotificationTime.toString()}');
+          await AndroidAlarmManager.oneShotAt(
+            tomorrowNotificationTime,
+            0,
+            notificationCallback,
+            exact: true,
+            wakeup: true,
+          );
+        } else {
+          print('Scheduling notification for today at ${notificationTime.toString()}');
+          await AndroidAlarmManager.oneShotAt(
+            notificationTime,
+            0,
+            notificationCallback,
+            exact: true,
+            wakeup: true,
+          );
+        }
       } else {
-        print('Scheduling notification for today at ${notificationTime.toString()}');
-        await AndroidAlarmManager.oneShotAt(
-          notificationTime,
-          0,
-          notificationCallback,
-          exact: true,
-          wakeup: true,
-        );
+        print('SCHEDULE_EXACT_ALARM permission not granted, requesting permission...');
+        await Permission.scheduleExactAlarm.request();
+        final bool isPermissionGrantedAfterRequest = await Permission.scheduleExactAlarm.isGranted;
+
+        if (isPermissionGrantedAfterRequest) {
+          print('SCHEDULE_EXACT_ALARM permission granted after request');
+          scheduleNotificationService(ref);
+        } else {
+          print('SCHEDULE_EXACT_ALARM permission denied after request');
+        }
       }
     } else {
-      print('SCHEDULE_EXACT_ALARM permission not granted, requesting permission...');
-      await Permission.scheduleExactAlarm.request();
-      final bool isPermissionGrantedAfterRequest = await Permission.scheduleExactAlarm.isGranted;
-
-      if (isPermissionGrantedAfterRequest) {
-        print('SCHEDULE_EXACT_ALARM permission granted after request');
-        scheduleNotificationService(ref);
-      } else {
-        print('SCHEDULE_EXACT_ALARM permission denied after request');
-      }
+      print('Skipping exact alarm scheduling on the web.');
     }
   }
 
