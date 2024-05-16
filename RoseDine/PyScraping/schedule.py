@@ -30,11 +30,12 @@ def scrape_day_meals(date, driver, file):
         scraper.get_meal(meal, day_url, driver, file)
 
 if __name__ == "__main__":
-    chromedriver_path = 'chromedriver-win64\chromedriver.exe'
+    chromedriver_path = 'PyScraping\\chromedriver-win64\\chromedriver.exe'
+    #chromedriver_path = 'chromedriver-win64\\chromedriver.exe'
     service = Service(executable_path=chromedriver_path)
     driver = webdriver.Chrome(service=service)
 
-    with open('output.txt', 'a') as file:
+    with open('PyScraping\\output.txt', 'a') as file:
         scrape_weekly_meals(driver, file)  
         # scrape_next_day_meal(driver, file)  # Uncomment to run for +7th day's meal
 
