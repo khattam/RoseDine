@@ -4,9 +4,15 @@ import com.rosedine.rosedine.dto.UserPreferences;
 import com.rosedine.rosedine.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.SqlOutParameter;
+import org.springframework.jdbc.core.SqlParameter;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
+import java.sql.Types;
 import java.util.Map;
 
 @Service
@@ -22,58 +28,92 @@ public class UserService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public boolean userExists(String email) {
-        try {
-            String query = "SELECT COUNT(*) FROM [User] WHERE [Email ID] = ?";
-            Integer count = jdbcTemplate.queryForObject(query, new Object[]{email}, Integer.class);
-            return count != null && count > 0;
-        } catch (Exception e) {
-            return false;
-        }
-    }
 
     public void updateUserPassword(String email, String newPassword) {
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
-        String updateQuery = "UPDATE [User] SET Password = ? WHERE [Email ID] = ?";
-        jdbcTemplate.update(updateQuery, hashedPassword, email);
+
+        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate)
+                .withProcedureName("UpdateUserPassword");
+
+        SqlParameterSource inParams = new MapSqlParameterSource()
+                .addValue("EmailID", email)
+                .addValue("NewPassword", hashedPassword);
+
+        jdbcCall.execute(inParams);
+    }
+
+
+    public boolean userExists(String email) {
+        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate)
+                .withProcedureName("CheckUserExists2")
+                .declareParameters(
+                        new SqlParameter("Email", Types.NVARCHAR),
+                        new SqlOutParameter("UserCount", Types.INTEGER));
+
+        SqlParameterSource inParams = new MapSqlParameterSource()
+                .addValue("Email", email);
+
+        Map<String, Object> result = jdbcCall.execute(inParams);
+        return (Integer) result.get("UserCount") > 0;
     }
 
     public void createUser(String fname, String lname, String email, String password) {
         try {
             String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
-            // Insert dietary restrictions
-            String insertDietaryRestriction = "INSERT INTO dbo.DietaryRestrictions (Is_Vegan, Is_Vegetarian, Is_Gluten_Free) VALUES (0, 0, 0)";
-            jdbcTemplate.update(insertDietaryRestriction);
+            SimpleJdbcCall jdbcCallDR = new SimpleJdbcCall(jdbcTemplate)
+                    .withProcedureName("InsertDietaryRestrictions2")
+                    .declareParameters(new SqlOutParameter("ID", Types.INTEGER));
 
-            // Retrieve the inserted dietary restriction ID
-            Long dietaryRestrictionId = jdbcTemplate.queryForObject("SELECT SCOPE_IDENTITY()", Long.class);
+            SqlParameterSource inParamsDR = new MapSqlParameterSource()
+                    .addValue("IsVegan", false)
+                    .addValue("IsVegetarian", false)
+                    .addValue("IsGlutenFree", false);
 
-            // Insert user with dietary restriction ID
-            String insertUser = "INSERT INTO [User] ([Fname], [Lname], [Email ID], Password, DietaryRestrictions_ID) VALUES (?, ?, ?, ?, ?)";
-            jdbcTemplate.update(insertUser, fname, lname, email, hashedPassword, dietaryRestrictionId);
+            Map<String, Object> outDR = jdbcCallDR.execute(inParamsDR);
+            Integer dietaryRestrictionId = (Integer) outDR.get("ID");
+
+            SimpleJdbcCall jdbcCallUser = new SimpleJdbcCall(jdbcTemplate)
+                    .withProcedureName("InsertUser2");
+
+            SqlParameterSource inParamsUser = new MapSqlParameterSource()
+                    .addValue("Fname", fname)
+                    .addValue("Lname", lname)
+                    .addValue("EmailID", email)
+                    .addValue("Password", hashedPassword)
+                    .addValue("DietaryRestrictionsID", dietaryRestrictionId);
+
+            jdbcCallUser.execute(inParamsUser);
         } catch (Exception e) {
             System.err.println("Error creating user: " + e.getMessage());
         }
     }
 
+
+
+
     public int validateUser(String email, String password) {
-        try {
-            String query = "SELECT UserID, Password FROM [User] WHERE [Email ID] = ?";
-            Map<String, Object> result = jdbcTemplate.queryForMap(query, email);
+        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(jdbcTemplate)
+                .withProcedureName("ValidateUser")
+                .declareParameters(
+                        new SqlParameter("EmailID", Types.NVARCHAR),
+                        new SqlOutParameter("UserID", Types.INTEGER),
+                        new SqlOutParameter("HashedPassword", Types.NVARCHAR));
 
-            int userId = (int) result.get("UserID");
-            String storedHashedPassword = (String) result.get("Password");
+        SqlParameterSource inParams = new MapSqlParameterSource()
+                .addValue("EmailID", email);
 
-            if (storedHashedPassword != null && BCrypt.checkpw(password, storedHashedPassword)) {
-                return userId;
-            } else {
-                return -1;
-            }
-        } catch (Exception e) {
+        Map<String, Object> result = jdbcCall.execute(inParams);
+        Integer userId = (Integer) result.get("UserID");
+        String storedHashedPassword = (String) result.get("HashedPassword");
+
+        if (userId != null && storedHashedPassword != null && BCrypt.checkpw(password, storedHashedPassword)) {
+            return userId;
+        } else {
             return -1;
         }
     }
+
 
     public UserPreferences getUserPreferences(int userId, String mealType) {
         return userRepository.getUserPreferences(userId, mealType);
