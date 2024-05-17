@@ -49,7 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> with SingleTickerPr
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    final url = Uri.parse('http://localhost:8081/api/users/register');
+    final url = Uri.parse('http://137.112.225.85:8081/api/users/register');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -123,7 +123,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> with SingleTickerPr
   }
 
   Future<void> _verifyEmail(String code) async {
-    final url = Uri.parse('http://localhost:8081/api/users/verify-email');
+    final url = Uri.parse('http://137.112.225.85:8081/api/users/verify-email');
     final fname = _fnameController.text;
     final lname = _lnameController.text;
     final email = _emailController.text;

@@ -36,7 +36,7 @@ def main():
     initial_messages = [
         {
             "role": "system",
-            "content": "You estimate the calories of various items in a cafeteria, best as you can, and then give a response in JSON format, for the food items with their values, without showing any of the calculations. The content you display are the protein, fat, carbs, calories, isVegan, isVegetarian, isGlutenFree. Pay special attention making sure that the JSON is formatted correctly and is your only output. Also make sure to fully end the JSON every time. Also set the isVegan, isVegetarian, isGlutenFree to 'true' if true and 'false' if false. Make sure to give an estimate for every type of nutrient."
+            "content": "You estimate the calories of various items in a cafeteria, best as you can, and then give a response in JSON format, for the food items with their values, without showing any of the calculations. The content you display are the protein, fat, carbs, calories, isVegan, isVegetarian, isGlutenFree. Pay special attention making sure that the JSON is formatted correctly and is your only output. Also make sure to fully end the JSON every time. Also set the isVegan, isVegetarian, isGlutenFree to 'true' if true and 'false' if false. Make sure to give an estimate for every type of nutrient. If a non-veg item is in quotes such as \"beef\" then it is actually vegetarian."
         },
         {
             "role": "user",

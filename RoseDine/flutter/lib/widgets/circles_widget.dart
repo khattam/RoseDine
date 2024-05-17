@@ -11,25 +11,48 @@ class CirclesWidget extends StatelessWidget {
     final isVegan = menuItem['vegan'];
     final isVegetarian = menuItem['vegetarian'];
 
-    if (!isGlutenFree && !isVegan && !isVegetarian) {
-      return Container(
-        margin: EdgeInsets.only(left: 8),
-        width: 40,
-        height: 40,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.red[900],
-        ),
-        child: Center(
-          child: Text(
-            'NVG',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 12,
+    if (!isVegan && !isVegetarian) {
+      return Row(
+        children: [
+          Container(
+            margin: EdgeInsets.only(left: 8),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.red[900],
+            ),
+            child: Center(
+              child: Text(
+                'NVG',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                ),
+              ),
             ),
           ),
-        ),
+          if (isGlutenFree)
+            Container(
+              margin: EdgeInsets.only(left: 8),
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0xFFAB8532),
+              ),
+              child: Center(
+                child: Text(
+                  'GF',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+        ],
       );
     }
 

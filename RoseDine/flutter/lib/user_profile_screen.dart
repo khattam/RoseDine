@@ -30,7 +30,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   Future<void> _loadUserPreferences() async {
     final userId = await _getUserId();
-    final url = 'http://localhost:8081/api/user-preferences/get-preferences?userId=$userId';
+    final url = 'http://137.112.225.85:8081/api/user-preferences/get-preferences?userId=$userId';
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
@@ -70,7 +70,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   Future<void> _updateDietaryRestriction(String restrictionName, bool restrictionValue) async {
     final userId = await _getUserId();
-    final url = 'http://localhost:8081/api/user-preferences/update-dietary-restriction?userId=$userId&restrictionName=$restrictionName&restrictionValue=$restrictionValue';
+    final url = 'http://137.112.225.85:8081/api/user-preferences/update-dietary-restriction?userId=$userId&restrictionName=$restrictionName&restrictionValue=$restrictionValue';
     final response = await http.put(Uri.parse(url));
 
     if (response.statusCode == 200) {
@@ -88,7 +88,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   Future<void> _updateMacro(String mealType, String macroName, int macroValue) async {
     final userId = await _getUserId();
-    final url = 'http://localhost:8081/api/user-preferences/update-macro?userId=$userId&mealType=$mealType&macroName=$macroName&macroValue=$macroValue';
+    final url = 'http://137.112.225.85:8081/api/user-preferences/update-macro?userId=$userId&mealType=$mealType&macroName=$macroName&macroValue=$macroValue';
     final response = await http.put(Uri.parse(url));
 
     if (response.statusCode == 200) {

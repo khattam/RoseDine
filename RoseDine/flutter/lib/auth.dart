@@ -19,7 +19,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final int ipSwitcher = 0;
+  final int ipSwitcher = 1;
 
   late String backendUrl;
 
@@ -44,7 +44,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     _animationController.forward();
 
     // Set the backendUrl based on the ipSwitcher value
-    backendUrl = ipSwitcher == 0 ? 'http://localhost:8081' : 'http://137.112.227.135:8081';
+    backendUrl = ipSwitcher == 0 ? 'http://localhost:8081' : 'http://137.112.225.85:8081';
   }
 
   Future<void> _checkLoginStatus() async {

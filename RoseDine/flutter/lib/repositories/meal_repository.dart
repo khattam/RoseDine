@@ -8,15 +8,16 @@ class MealRepository {
 
   MealRepository({required this.httpClient});
 
-  final int ipSwitcher = 0;
+  final int ipSwitcher = 1;
 
   String get baseUrl {
     switch (ipSwitcher) {
       case 0:
         return 'http://localhost:8081';
       case 1:
-        return 'http://137.112.227.135:8081'; //replace with laptop ipv4 address
+        return 'http://137.112.225.85:8081'; //replace with laptop ipv4 address
                                               //Also change auth.dart
+                                                //Also change onboarding_screen.dart, ipconfig to get wifi ipv4 address
       default:
         return 'http://localhost:8081';
     }

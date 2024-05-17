@@ -56,9 +56,14 @@ class ScheduleScreen extends ConsumerWidget {
                 tooltip: 'User Profile',
               ),
               IconButton(
-                icon: Icon(Icons.play_arrow, color: Colors.grey.shade300),
+                icon: Text(
+                  'Rec.',
+                  style: TextStyle(
+                    color: Colors.grey.shade300,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onPressed: () {
-
                   ref.read(recommendationsNotifierProvider.notifier).fetchRecommendations(selectedDate, selectedMealType);
                 },
                 tooltip: 'Recommendations',
@@ -158,11 +163,11 @@ class ScheduleScreen extends ConsumerWidget {
       },
     );
 
-    if (await canLaunchUrl(emailLaunchUri)) {
+    // if (await canLaunchUrl(emailLaunchUri)) { // Bug with this stuff
       await launchUrl(emailLaunchUri);
-    } else {
-      throw 'Could not launch email';
-    }
+    // } else {
+    //   throw 'Could not launch email';
+    // }
   }
 
   String _getInitialMealType(DateTime selectedDate) {
