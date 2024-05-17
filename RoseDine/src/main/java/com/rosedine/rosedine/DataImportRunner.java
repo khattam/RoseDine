@@ -18,9 +18,9 @@ public class DataImportRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         String script1Path = "PyScraping/main.py";
 
-        //runPythonScript(script1Path);
+        runPythonScript(script1Path);
 
-        //sendPostRequest();
+        sendPostRequest();
     }
 
     private void runPythonScript(String scriptPath) throws Exception {
