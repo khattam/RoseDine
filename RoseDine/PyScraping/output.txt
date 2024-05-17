@@ -3,14 +3,14 @@ Breakfast:
 	Section: rise
 	  Item: Scrambled Eggs
 	  Item: Cameron Farms Breakfast Sausage
-	  Item: O'brien Potatoes
-	  Item: Ham and Cheddar Croissant
+	  Item: Fried Potato Wedges
+	  Item: Ham and Cheddar Slider
 	  Item: Peaches and Cream Smoothie
 	Section: roots
 	  Item: Texas French Toast
 	  Item: Caramel Sauce
 	  Item: Spiced Apple Compote
-	  Item: Morning Star Bacon
+	  Item: Morning Star Sausage
 	Section: sizzle
 	  Item: Buttermilk Biscuit
 	  Item: White Pepper Gravy
@@ -20,8 +20,8 @@ Scraping Lunch for 2024-05-16
 Lunch:
 	Section: roots
 	  Item: Buffalo Tofu
-	  Item: Roasted Potatoes
-	  Item: Steamed Broccoli
+	  Item: Cilantro Lime Rice
+	  Item: Sauteed Spinach
 	Section: global
 	  Item: Chimichurri Chicken Brown Rice Quinoa Bowl
 	  Item: Steamed Broccoli
@@ -32,23 +32,25 @@ Lunch:
 	  Item: Steamed Cauliflower and Carrots
 	Section: rosies favorites
 	  Item: Cameron Farms Habanero Maple Roasted Pork Loin
-	  Item: Chili Roasted Sweet Potatoes
+	  Item: Spiced Roasted Sweet Potatoes
 	  Item: Steamed Green Beans and Tomatoes
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
 	  Item: Chicken Parmesan Pizza
+	Section: kettles
+	  Item: Chicken Noddle
 	Section: spa waters
 	  Item: Blueberry Orange Fresca
 	Section: market
-	  Item: Orange Oregano Roasted Chicken Thighs
+	  Item: Maple Tarragon Roasted Chicken Thighs
+	  Item: Wild Rice
 	  Item: Roasted Vegetables
-	  Item: Steamed Lentil and Brown Rice
 Scraping Dinner for 2024-05-16
 Dinner:
 	Section: roots
 	  Item: Asian Inspired "beef" Wrap
-	  Item: Steamed Rice
+	  Item: Steamed Rice and Quinoa
 	  Item: Roasted Corn
 	Section: global
 	  Item: Ancho Pork and Hominy Stew
@@ -61,12 +63,14 @@ Dinner:
 	  Item: Steamed Peas
 	Section: rosies favorites
 	  Item: Chicken with Mushroom Marsala
-	  Item: Bowtie Pasta
 	  Item: Sauteed Spinach and Peppers
+	  Item: Whole Wheat Pasta
 	Section: pomodoro
 	  Item: Cheese Pizza
 	  Item: Pepperoni Pizza
 	  Item: Chicken Parmesan Pizza
+	Section: kettles
+	  Item: Chicken Noddle
 	Section: spa waters
 	  Item: Blueberry Orange Fresca
 	Section: market
@@ -80,12 +84,12 @@ Breakfast:
 	  Item: Scrambled Eggs
 	  Item: Oven-roasted Potatoes
 	  Item: Beyond Sausage Scaramble
-	  Item: Raspberry Mango Tea Smoothie
+	  Item: Peach Mango Sweet Tea Smoothie
 	Section: roots
 	  Item: Buttermilk Pancakes
 	  Item: Chocolate Sauce
 	  Item: Mango Compote
-	  Item: Morning Star Sausage
+	  Item: Morning Star Bacon
 	Section: sizzle
 	  Item: Buttermilk Biscuit
 	  Item: White Pepper Gravy
@@ -94,19 +98,16 @@ Breakfast:
 Scraping Lunch for 2024-05-17
 Lunch:
 	Section: roots
-	  Item: Spinach Mushroom Rolls
-	  Item: Herb Orzo
-	  Item: Steamed Carrots
+	  Item: Coconut Kale Bowl
 	Section: global
-	  Item: Jerk Chicken Thighs
-	  Item: Mango Coconut Rice
+	  Item: Sweet Chili Chicken Thighs
+	  Item: Jasmine Rice
 	  Item: Steamed Carrots
 	Section: sizzle
 	  Item: French Fries
 	  Item: Crispy French Fry Bar
 	Section: rosies favorites
 	  Item: Red Wine and Herb Marinated Beef Tips and Button Mushrooms
-	  Item: Sour Cream and Chive Mashed Potatoes
 	  Item: Steamed Broccoli and Cauliflower
 	Section: pomodoro
 	  Item: Cheese Pizza
@@ -143,7 +144,7 @@ Brunch:
 	  Item: Lentil Sloppy Jo
 	  Item: Steamed Green Beans and Carrots
 	Section: rosies favorites
-	  Item: Sweet Chili Chicken Stir Fry
+	  Item: Orange Chicken Stir Fry
 	  Item: Steamed Jasmine Rice
 	  Item: Steamed Snow Peas with Roasted Red Peppers
 	  Item: Sweet Soy Roasted Tofu
@@ -226,7 +227,7 @@ Dinner:
 	Section: global
 	  Item: Chicken and Shrimp Gumbo
 	Section: sizzle
-	  Item: Turkey Pepperjack Melt
+	  Item: Turkey Bacon Ranch Slider Melt
 	Section: rosies favorites
 	  Item: Beef Manhattan
 	  Item: Braised Collard Greens
@@ -261,7 +262,8 @@ Lunch:
 	  Item: Steamed Jasmine Rice
 	  Item: Roasted Carrots
 	Section: global
-	  Item: Steamed Jasmine Rice
+	  Item: Jerk Chicken Thighs
+	  Item: Mango Coconut Rice
 	Section: sizzle
 	  Item: French Fries
 	  Item: Hot Dog Bar
@@ -280,7 +282,6 @@ Dinner:
 	  Item: Brown Rice
 	  Item: Roasted Zucchini and Squash
 	Section: global
-	  Item: Korean-style Spicy Barbecue Chicken Thighs
 	  Item: Breakfast for Dinner!!!!!
 	Section: sizzle
 	  Item: French Fries
@@ -344,3 +345,453 @@ Dinner:
 	  Item: Pesto Roasted Chicken Thighs
 	  Item: Roasted Cauliflower and Red Peppers
 	  Item: Garlic Roasted Potatoes
+Scraping Breakfast for 2024-05-16
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-16/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Lunch for 2024-05-16
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-16/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-16
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-16/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Breakfast for 2024-05-17
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-17/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Lunch for 2024-05-17
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-17/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-17
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-17/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Brunch for 2024-05-18
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-18/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Brunch for 2024-05-19
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-19/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-19
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-19/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Breakfast for 2024-05-20
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-20/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Lunch for 2024-05-20
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-20/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-20
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-20/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Breakfast for 2024-05-21
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-21/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Lunch for 2024-05-21
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-21/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-21
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-21/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Breakfast for 2024-05-22
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-22/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Lunch for 2024-05-22
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-22/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
+Scraping Dinner for 2024-05-22
+Error accessing https://rose-hulman.cafebonappetit.com/cafe/cafe/2024-05-22/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D1FA7032+63090]
+	(No symbol) [0x00007FF6D1F12C82]
+	(No symbol) [0x00007FF6D1DAEC65]
+	(No symbol) [0x00007FF6D1D8CA7C]
+	(No symbol) [0x00007FF6D1E1D687]
+	(No symbol) [0x00007FF6D1E32AC1]
+	(No symbol) [0x00007FF6D1E16D83]
+	(No symbol) [0x00007FF6D1DE83A8]
+	(No symbol) [0x00007FF6D1DE9441]
+	GetHandleVerifier [0x00007FF6D23A25AD+4238317]
+	GetHandleVerifier [0x00007FF6D23DF70D+4488525]
+	GetHandleVerifier [0x00007FF6D23D79EF+4456495]
+	GetHandleVerifier [0x00007FF6D2080576+953270]
+	(No symbol) [0x00007FF6D1F1E54F]
+	(No symbol) [0x00007FF6D1F19224]
+	(No symbol) [0x00007FF6D1F1935B]
+	(No symbol) [0x00007FF6D1F09B94]
+	BaseThreadInitThunk [0x00007FFBBF3A257D+29]
+	RtlUserThreadStart [0x00007FFBC122AA48+40]
+
