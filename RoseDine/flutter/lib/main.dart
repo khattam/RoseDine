@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:rosedine/auth.dart';
 import 'notification_service.dart';
+import 'onboarding_screen.dart';
 
 final container = ProviderContainer();
 
@@ -18,6 +19,7 @@ void main() async {
   }
   runApp(UncontrolledProviderScope(container: container, child: MyApp()));
 }
+
 
 class MyApp extends ConsumerWidget {
   @override
@@ -45,7 +47,13 @@ class MyApp extends ConsumerWidget {
           selectedColor: Colors.white,
         ),
       ),
-      home: const AuthScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const AuthScreen(),
+        '/auth': (context) => const AuthScreen(),
+        '/onboarding': (context) => OnboardingScreen(),
+      },
     );
   }
 }
+

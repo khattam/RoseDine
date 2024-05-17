@@ -1,10 +1,9 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:rosedine/widgets/custom_button_widget.dart';
-import 'package:rosedine/widgets/custom_text_widget.dart';
+import 'package:rosedine/widgets/custom_text_widget.dart' as custom_widget;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'schedule_screen.dart';
 import 'onboarding_screen.dart';
@@ -178,14 +177,14 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                     ),
                   ),
                   const SizedBox(height: 30),
-                  CustomTextField(
+                  custom_widget.CustomTextField(
                     controller: _emailController,
                     labelText: 'Email',
                     keyboardType: TextInputType.emailAddress,
                     obscureText: false,
                   ),
                   const SizedBox(height: 30),
-                  CustomTextField(
+                  custom_widget.CustomTextField(
                     controller: _passwordController,
                     labelText: 'Password',
                     obscureText: true, // Ensures the text is obscured for password input

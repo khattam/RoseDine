@@ -12,7 +12,7 @@ import java.util.Map;
 @Service
 public class UserService {
 
-    private final UserRepository userRepository; // Field for UserRepository
+    private final UserRepository userRepository;
 
     @Autowired // Constructor injection for UserRepository
     public UserService(UserRepository userRepository) {
@@ -30,6 +30,12 @@ public class UserService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void updateUserPassword(String email, String newPassword) {
+        String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
+        String updateQuery = "UPDATE [User] SET Password = ? WHERE [Email ID] = ?";
+        jdbcTemplate.update(updateQuery, hashedPassword, email);
     }
 
     public void createUser(String fname, String lname, String email, String password) {
@@ -72,6 +78,4 @@ public class UserService {
     public UserPreferences getUserPreferences(int userId, String mealType) {
         return userRepository.getUserPreferences(userId, mealType);
     }
-
-
 }

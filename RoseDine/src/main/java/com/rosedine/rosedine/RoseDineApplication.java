@@ -9,4 +9,5 @@ public class RoseDineApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RoseDineApplication.class, args);
 	}
+
 }
