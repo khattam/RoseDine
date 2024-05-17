@@ -28,7 +28,7 @@ def read_menu_data(filename):
     return menu_data
 
 def main():
-    filename = "output.txt"
+    filename = "PyScraping\\output.txt"
     menu_data = read_menu_data(filename)
     all_nutrition_data = []
 
@@ -85,7 +85,7 @@ def main():
                     "Nutrition": nutrition_info
                 })
 
-    with open('nutrition_info.json', 'w') as f:
+    with open('PyScraping\\nutrition_info.json', 'w') as f:
         json.dump(all_nutrition_data, f, indent=4)
 
 if __name__ == "__main__":
