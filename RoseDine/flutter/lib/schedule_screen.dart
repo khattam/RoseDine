@@ -14,12 +14,20 @@ class ScheduleScreen extends ConsumerWidget {
     final selectedDate = ref.watch(selectedDateProvider);
     final selectedMealType = ref.watch(selectedMealTypeProvider);
 
+    ref.listen<DateTime>(selectedDateProvider, (previous, next) {
+      if (previous != next) {
+        final initialMealType = _getInitialMealType(next);
+        ref.read(selectedMealTypeProvider.notifier).state = initialMealType;
+      }
+    });
+
     final initialMealType = _getInitialMealType(selectedDate);
     if (selectedMealType.isEmpty) {
       Future(() {
         ref.read(selectedMealTypeProvider.notifier).state = initialMealType;
       });
     }
+
 
     String dateStr = DateFormat('EEE, dd MMM').format(selectedDate);
     String mealTime = getMealTime(selectedDate, selectedMealType);

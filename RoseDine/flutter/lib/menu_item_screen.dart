@@ -13,12 +13,33 @@ class MenuItemScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDate = ref.watch(selectedDateProvider);
     final recommendations = ref.watch(recommendationsNotifierProvider);
+    final isSaturday = selectedDate.weekday == DateTime.saturday;
 
     ref.listen<DateTime>(selectedDateProvider, (previous, next) {
       if (previous != next) {
         ref.read(recommendationsNotifierProvider.notifier).clearRecommendations();
       }
     });
+
+    ref.listen<String>(selectedMealTypeProvider, (previous, next) {
+      if (previous != next) {
+        ref.read(recommendationsNotifierProvider.notifier).clearRecommendations();
+      }
+    });
+
+    if (isSaturday && mealType == 'Dinner') {
+      return Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: Text(
+            'The Bon does not offer dinner on Saturday. Please go to Chauncey\'s.',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18),
+          ),
+        ),
+      );
+    }
+
 
     return ref.watch(menuItemsProvider(selectedDate)).when(
       data: (menuItems) {
