@@ -46,45 +46,45 @@ This system helps users manage their dietary goals by providing a seamless, user
    ```bash
    git clone https://github.com/username/rosedine-backend.git
 
-### Configure the `application.properties` file with your database credentials and API keys:
-```properties
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=roseDineDB
-spring.datasource.username=your-username
-spring.datasource.password=your-password
-sendgrid.api.key=your-sendgrid-api-key
-```
+2. Configure the `application.properties` file with your database credentials and API keys:
+   ```properties
+   spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=roseDineDB
+   spring.datasource.username=your-username
+   spring.datasource.password=your-password
+   sendgrid.api.key=your-sendgrid-api-key
+   ```
 
-### Build the project:
-```bash
-./mvnw clean install
-```
+3. Build the project:
+   ```bash
+   ./mvnw clean install
+   ```
 
-### Run the Spring Boot application:
-```bash
-./mvnw spring-boot:run
-```
+4. Run the Spring Boot application:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
 ## Front-end Setup (Flutter)
 
-### Clone the front-end repository:
-```bash
-git clone https://github.com/username/rosedine-frontend.git
-```
+1. Clone the front-end repository:
+   ```bash
+   git clone https://github.com/username/rosedine-frontend.git
+   ```
 
-### Navigate to the project directory:
-```bash
-cd rosedine-frontend
-```
+2. Navigate to the project directory:
+   ```bash
+   cd rosedine-frontend
+   ```
 
-### Install the necessary Flutter dependencies:
-```bash
-flutter pub get
-```
+3. Install the necessary Flutter dependencies:
+   ```bash
+   flutter pub get
+   ```
 
-### Run the Flutter app:
-```bash
-flutter run
-```
+4. Run the Flutter app:
+   ```bash
+   flutter run
+   ```
 
 ## API Endpoints
 
