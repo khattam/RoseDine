@@ -45,3 +45,87 @@ This system helps users manage their dietary goals by providing a seamless, user
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/rosedine-backend.git
+
+### Configure the `application.properties` file with your database credentials and API keys:
+```properties
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=roseDineDB
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+sendgrid.api.key=your-sendgrid-api-key
+```
+
+### Build the project:
+```bash
+./mvnw clean install
+```
+
+### Run the Spring Boot application:
+```bash
+./mvnw spring-boot:run
+```
+
+## Front-end Setup (Flutter)
+
+### Clone the front-end repository:
+```bash
+git clone https://github.com/username/rosedine-frontend.git
+```
+
+### Navigate to the project directory:
+```bash
+cd rosedine-frontend
+```
+
+### Install the necessary Flutter dependencies:
+```bash
+flutter pub get
+```
+
+### Run the Flutter app:
+```bash
+flutter run
+```
+
+## API Endpoints
+
+### User Endpoints
+- **GET /api/user/preferences**: Fetch user’s dietary preferences.
+- **POST /api/user/preferences**: Update dietary preferences for personalized recommendations.
+
+### Meal Recommendation Endpoints
+- **GET /api/meal/recommendations**: Get meal recommendations based on current macros and preferences.
+- **GET /api/menu/today**: Fetch today’s menu options from Rose-Hulman’s dining services.
+
+### Authentication Endpoints
+- **POST /api/auth/login**: User login with OAuth 2.0.
+- **POST /api/auth/register**: New user registration.
+
+## Future Enhancements
+- **Nutrition Tracking Integration**: Allow users to manually log meals and adjust macros based on actual intake.
+- **Advanced Filters**: Add options for dietary restrictions (e.g., gluten-free, vegan).
+- **Machine Learning**: Use machine learning to improve recommendation accuracy based on user history.
+
+## Contributing
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. Make your changes.
+4. Commit the changes:
+    ```bash
+    git commit -m 'Add some feature'
+    ```
+5. Push to the branch:
+    ```bash
+    git push origin feature-branch
+    ```
+6. Create a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+**RoseDine** is all about making personalized meal planning easier and more effective. Feel free to contribute or reach out for any questions!
+
