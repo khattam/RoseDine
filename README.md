@@ -6,7 +6,7 @@
 
 This system helps users manage their dietary goals by providing a seamless, user-friendly interface to monitor their macros and receive meal suggestions that align with their health objectives. RoseDine offers a secure and intuitive experience for personalized meal planning.
 
-# Access it at https://rosedine.com/! #
+# Access it at https://rosedine.com/
 
 ## Features
 
